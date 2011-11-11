@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<inherits name="com.google.gwt.dev.jjs.intrinsic.Intrinsic" />
+	<inherits name="com.google.gwt.emul.Emulation" />
+	<inherits name="com.google.gwt.core.CompilerParameters" />
+	<inherits name="com.google.gwt.core.EmulateJsStack" />
+
+	<define-linker name="pmt" class="com.gwt.pmt.PMTScriptLinker" />
+	<add-linker name="pmt" />
+
+	<source path='pmt' />
+</module>
