@@ -1008,10 +1008,11 @@ public class TabGroup {
 	 * add a tab to the tab group
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.9
+	 * @param tab (object) the tab to add to this tab group
 	 * @return void
 	 */
-	 public native void addTab() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addTab();
+	 public native void addTab(JavaScriptObject tab) /*-{
+		return this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addTab(tab);
 	}-*/;
 
 	/**
