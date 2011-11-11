@@ -1550,25 +1550,7 @@ public class VideoPlayer {
 	 public native JavaScriptObject toImage(JavaScriptObject f) /*-{
 		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.toImage(f);
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when the device detects a click (longer than touch) against the view
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when the device detects a click (longer than touch) against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void click(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -1576,31 +1558,12 @@ public class VideoPlayer {
 	 * fired when the device detects a click (longer than touch) against the view
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('click', function(source, type, globalPoint, y, x) {
-			click.@com.pmt.wrap.titanium.media.VideoPlayer.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>complete</b>
-	 * <p>
-	 * fired when movie playback ends or a user exits playback
-	 */
-	public interface CompleteHandler {
-		/**
-		 * <b>complete</b>
-		 * <p>
-		 * fired when movie playback ends or a user exits playback
-		 * @param source the source object that fired the event
-		 * @param reason the completion reason. One of Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ENDED, Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ERROR or Titanium.Media.VIDEO_FINISH_REASON_USER_EXITED.
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void complete(JavaScriptObject source, JavaScriptObject reason, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>complete</b>
@@ -1608,30 +1571,12 @@ public class VideoPlayer {
 	 * fired when movie playback ends or a user exits playback
 	 * @param complete event handler
 	 */
-	public native void addComplete(CompleteHandler complete) /*-{
+	public native void addComplete(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerCompleteHandler complete) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('complete', function(source, reason, type, globalPoint, y, x) {
-			complete.@com.pmt.wrap.titanium.media.VideoPlayer.CompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, reason, type, globalPoint, y, x);
+			complete.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerCompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, reason, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>dblclick</b>
-	 * <p>
-	 * fired when the device detects a double click against the view
-	 */
-	public interface DblclickHandler {
-		/**
-		 * <b>dblclick</b>
-		 * <p>
-		 * fired when the device detects a double click against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void dblclick(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>dblclick</b>
@@ -1639,30 +1584,12 @@ public class VideoPlayer {
 	 * fired when the device detects a double click against the view
 	 * @param dblclick event handler
 	 */
-	public native void addDblclick(DblclickHandler dblclick) /*-{
+	public native void addDblclick(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerDblclickHandler dblclick) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('dblclick', function(source, type, globalPoint, y, x) {
-			dblclick.@com.pmt.wrap.titanium.media.VideoPlayer.DblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			dblclick.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerDblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>doubletap</b>
-	 * <p>
-	 * fired when the device detects a double tap against the view
-	 */
-	public interface DoubletapHandler {
-		/**
-		 * <b>doubletap</b>
-		 * <p>
-		 * fired when the device detects a double tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void doubletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>doubletap</b>
@@ -1670,31 +1597,12 @@ public class VideoPlayer {
 	 * fired when the device detects a double tap against the view
 	 * @param doubletap event handler
 	 */
-	public native void addDoubletap(DoubletapHandler doubletap) /*-{
+	public native void addDoubletap(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerDoubletapHandler doubletap) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('doubletap', function(source, type, globalPoint, y, x) {
-			doubletap.@com.pmt.wrap.titanium.media.VideoPlayer.DoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			doubletap.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerDoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>durationAvailable</b>
-	 * <p>
-	 * fired when the duration is available
-	 */
-	public interface DurationAvailableHandler {
-		/**
-		 * <b>durationAvailable</b>
-		 * <p>
-		 * fired when the duration is available
-		 * @param duration duration
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void durationAvailable(JavaScriptObject duration, JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>durationAvailable</b>
@@ -1702,31 +1610,12 @@ public class VideoPlayer {
 	 * fired when the duration is available
 	 * @param durationAvailable event handler
 	 */
-	public native void addDurationAvailable(DurationAvailableHandler durationAvailable) /*-{
+	public native void addDurationAvailable(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerDurationAvailableHandler durationAvailable) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('durationAvailable', function(duration, source, type, globalPoint, y, x) {
-			durationAvailable.@com.pmt.wrap.titanium.media.VideoPlayer.DurationAvailableHandler::durationAvailable(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(duration, source, type, globalPoint, y, x);
+			durationAvailable.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerDurationAvailableHandler::durationAvailable(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(duration, source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>error</b>
-	 * <p>
-	 * fired when movie playback encounters an error
-	 */
-	public interface ErrorHandler {
-		/**
-		 * <b>error</b>
-		 * <p>
-		 * fired when movie playback encounters an error
-		 * @param message reason for error as string
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void error(JavaScriptObject message, JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>error</b>
@@ -1734,31 +1623,12 @@ public class VideoPlayer {
 	 * fired when movie playback encounters an error
 	 * @param error event handler
 	 */
-	public native void addError(ErrorHandler error) /*-{
+	public native void addError(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerErrorHandler error) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('error', function(message, source, type, globalPoint, y, x) {
-			error.@com.pmt.wrap.titanium.media.VideoPlayer.ErrorHandler::error(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(message, source, type, globalPoint, y, x);
+			error.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerErrorHandler::error(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(message, source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>fullscreen</b>
-	 * <p>
-	 * fired when a movie changes from fullscreen view
-	 */
-	public interface FullscreenHandler {
-		/**
-		 * <b>fullscreen</b>
-		 * <p>
-		 * fired when a movie changes from fullscreen view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 * @param entering true to indicate entering fullscreen, false to indicate leaving fullscreen
-		 */
-		void fullscreen(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x, JavaScriptObject entering);
-	}
+	
 
 	/**
 	 * <b>fullscreen</b>
@@ -1766,30 +1636,12 @@ public class VideoPlayer {
 	 * fired when a movie changes from fullscreen view
 	 * @param fullscreen event handler
 	 */
-	public native void addFullscreen(FullscreenHandler fullscreen) /*-{
+	public native void addFullscreen(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerFullscreenHandler fullscreen) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('fullscreen', function(source, type, globalPoint, y, x, entering) {
-			fullscreen.@com.pmt.wrap.titanium.media.VideoPlayer.FullscreenHandler::fullscreen(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x, entering);
+			fullscreen.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerFullscreenHandler::fullscreen(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x, entering);
 		});
 	}-*/;
-
-	/**
-	 * <b>load</b>
-	 * <p>
-	 * fired when the movie play loads
-	 */
-	public interface LoadHandler {
-		/**
-		 * <b>load</b>
-		 * <p>
-		 * fired when the movie play loads
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void load(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>load</b>
@@ -1797,31 +1649,12 @@ public class VideoPlayer {
 	 * fired when the movie play loads
 	 * @param load event handler
 	 */
-	public native void addLoad(LoadHandler load) /*-{
+	public native void addLoad(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerLoadHandler load) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('load', function(source, type, globalPoint, y, x) {
-			load.@com.pmt.wrap.titanium.media.VideoPlayer.LoadHandler::load(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			load.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerLoadHandler::load(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>loadstate</b>
-	 * <p>
-	 * fired when the network loadState changes
-	 */
-	public interface LoadstateHandler {
-		/**
-		 * <b>loadstate</b>
-		 * <p>
-		 * fired when the network loadState changes
-		 * @param source the source object that fired the event
-		 * @param loadState loadState
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void loadstate(JavaScriptObject source, JavaScriptObject loadState, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>loadstate</b>
@@ -1829,31 +1662,12 @@ public class VideoPlayer {
 	 * fired when the network loadState changes
 	 * @param loadstate event handler
 	 */
-	public native void addLoadstate(LoadstateHandler loadstate) /*-{
+	public native void addLoadstate(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerLoadstateHandler loadstate) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('loadstate', function(source, loadState, type, globalPoint, y, x) {
-			loadstate.@com.pmt.wrap.titanium.media.VideoPlayer.LoadstateHandler::loadstate(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, loadState, type, globalPoint, y, x);
+			loadstate.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerLoadstateHandler::loadstate(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, loadState, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>mediaTypesAvailable</b>
-	 * <p>
-	 * fired when the media types is available
-	 */
-	public interface MediaTypesAvailableHandler {
-		/**
-		 * <b>mediaTypesAvailable</b>
-		 * <p>
-		 * fired when the media types is available
-		 * @param source the source object that fired the event
-		 * @param mediaTypes media types
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void mediaTypesAvailable(JavaScriptObject source, JavaScriptObject mediaTypes, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>mediaTypesAvailable</b>
@@ -1861,31 +1675,12 @@ public class VideoPlayer {
 	 * fired when the media types is available
 	 * @param mediaTypesAvailable event handler
 	 */
-	public native void addMediaTypesAvailable(MediaTypesAvailableHandler mediaTypesAvailable) /*-{
+	public native void addMediaTypesAvailable(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerMediaTypesAvailableHandler mediaTypesAvailable) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('mediaTypesAvailable', function(source, mediaTypes, type, globalPoint, y, x) {
-			mediaTypesAvailable.@com.pmt.wrap.titanium.media.VideoPlayer.MediaTypesAvailableHandler::mediaTypesAvailable(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, mediaTypes, type, globalPoint, y, x);
+			mediaTypesAvailable.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerMediaTypesAvailableHandler::mediaTypesAvailable(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, mediaTypes, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>naturalSizeAvailable</b>
-	 * <p>
-	 * fired when the natural size is available
-	 */
-	public interface NaturalSizeAvailableHandler {
-		/**
-		 * <b>naturalSizeAvailable</b>
-		 * <p>
-		 * fired when the natural size is available
-		 * @param source the source object that fired the event
-		 * @param naturalSize natural size as a dictionary. see naturalSize property.
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void naturalSizeAvailable(JavaScriptObject source, JavaScriptObject naturalSize, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>naturalSizeAvailable</b>
@@ -1893,31 +1688,12 @@ public class VideoPlayer {
 	 * fired when the natural size is available
 	 * @param naturalSizeAvailable event handler
 	 */
-	public native void addNaturalSizeAvailable(NaturalSizeAvailableHandler naturalSizeAvailable) /*-{
+	public native void addNaturalSizeAvailable(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerNaturalSizeAvailableHandler naturalSizeAvailable) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('naturalSizeAvailable', function(source, naturalSize, type, globalPoint, y, x) {
-			naturalSizeAvailable.@com.pmt.wrap.titanium.media.VideoPlayer.NaturalSizeAvailableHandler::naturalSizeAvailable(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, naturalSize, type, globalPoint, y, x);
+			naturalSizeAvailable.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerNaturalSizeAvailableHandler::naturalSizeAvailable(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, naturalSize, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>playbackState</b>
-	 * <p>
-	 * fired when the playbackState changes
-	 */
-	public interface PlaybackStateHandler {
-		/**
-		 * <b>playbackState</b>
-		 * <p>
-		 * fired when the playbackState changes
-		 * @param source the source object that fired the event
-		 * @param playbackState playbackState
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void playbackState(JavaScriptObject source, JavaScriptObject playbackState, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>playbackState</b>
@@ -1925,31 +1701,12 @@ public class VideoPlayer {
 	 * fired when the playbackState changes
 	 * @param playbackState event handler
 	 */
-	public native void addPlaybackState(PlaybackStateHandler playbackState) /*-{
+	public native void addPlaybackState(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerPlaybackStateHandler playbackState) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('playbackState', function(source, playbackState, type, globalPoint, y, x) {
-			playbackState.@com.pmt.wrap.titanium.media.VideoPlayer.PlaybackStateHandler::playbackState(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, playbackState, type, globalPoint, y, x);
+			playbackState.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerPlaybackStateHandler::playbackState(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, playbackState, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>playing</b>
-	 * <p>
-	 * fired when the currently playing movie changes
-	 */
-	public interface PlayingHandler {
-		/**
-		 * <b>playing</b>
-		 * <p>
-		 * fired when the currently playing movie changes
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param url url of the media
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void playing(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject url, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>playing</b>
@@ -1957,30 +1714,12 @@ public class VideoPlayer {
 	 * fired when the currently playing movie changes
 	 * @param playing event handler
 	 */
-	public native void addPlaying(PlayingHandler playing) /*-{
+	public native void addPlaying(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerPlayingHandler playing) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('playing', function(source, type, globalPoint, y, url, x) {
-			playing.@com.pmt.wrap.titanium.media.VideoPlayer.PlayingHandler::playing(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, url, x);
+			playing.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerPlayingHandler::playing(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, url, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>preload</b>
-	 * <p>
-	 * fired when the movie has preloaded and is ready to play
-	 */
-	public interface PreloadHandler {
-		/**
-		 * <b>preload</b>
-		 * <p>
-		 * fired when the movie has preloaded and is ready to play
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void preload(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>preload</b>
@@ -1988,30 +1727,12 @@ public class VideoPlayer {
 	 * fired when the movie has preloaded and is ready to play
 	 * @param preload event handler
 	 */
-	public native void addPreload(PreloadHandler preload) /*-{
+	public native void addPreload(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerPreloadHandler preload) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('preload', function(source, type, globalPoint, y, x) {
-			preload.@com.pmt.wrap.titanium.media.VideoPlayer.PreloadHandler::preload(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			preload.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerPreloadHandler::preload(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>resize</b>
-	 * <p>
-	 * fired when the movie player is resized
-	 */
-	public interface ResizeHandler {
-		/**
-		 * <b>resize</b>
-		 * <p>
-		 * fired when the movie player is resized
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void resize(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>resize</b>
@@ -2019,30 +1740,12 @@ public class VideoPlayer {
 	 * fired when the movie player is resized
 	 * @param resize event handler
 	 */
-	public native void addResize(ResizeHandler resize) /*-{
+	public native void addResize(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerResizeHandler resize) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('resize', function(source, type, globalPoint, y, x) {
-			resize.@com.pmt.wrap.titanium.media.VideoPlayer.ResizeHandler::resize(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			resize.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerResizeHandler::resize(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>singletap</b>
-	 * <p>
-	 * fired when the device detects a single tap against the view
-	 */
-	public interface SingletapHandler {
-		/**
-		 * <b>singletap</b>
-		 * <p>
-		 * fired when the device detects a single tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void singletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>singletap</b>
@@ -2050,31 +1753,12 @@ public class VideoPlayer {
 	 * fired when the device detects a single tap against the view
 	 * @param singletap event handler
 	 */
-	public native void addSingletap(SingletapHandler singletap) /*-{
+	public native void addSingletap(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerSingletapHandler singletap) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('singletap', function(source, type, globalPoint, y, x) {
-			singletap.@com.pmt.wrap.titanium.media.VideoPlayer.SingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			singletap.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerSingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>sourceChange</b>
-	 * <p>
-	 * fired when the movieSourceType is Titanium.Media.VIDEO_SOURCE_TYPE_UNKNOWN when preparing for playback.
-	 */
-	public interface SourceChangeHandler {
-		/**
-		 * <b>sourceChange</b>
-		 * <p>
-		 * fired when the movieSourceType is Titanium.Media.VIDEO_SOURCE_TYPE_UNKNOWN when preparing for playback.
-		 * @param sourceChange the new sourceType
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void sourceChange(JavaScriptObject sourceChange, JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>sourceChange</b>
@@ -2082,31 +1766,12 @@ public class VideoPlayer {
 	 * fired when the movieSourceType is Titanium.Media.VIDEO_SOURCE_TYPE_UNKNOWN when preparing for playback.
 	 * @param sourceChange event handler
 	 */
-	public native void addSourceChange(SourceChangeHandler sourceChange) /*-{
+	public native void addSourceChange(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerSourceChangeHandler sourceChange) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('sourceChange', function(sourceChange, source, type, globalPoint, y, x) {
-			sourceChange.@com.pmt.wrap.titanium.media.VideoPlayer.SourceChangeHandler::sourceChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(sourceChange, source, type, globalPoint, y, x);
+			sourceChange.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerSourceChangeHandler::sourceChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(sourceChange, source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>swipe</b>
-	 * <p>
-	 * fired when the device detects a swipe (left or right) against the view
-	 */
-	public interface SwipeHandler {
-		/**
-		 * <b>swipe</b>
-		 * <p>
-		 * fired when the device detects a swipe (left or right) against the view
-		 * @param source the source object that fired the event
-		 * @param direction direction of the swipe - either left or right
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void swipe(JavaScriptObject source, JavaScriptObject direction, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>swipe</b>
@@ -2114,34 +1779,12 @@ public class VideoPlayer {
 	 * fired when the device detects a swipe (left or right) against the view
 	 * @param swipe event handler
 	 */
-	public native void addSwipe(SwipeHandler swipe) /*-{
+	public native void addSwipe(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerSwipeHandler swipe) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('swipe', function(source, direction, type, globalPoint, y, x) {
-			swipe.@com.pmt.wrap.titanium.media.VideoPlayer.SwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
+			swipe.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerSwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>thumbnail</b>
-	 * <p>
-	 * fired when a movie thumbnail is available from requestThumbnailImagesAtTimes
-	 */
-	public interface ThumbnailHandler {
-		/**
-		 * <b>thumbnail</b>
-		 * <p>
-		 * fired when a movie thumbnail is available from requestThumbnailImagesAtTimes
-		 * @param time time
-		 * @param source the source object that fired the event
-		 * @param error if success is false, error message as string for reason
-		 * @param image blob of the thumbnail image
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param success boolean to indicate success or failure
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void thumbnail(JavaScriptObject time, JavaScriptObject source, JavaScriptObject error, JavaScriptObject image, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject success, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>thumbnail</b>
@@ -2149,30 +1792,12 @@ public class VideoPlayer {
 	 * fired when a movie thumbnail is available from requestThumbnailImagesAtTimes
 	 * @param thumbnail event handler
 	 */
-	public native void addThumbnail(ThumbnailHandler thumbnail) /*-{
+	public native void addThumbnail(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerThumbnailHandler thumbnail) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('thumbnail', function(time, source, error, image, type, globalPoint, success, y, x) {
-			thumbnail.@com.pmt.wrap.titanium.media.VideoPlayer.ThumbnailHandler::thumbnail(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(time, source, error, image, type, globalPoint, success, y, x);
+			thumbnail.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerThumbnailHandler::thumbnail(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(time, source, error, image, type, globalPoint, success, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchcancel</b>
-	 * <p>
-	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-	 */
-	public interface TouchcancelHandler {
-		/**
-		 * <b>touchcancel</b>
-		 * <p>
-		 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchcancel(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchcancel</b>
@@ -2180,30 +1805,12 @@ public class VideoPlayer {
 	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
 	 * @param touchcancel event handler
 	 */
-	public native void addTouchcancel(TouchcancelHandler touchcancel) /*-{
+	public native void addTouchcancel(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchcancelHandler touchcancel) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('touchcancel', function(source, type, globalPoint, y, x) {
-			touchcancel.@com.pmt.wrap.titanium.media.VideoPlayer.TouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchcancel.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchend</b>
-	 * <p>
-	 * fired when a touch event is completed
-	 */
-	public interface TouchendHandler {
-		/**
-		 * <b>touchend</b>
-		 * <p>
-		 * fired when a touch event is completed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchend(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchend</b>
@@ -2211,30 +1818,12 @@ public class VideoPlayer {
 	 * fired when a touch event is completed
 	 * @param touchend event handler
 	 */
-	public native void addTouchend(TouchendHandler touchend) /*-{
+	public native void addTouchend(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchendHandler touchend) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('touchend', function(source, type, globalPoint, y, x) {
-			touchend.@com.pmt.wrap.titanium.media.VideoPlayer.TouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchend.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchmove</b>
-	 * <p>
-	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-	 */
-	public interface TouchmoveHandler {
-		/**
-		 * <b>touchmove</b>
-		 * <p>
-		 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchmove(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchmove</b>
@@ -2242,30 +1831,12 @@ public class VideoPlayer {
 	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
 	 * @param touchmove event handler
 	 */
-	public native void addTouchmove(TouchmoveHandler touchmove) /*-{
+	public native void addTouchmove(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchmoveHandler touchmove) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('touchmove', function(source, type, globalPoint, y, x) {
-			touchmove.@com.pmt.wrap.titanium.media.VideoPlayer.TouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchmove.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchstart</b>
-	 * <p>
-	 * fired as soon as the device detects a gesture
-	 */
-	public interface TouchstartHandler {
-		/**
-		 * <b>touchstart</b>
-		 * <p>
-		 * fired as soon as the device detects a gesture
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchstart(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchstart</b>
@@ -2273,30 +1844,12 @@ public class VideoPlayer {
 	 * fired as soon as the device detects a gesture
 	 * @param touchstart event handler
 	 */
-	public native void addTouchstart(TouchstartHandler touchstart) /*-{
+	public native void addTouchstart(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchstartHandler touchstart) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('touchstart', function(source, type, globalPoint, y, x) {
-			touchstart.@com.pmt.wrap.titanium.media.VideoPlayer.TouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchstart.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>twofingertap</b>
-	 * <p>
-	 * fired when the device detects a two-finger tap against the view
-	 */
-	public interface TwofingertapHandler {
-		/**
-		 * <b>twofingertap</b>
-		 * <p>
-		 * fired when the device detects a two-finger tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void twofingertap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>twofingertap</b>
@@ -2304,9 +1857,9 @@ public class VideoPlayer {
 	 * fired when the device detects a two-finger tap against the view
 	 * @param twofingertap event handler
 	 */
-	public native void addTwofingertap(TwofingertapHandler twofingertap) /*-{
+	public native void addTwofingertap(com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTwofingertapHandler twofingertap) /*-{
 		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener('twofingertap', function(source, type, globalPoint, y, x) {
-			twofingertap.@com.pmt.wrap.titanium.media.VideoPlayer.TwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			twofingertap.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVideoPlayerTwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
 }

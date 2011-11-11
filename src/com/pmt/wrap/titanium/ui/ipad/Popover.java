@@ -926,7 +926,7 @@ public class Popover {
 	 * hide the view
 	 * <p>
 	 * <b>Platforms:</b> ipad, <b>Since:</b> 1.2
-	 * @param options (object) dictionary with optional boolean property <tt>animated</tt> which indicates if the popover should be hidden with animation (defaults to true) or not
+	 * @param options (object) dictionary with optional boolean property animated which indicates if the popover should be hidden with animation (defaults to true) or not
 	 * @return void
 	 */
 	 public native void hide(JavaScriptObject options) /*-{
@@ -1005,7 +1005,7 @@ public class Popover {
 	 * make the view visible
 	 * <p>
 	 * <b>Platforms:</b> ipad, <b>Since:</b> 1.2
-	 * @param options (object) dictionary of the following properties: <tt>rect</tt>, <tt>animated</tt> and <tt>view</tt>. The <tt>view</tt> property should specify the view relative to where the popover should display.  <tt>animated</tt> is a boolean indicating if the showing of the popover should be animated, defaults to true. The property <tt>rect</tt> is a dictionary with the following properties: <tt>x</tt>, <tt>y</tt>, <tt>width</tt> and <tt>height</tt>, where the rectangle in <tt>view</tt> at which to anchor the popover.
+	 * @param options (object) dictionary of the following properties: rect, animated and view. The view property should specify the view relative to where the popover should display.  animated is a boolean indicating if the showing of the popover should be animated, defaults to true. The property rect is a dictionary with the following properties: x, y, width and height, where the rectangle in view at which to anchor the popover.
 	 * @return void
 	 */
 	 public native void show(JavaScriptObject options) /*-{
@@ -1024,25 +1024,7 @@ public class Popover {
 	 public native JavaScriptObject toImage(JavaScriptObject f) /*-{
 		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.toImage(f);
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when the device detects a click (longer than touch) against the view
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when the device detects a click (longer than touch) against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void click(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -1050,30 +1032,12 @@ public class Popover {
 	 * fired when the device detects a click (longer than touch) against the view
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('click', function(source, type, globalPoint, y, x) {
-			click.@com.pmt.wrap.titanium.ui.ipad.Popover.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>dblclick</b>
-	 * <p>
-	 * fired when the device detects a double click against the view
-	 */
-	public interface DblclickHandler {
-		/**
-		 * <b>dblclick</b>
-		 * <p>
-		 * fired when the device detects a double click against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void dblclick(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>dblclick</b>
@@ -1081,30 +1045,12 @@ public class Popover {
 	 * fired when the device detects a double click against the view
 	 * @param dblclick event handler
 	 */
-	public native void addDblclick(DblclickHandler dblclick) /*-{
+	public native void addDblclick(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverDblclickHandler dblclick) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('dblclick', function(source, type, globalPoint, y, x) {
-			dblclick.@com.pmt.wrap.titanium.ui.ipad.Popover.DblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			dblclick.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverDblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>doubletap</b>
-	 * <p>
-	 * fired when the device detects a double tap against the view
-	 */
-	public interface DoubletapHandler {
-		/**
-		 * <b>doubletap</b>
-		 * <p>
-		 * fired when the device detects a double tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void doubletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>doubletap</b>
@@ -1112,30 +1058,12 @@ public class Popover {
 	 * fired when the device detects a double tap against the view
 	 * @param doubletap event handler
 	 */
-	public native void addDoubletap(DoubletapHandler doubletap) /*-{
+	public native void addDoubletap(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverDoubletapHandler doubletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('doubletap', function(source, type, globalPoint, y, x) {
-			doubletap.@com.pmt.wrap.titanium.ui.ipad.Popover.DoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			doubletap.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverDoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>hide</b>
-	 * <p>
-	 * fired when the popover is hidden
-	 */
-	public interface HideHandler {
-		/**
-		 * <b>hide</b>
-		 * <p>
-		 * fired when the popover is hidden
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void hide(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>hide</b>
@@ -1143,30 +1071,12 @@ public class Popover {
 	 * fired when the popover is hidden
 	 * @param hide event handler
 	 */
-	public native void addHide(HideHandler hide) /*-{
+	public native void addHide(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverHideHandler hide) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('hide', function(source, type, globalPoint, y, x) {
-			hide.@com.pmt.wrap.titanium.ui.ipad.Popover.HideHandler::hide(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			hide.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverHideHandler::hide(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>singletap</b>
-	 * <p>
-	 * fired when the device detects a single tap against the view
-	 */
-	public interface SingletapHandler {
-		/**
-		 * <b>singletap</b>
-		 * <p>
-		 * fired when the device detects a single tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void singletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>singletap</b>
@@ -1174,31 +1084,12 @@ public class Popover {
 	 * fired when the device detects a single tap against the view
 	 * @param singletap event handler
 	 */
-	public native void addSingletap(SingletapHandler singletap) /*-{
+	public native void addSingletap(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverSingletapHandler singletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('singletap', function(source, type, globalPoint, y, x) {
-			singletap.@com.pmt.wrap.titanium.ui.ipad.Popover.SingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			singletap.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverSingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>swipe</b>
-	 * <p>
-	 * fired when the device detects a swipe (left or right) against the view
-	 */
-	public interface SwipeHandler {
-		/**
-		 * <b>swipe</b>
-		 * <p>
-		 * fired when the device detects a swipe (left or right) against the view
-		 * @param source the source object that fired the event
-		 * @param direction direction of the swipe - either left or right
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void swipe(JavaScriptObject source, JavaScriptObject direction, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>swipe</b>
@@ -1206,30 +1097,12 @@ public class Popover {
 	 * fired when the device detects a swipe (left or right) against the view
 	 * @param swipe event handler
 	 */
-	public native void addSwipe(SwipeHandler swipe) /*-{
+	public native void addSwipe(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverSwipeHandler swipe) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('swipe', function(source, direction, type, globalPoint, y, x) {
-			swipe.@com.pmt.wrap.titanium.ui.ipad.Popover.SwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
+			swipe.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverSwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchcancel</b>
-	 * <p>
-	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-	 */
-	public interface TouchcancelHandler {
-		/**
-		 * <b>touchcancel</b>
-		 * <p>
-		 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchcancel(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchcancel</b>
@@ -1237,30 +1110,12 @@ public class Popover {
 	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
 	 * @param touchcancel event handler
 	 */
-	public native void addTouchcancel(TouchcancelHandler touchcancel) /*-{
+	public native void addTouchcancel(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchcancelHandler touchcancel) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('touchcancel', function(source, type, globalPoint, y, x) {
-			touchcancel.@com.pmt.wrap.titanium.ui.ipad.Popover.TouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchcancel.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchend</b>
-	 * <p>
-	 * fired when a touch event is completed
-	 */
-	public interface TouchendHandler {
-		/**
-		 * <b>touchend</b>
-		 * <p>
-		 * fired when a touch event is completed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchend(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchend</b>
@@ -1268,30 +1123,12 @@ public class Popover {
 	 * fired when a touch event is completed
 	 * @param touchend event handler
 	 */
-	public native void addTouchend(TouchendHandler touchend) /*-{
+	public native void addTouchend(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchendHandler touchend) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('touchend', function(source, type, globalPoint, y, x) {
-			touchend.@com.pmt.wrap.titanium.ui.ipad.Popover.TouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchend.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchmove</b>
-	 * <p>
-	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-	 */
-	public interface TouchmoveHandler {
-		/**
-		 * <b>touchmove</b>
-		 * <p>
-		 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchmove(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchmove</b>
@@ -1299,30 +1136,12 @@ public class Popover {
 	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
 	 * @param touchmove event handler
 	 */
-	public native void addTouchmove(TouchmoveHandler touchmove) /*-{
+	public native void addTouchmove(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchmoveHandler touchmove) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('touchmove', function(source, type, globalPoint, y, x) {
-			touchmove.@com.pmt.wrap.titanium.ui.ipad.Popover.TouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchmove.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchstart</b>
-	 * <p>
-	 * fired as soon as the device detects a gesture
-	 */
-	public interface TouchstartHandler {
-		/**
-		 * <b>touchstart</b>
-		 * <p>
-		 * fired as soon as the device detects a gesture
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchstart(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchstart</b>
@@ -1330,30 +1149,12 @@ public class Popover {
 	 * fired as soon as the device detects a gesture
 	 * @param touchstart event handler
 	 */
-	public native void addTouchstart(TouchstartHandler touchstart) /*-{
+	public native void addTouchstart(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchstartHandler touchstart) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('touchstart', function(source, type, globalPoint, y, x) {
-			touchstart.@com.pmt.wrap.titanium.ui.ipad.Popover.TouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchstart.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>twofingertap</b>
-	 * <p>
-	 * fired when the device detects a two-finger tap against the view
-	 */
-	public interface TwofingertapHandler {
-		/**
-		 * <b>twofingertap</b>
-		 * <p>
-		 * fired when the device detects a two-finger tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void twofingertap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>twofingertap</b>
@@ -1361,9 +1162,9 @@ public class Popover {
 	 * fired when the device detects a two-finger tap against the view
 	 * @param twofingertap event handler
 	 */
-	public native void addTwofingertap(TwofingertapHandler twofingertap) /*-{
+	public native void addTwofingertap(com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTwofingertapHandler twofingertap) /*-{
 		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener('twofingertap', function(source, type, globalPoint, y, x) {
-			twofingertap.@com.pmt.wrap.titanium.ui.ipad.Popover.TwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			twofingertap.@com.pmt.wrap.titanium.sys.events.TitaniumUIiPadPopoverTwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
 }

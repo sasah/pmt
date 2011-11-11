@@ -30,7 +30,7 @@ public class Service {
 	}
 
 	/**
-	 * <b>intent</b> (`Titanium.Android.Intent`)
+	 * <b>intent</b> (Titanium.Android.Intent)
 	 * <p>
 	 * (read-only) The Titanium.Android.Intent used to start or bind to the Service.
 	 * <p>
@@ -41,7 +41,7 @@ public class Service {
 	}-*/;
 
 	/**
-	 * <b>intent</b> (`Titanium.Android.Intent`)
+	 * <b>intent</b> (Titanium.Android.Intent)
 	 * <p>
 	 * (read-only) The Titanium.Android.Intent used to start or bind to the Service.
 	 * <p>
@@ -96,23 +96,7 @@ public class Service {
 	 public native void stop() /*-{
 		return this.@com.pmt.wrap.titanium.android.Service::handler.stop();
 	}-*/;
-
-	/**
-	 * <b>pause</b>
-	 * <p>
-	 * For Javascript-based Services which you create, pause fires after each time the Javascript code executes.  resume and pause happen in pairs, with resume firing just before your Javascript service code executes, and pause just after.
-	 */
-	public interface PauseHandler {
-		/**
-		 * <b>pause</b>
-		 * <p>
-		 * For Javascript-based Services which you create, pause fires after each time the Javascript code executes.  resume and pause happen in pairs, with resume firing just before your Javascript service code executes, and pause just after.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param iteration incrementing integer indicating which iteration of an interval-based Service is pausing.  For example, if you have an interval-based Service running every 10 seconds, iteration 3 would occur at about 30 seconds after you start the instance (assuming your service code runs quickly.)
-		 */
-		void pause(JavaScriptObject source, JavaScriptObject type, JavaScriptObject iteration);
-	}
+	
 
 	/**
 	 * <b>pause</b>
@@ -120,28 +104,12 @@ public class Service {
 	 * For Javascript-based Services which you create, pause fires after each time the Javascript code executes.  resume and pause happen in pairs, with resume firing just before your Javascript service code executes, and pause just after.
 	 * @param pause event handler
 	 */
-	public native void addPause(PauseHandler pause) /*-{
+	public native void addPause(com.pmt.wrap.titanium.sys.events.TitaniumAndroidServicePauseHandler pause) /*-{
 		this.@com.pmt.wrap.titanium.android.Service::handler.addEventListener('pause', function(source, type, iteration) {
-			pause.@com.pmt.wrap.titanium.android.Service.PauseHandler::pause(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, iteration);
+			pause.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidServicePauseHandler::pause(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, iteration);
 		});
 	}-*/;
-
-	/**
-	 * <b>resume</b>
-	 * <p>
-	 * For Javascript-based Services which you create, resume fires each time the Javascript code executes.  For example, if your Service runs on an interval of 10000 (10 seconds), you would expect to see resume fired every 10 seconds, just as the Javascript service code you wrote is about to execute.
-	 */
-	public interface ResumeHandler {
-		/**
-		 * <b>resume</b>
-		 * <p>
-		 * For Javascript-based Services which you create, resume fires each time the Javascript code executes.  For example, if your Service runs on an interval of 10000 (10 seconds), you would expect to see resume fired every 10 seconds, just as the Javascript service code you wrote is about to execute.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param iteration incrementing integer indicating which iteration of an interval-based Service is resuming.  For example, if you have an interval-based Service running every 10 seconds, iteration 3 would occur at about 30 seconds after you start the instance (assuming your service code runs quickly.)
-		 */
-		void resume(JavaScriptObject source, JavaScriptObject type, JavaScriptObject iteration);
-	}
+	
 
 	/**
 	 * <b>resume</b>
@@ -149,27 +117,12 @@ public class Service {
 	 * For Javascript-based Services which you create, resume fires each time the Javascript code executes.  For example, if your Service runs on an interval of 10000 (10 seconds), you would expect to see resume fired every 10 seconds, just as the Javascript service code you wrote is about to execute.
 	 * @param resume event handler
 	 */
-	public native void addResume(ResumeHandler resume) /*-{
+	public native void addResume(com.pmt.wrap.titanium.sys.events.TitaniumAndroidServiceResumeHandler resume) /*-{
 		this.@com.pmt.wrap.titanium.android.Service::handler.addEventListener('resume', function(source, type, iteration) {
-			resume.@com.pmt.wrap.titanium.android.Service.ResumeHandler::resume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, iteration);
+			resume.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidServiceResumeHandler::resume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, iteration);
 		});
 	}-*/;
-
-	/**
-	 * <b>start</b>
-	 * <p>
-	 * Fired when the bound Service instance starts.  Bound service instances are created via Titanium.Android.createService.
-	 */
-	public interface StartHandler {
-		/**
-		 * <b>start</b>
-		 * <p>
-		 * Fired when the bound Service instance starts.  Bound service instances are created via Titanium.Android.createService.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void start(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>start</b>
@@ -177,27 +130,12 @@ public class Service {
 	 * Fired when the bound Service instance starts.  Bound service instances are created via Titanium.Android.createService.
 	 * @param start event handler
 	 */
-	public native void addStart(StartHandler start) /*-{
+	public native void addStart(com.pmt.wrap.titanium.sys.events.TitaniumAndroidServiceStartHandler start) /*-{
 		this.@com.pmt.wrap.titanium.android.Service::handler.addEventListener('start', function(source, type) {
-			start.@com.pmt.wrap.titanium.android.Service.StartHandler::start(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			start.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidServiceStartHandler::start(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>stop</b>
-	 * <p>
-	 * Fired when the bound Service instance stops, meaning Titanium.Android.Service.stop or Titanium.Android.stopService has been called and there are no more bound, un-stopped clients.
-	 */
-	public interface StopHandler {
-		/**
-		 * <b>stop</b>
-		 * <p>
-		 * Fired when the bound Service instance stops, meaning Titanium.Android.Service.stop or Titanium.Android.stopService has been called and there are no more bound, un-stopped clients.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void stop(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>stop</b>
@@ -205,9 +143,9 @@ public class Service {
 	 * Fired when the bound Service instance stops, meaning Titanium.Android.Service.stop or Titanium.Android.stopService has been called and there are no more bound, un-stopped clients.
 	 * @param stop event handler
 	 */
-	public native void addStop(StopHandler stop) /*-{
+	public native void addStop(com.pmt.wrap.titanium.sys.events.TitaniumAndroidServiceStopHandler stop) /*-{
 		this.@com.pmt.wrap.titanium.android.Service::handler.addEventListener('stop', function(source, type) {
-			stop.@com.pmt.wrap.titanium.android.Service.StopHandler::stop(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			stop.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidServiceStopHandler::stop(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
 }

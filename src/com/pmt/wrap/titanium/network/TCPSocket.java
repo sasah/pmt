@@ -188,24 +188,7 @@ public class TCPSocket {
 	 public native void write(JavaScriptObject data, int sendTo) /*-{
 		return this.@com.pmt.wrap.titanium.network.TCPSocket::handler.write(data, sendTo);
 	}-*/;
-
-	/**
-	 * <b>read</b>
-	 * <p>
-	 * new data was read off the socket
-	 */
-	public interface ReadHandler {
-		/**
-		 * <b>read</b>
-		 * <p>
-		 * new data was read off the socket
-		 * @param source the source object that fired the event
-		 * @param data a blob representing the data read, can be interpreted via toString
-		 * @param from the reference for the socket that data was retrieved from
-		 * @param type the name of the event fired
-		 */
-		void read(JavaScriptObject source, JavaScriptObject data, JavaScriptObject from, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>read</b>
@@ -213,29 +196,12 @@ public class TCPSocket {
 	 * new data was read off the socket
 	 * @param read event handler
 	 */
-	public native void addRead(ReadHandler read) /*-{
+	public native void addRead(com.pmt.wrap.titanium.sys.events.TitaniumNetworkTCPSocketReadHandler read) /*-{
 		this.@com.pmt.wrap.titanium.network.TCPSocket::handler.addEventListener('read', function(source, data, from, type) {
-			read.@com.pmt.wrap.titanium.network.TCPSocket.ReadHandler::read(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, data, from, type);
+			read.@com.pmt.wrap.titanium.sys.events.TitaniumNetworkTCPSocketReadHandler::read(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, data, from, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>readError</b>
-	 * <p>
-	 * an error occured when reading
-	 */
-	public interface ReadErrorHandler {
-		/**
-		 * <b>readError</b>
-		 * <p>
-		 * an error occured when reading
-		 * @param source the source object that fired the event
-		 * @param error a description of the error
-		 * @param code the BSD socket error code
-		 * @param type the name of the event fired
-		 */
-		void readError(JavaScriptObject source, JavaScriptObject error, JavaScriptObject code, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>readError</b>
@@ -243,29 +209,12 @@ public class TCPSocket {
 	 * an error occured when reading
 	 * @param readError event handler
 	 */
-	public native void addReadError(ReadErrorHandler readError) /*-{
+	public native void addReadError(com.pmt.wrap.titanium.sys.events.TitaniumNetworkTCPSocketReadErrorHandler readError) /*-{
 		this.@com.pmt.wrap.titanium.network.TCPSocket::handler.addEventListener('readError', function(source, error, code, type) {
-			readError.@com.pmt.wrap.titanium.network.TCPSocket.ReadErrorHandler::readError(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, error, code, type);
+			readError.@com.pmt.wrap.titanium.sys.events.TitaniumNetworkTCPSocketReadErrorHandler::readError(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, error, code, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>writeError</b>
-	 * <p>
-	 * an error occured when writing
-	 */
-	public interface WriteErrorHandler {
-		/**
-		 * <b>writeError</b>
-		 * <p>
-		 * an error occured when writing
-		 * @param source the source object that fired the event
-		 * @param error a description of the error
-		 * @param code the BSD socket error code
-		 * @param type the name of the event fired
-		 */
-		void writeError(JavaScriptObject source, JavaScriptObject error, JavaScriptObject code, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>writeError</b>
@@ -273,9 +222,9 @@ public class TCPSocket {
 	 * an error occured when writing
 	 * @param writeError event handler
 	 */
-	public native void addWriteError(WriteErrorHandler writeError) /*-{
+	public native void addWriteError(com.pmt.wrap.titanium.sys.events.TitaniumNetworkTCPSocketWriteErrorHandler writeError) /*-{
 		this.@com.pmt.wrap.titanium.network.TCPSocket::handler.addEventListener('writeError', function(source, error, code, type) {
-			writeError.@com.pmt.wrap.titanium.network.TCPSocket.WriteErrorHandler::writeError(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, error, code, type);
+			writeError.@com.pmt.wrap.titanium.sys.events.TitaniumNetworkTCPSocketWriteErrorHandler::writeError(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, error, code, type);
 		});
 	}-*/;
 }

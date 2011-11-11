@@ -94,7 +94,7 @@ public class Menu {
 	 * locate a Titanium.Android.MenuItem
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param item (object) integer itemId or <a href="Titanium.Android.MenuItem.html">Titanium.Android.MenuItem</a>
+	 * @param item (object) integer itemId or Titanium.Android.MenuItem
 	 * @return <a href="Titanium.Android.MenuItem.html">Titanium.Android.MenuItem</a>
 	 */
 	 public native JavaScriptObject findItem(JavaScriptObject item) /*-{

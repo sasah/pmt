@@ -1850,8 +1850,8 @@ public class Android {
 	 * Create a Titanium.Android.PendingIntent to be used inside a Titanium.Android.Notification
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) The Intent that will be executed
-	 * @param flags (int) (optional, default: 0) Can be any of <a href="Titanium.Android.FLAG_CANCEL_CURRENT.html">Titanium.Android.FLAG_CANCEL_CURRENT</a>, <a href="Titanium.Android.FLAG_NO_CREATE.html">Titanium.Android.FLAG_NO_CREATE</a>, <a href="Titanium.Android.FLAG_ONE_SHOT.html">Titanium.Android.FLAG_ONE_SHOT</a>, <a href="Titanium.Android.FLAG_UPDATE_CURRENT.html">Titanium.Android.FLAG_UPDATE_CURRENT</a>
+	 * @param intent (Titanium.Android.Intent) The Intent that will be executed
+	 * @param flags (int) (optional, default: 0) Can be any of Titanium.Android.FLAG_CANCEL_CURRENT, Titanium.Android.FLAG_NO_CREATE, Titanium.Android.FLAG_ONE_SHOT, Titanium.Android.FLAG_UPDATE_CURRENT
 	 * @return <a href="Titanium.Android.PendingIntent.html">Titanium.Android.PendingIntent</a>
 	 */
 	 public static native JavaScriptObject createPendingIntent(JavaScriptObject intent, int flags) /*-{
@@ -1864,7 +1864,7 @@ public class Android {
 	 * Create a Titanium.Android.Service so you can start/stop it and listen for events from it.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) An Intent created with <a href="Titanium.Android.createServiceIntent-method.html">Titanium.Android.createServiceIntent</a> which specifies the service to be instantiated.
+	 * @param intent (Titanium.Android.Intent) An Intent created with Titanium.Android.createServiceIntent which specifies the service to be instantiated.
 	 * @return <a href="Titanium.Android.Service.html">Titanium.Android.Service</a>
 	 */
 	 public static native JavaScriptObject createService(JavaScriptObject intent) /*-{
@@ -1877,7 +1877,7 @@ public class Android {
 	 * Create an Titanium.Android.Intent to be used to start a Service.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param options (object) Options dictionary -- pass in a <tt>url</tt> option to specify the path to a javascript-based service you create.
+	 * @param options (object) Options dictionary -- pass in a url option to specify the path to a javascript-based service you create.
 	 * @return <a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>
 	 */
 	 public static native JavaScriptObject createServiceIntent(JavaScriptObject options) /*-{
@@ -1904,7 +1904,7 @@ public class Android {
 	 * Check on state of Service.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) An Intent created with <a href="Titanium.Android.createServiceIntent-method.html">Titanium.Android.createServiceIntent</a> which specifies the service to check.
+	 * @param intent (Titanium.Android.Intent) An Intent created with Titanium.Android.createServiceIntent which specifies the service to check.
 	 * @return boolean
 	 */
 	 public static native boolean isServiceRunning(JavaScriptObject intent) /*-{
@@ -1931,7 +1931,7 @@ public class Android {
 	 * Start a simple service
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) An Intent created with <a href="Titanium.Android.createServiceIntent-method.html">Titanium.Android.createServiceIntent</a> which specifies the service to start.
+	 * @param intent (Titanium.Android.Intent) An Intent created with Titanium.Android.createServiceIntent which specifies the service to start.
 	 * @return void
 	 */
 	 public static native void startService(JavaScriptObject intent) /*-{
@@ -1944,7 +1944,7 @@ public class Android {
 	 * Stop a simple service that was started with startService.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) An Intent created with <a href="Titanium.Android.createServiceIntent-method.html">Titanium.Android.createServiceIntent</a> which specifies the service to stop.
+	 * @param intent (Titanium.Android.Intent) An Intent created with Titanium.Android.createServiceIntent which specifies the service to stop.
 	 * @return void
 	 */
 	 public static native void stopService(JavaScriptObject intent) /*-{

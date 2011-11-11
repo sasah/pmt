@@ -1154,29 +1154,7 @@ public class TabGroup {
 	 public native JavaScriptObject toImage(JavaScriptObject f) /*-{
 		return this.@com.pmt.wrap.titanium.ui.TabGroup::handler.toImage(f);
 	}-*/;
-
-	/**
-	 * <b>blur</b>
-	 * <p>
-	 * fired when the tab group loses focus
-	 */
-	public interface BlurHandler {
-		/**
-		 * <b>blur</b>
-		 * <p>
-		 * fired when the tab group loses focus
-		 * @param previousIndex the previous tab index
-		 * @param index the tab index
-		 * @param source the source object that fired the event
-		 * @param tab the tab object
-		 * @param previousTab the previous tab object
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void blur(JavaScriptObject previousIndex, JavaScriptObject index, JavaScriptObject source, JavaScriptObject tab, JavaScriptObject previousTab, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>blur</b>
@@ -1184,30 +1162,12 @@ public class TabGroup {
 	 * fired when the tab group loses focus
 	 * @param blur event handler
 	 */
-	public native void addBlur(BlurHandler blur) /*-{
+	public native void addBlur(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupBlurHandler blur) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('blur', function(previousIndex, index, source, tab, previousTab, type, globalPoint, y, x) {
-			blur.@com.pmt.wrap.titanium.ui.TabGroup.BlurHandler::blur(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(previousIndex, index, source, tab, previousTab, type, globalPoint, y, x);
+			blur.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupBlurHandler::blur(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(previousIndex, index, source, tab, previousTab, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when the device detects a click (longer than touch) against the view
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when the device detects a click (longer than touch) against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void click(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -1215,30 +1175,12 @@ public class TabGroup {
 	 * fired when the device detects a click (longer than touch) against the view
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('click', function(source, type, globalPoint, y, x) {
-			click.@com.pmt.wrap.titanium.ui.TabGroup.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>close</b>
-	 * <p>
-	 * fired when the tab group is closed
-	 */
-	public interface CloseHandler {
-		/**
-		 * <b>close</b>
-		 * <p>
-		 * fired when the tab group is closed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void close(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>close</b>
@@ -1246,30 +1188,12 @@ public class TabGroup {
 	 * fired when the tab group is closed
 	 * @param close event handler
 	 */
-	public native void addClose(CloseHandler close) /*-{
+	public native void addClose(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupCloseHandler close) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('close', function(source, type, globalPoint, y, x) {
-			close.@com.pmt.wrap.titanium.ui.TabGroup.CloseHandler::close(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			close.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupCloseHandler::close(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>dblclick</b>
-	 * <p>
-	 * fired when the device detects a double click against the view
-	 */
-	public interface DblclickHandler {
-		/**
-		 * <b>dblclick</b>
-		 * <p>
-		 * fired when the device detects a double click against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void dblclick(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>dblclick</b>
@@ -1277,30 +1201,12 @@ public class TabGroup {
 	 * fired when the device detects a double click against the view
 	 * @param dblclick event handler
 	 */
-	public native void addDblclick(DblclickHandler dblclick) /*-{
+	public native void addDblclick(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupDblclickHandler dblclick) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('dblclick', function(source, type, globalPoint, y, x) {
-			dblclick.@com.pmt.wrap.titanium.ui.TabGroup.DblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			dblclick.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupDblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>doubletap</b>
-	 * <p>
-	 * fired when the device detects a double tap against the view
-	 */
-	public interface DoubletapHandler {
-		/**
-		 * <b>doubletap</b>
-		 * <p>
-		 * fired when the device detects a double tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void doubletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>doubletap</b>
@@ -1308,34 +1214,12 @@ public class TabGroup {
 	 * fired when the device detects a double tap against the view
 	 * @param doubletap event handler
 	 */
-	public native void addDoubletap(DoubletapHandler doubletap) /*-{
+	public native void addDoubletap(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupDoubletapHandler doubletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('doubletap', function(source, type, globalPoint, y, x) {
-			doubletap.@com.pmt.wrap.titanium.ui.TabGroup.DoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			doubletap.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupDoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>focus</b>
-	 * <p>
-	 * fired when the tab group gains focus
-	 */
-	public interface FocusHandler {
-		/**
-		 * <b>focus</b>
-		 * <p>
-		 * fired when the tab group gains focus
-		 * @param previousIndex the previous tab index
-		 * @param index the tab index
-		 * @param source the source object that fired the event
-		 * @param tab the tab object
-		 * @param previousTab the previous tab object
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void focus(JavaScriptObject previousIndex, JavaScriptObject index, JavaScriptObject source, JavaScriptObject tab, JavaScriptObject previousTab, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>focus</b>
@@ -1343,30 +1227,12 @@ public class TabGroup {
 	 * fired when the tab group gains focus
 	 * @param focus event handler
 	 */
-	public native void addFocus(FocusHandler focus) /*-{
+	public native void addFocus(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupFocusHandler focus) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('focus', function(previousIndex, index, source, tab, previousTab, type, globalPoint, y, x) {
-			focus.@com.pmt.wrap.titanium.ui.TabGroup.FocusHandler::focus(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(previousIndex, index, source, tab, previousTab, type, globalPoint, y, x);
+			focus.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupFocusHandler::focus(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(previousIndex, index, source, tab, previousTab, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>open</b>
-	 * <p>
-	 * fired when the tab group is opened
-	 */
-	public interface OpenHandler {
-		/**
-		 * <b>open</b>
-		 * <p>
-		 * fired when the tab group is opened
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void open(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>open</b>
@@ -1374,30 +1240,12 @@ public class TabGroup {
 	 * fired when the tab group is opened
 	 * @param open event handler
 	 */
-	public native void addOpen(OpenHandler open) /*-{
+	public native void addOpen(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupOpenHandler open) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('open', function(source, type, globalPoint, y, x) {
-			open.@com.pmt.wrap.titanium.ui.TabGroup.OpenHandler::open(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			open.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupOpenHandler::open(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>singletap</b>
-	 * <p>
-	 * fired when the device detects a single tap against the view
-	 */
-	public interface SingletapHandler {
-		/**
-		 * <b>singletap</b>
-		 * <p>
-		 * fired when the device detects a single tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void singletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>singletap</b>
@@ -1405,31 +1253,12 @@ public class TabGroup {
 	 * fired when the device detects a single tap against the view
 	 * @param singletap event handler
 	 */
-	public native void addSingletap(SingletapHandler singletap) /*-{
+	public native void addSingletap(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupSingletapHandler singletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('singletap', function(source, type, globalPoint, y, x) {
-			singletap.@com.pmt.wrap.titanium.ui.TabGroup.SingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			singletap.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupSingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>swipe</b>
-	 * <p>
-	 * fired when the device detects a swipe (left or right) against the view
-	 */
-	public interface SwipeHandler {
-		/**
-		 * <b>swipe</b>
-		 * <p>
-		 * fired when the device detects a swipe (left or right) against the view
-		 * @param source the source object that fired the event
-		 * @param direction direction of the swipe - either left or right
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void swipe(JavaScriptObject source, JavaScriptObject direction, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>swipe</b>
@@ -1437,30 +1266,12 @@ public class TabGroup {
 	 * fired when the device detects a swipe (left or right) against the view
 	 * @param swipe event handler
 	 */
-	public native void addSwipe(SwipeHandler swipe) /*-{
+	public native void addSwipe(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupSwipeHandler swipe) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('swipe', function(source, direction, type, globalPoint, y, x) {
-			swipe.@com.pmt.wrap.titanium.ui.TabGroup.SwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
+			swipe.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupSwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchcancel</b>
-	 * <p>
-	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-	 */
-	public interface TouchcancelHandler {
-		/**
-		 * <b>touchcancel</b>
-		 * <p>
-		 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchcancel(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchcancel</b>
@@ -1468,30 +1279,12 @@ public class TabGroup {
 	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
 	 * @param touchcancel event handler
 	 */
-	public native void addTouchcancel(TouchcancelHandler touchcancel) /*-{
+	public native void addTouchcancel(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchcancelHandler touchcancel) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('touchcancel', function(source, type, globalPoint, y, x) {
-			touchcancel.@com.pmt.wrap.titanium.ui.TabGroup.TouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchcancel.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchend</b>
-	 * <p>
-	 * fired when a touch event is completed
-	 */
-	public interface TouchendHandler {
-		/**
-		 * <b>touchend</b>
-		 * <p>
-		 * fired when a touch event is completed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchend(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchend</b>
@@ -1499,30 +1292,12 @@ public class TabGroup {
 	 * fired when a touch event is completed
 	 * @param touchend event handler
 	 */
-	public native void addTouchend(TouchendHandler touchend) /*-{
+	public native void addTouchend(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchendHandler touchend) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('touchend', function(source, type, globalPoint, y, x) {
-			touchend.@com.pmt.wrap.titanium.ui.TabGroup.TouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchend.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchmove</b>
-	 * <p>
-	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-	 */
-	public interface TouchmoveHandler {
-		/**
-		 * <b>touchmove</b>
-		 * <p>
-		 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchmove(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchmove</b>
@@ -1530,30 +1305,12 @@ public class TabGroup {
 	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
 	 * @param touchmove event handler
 	 */
-	public native void addTouchmove(TouchmoveHandler touchmove) /*-{
+	public native void addTouchmove(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchmoveHandler touchmove) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('touchmove', function(source, type, globalPoint, y, x) {
-			touchmove.@com.pmt.wrap.titanium.ui.TabGroup.TouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchmove.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchstart</b>
-	 * <p>
-	 * fired as soon as the device detects a gesture
-	 */
-	public interface TouchstartHandler {
-		/**
-		 * <b>touchstart</b>
-		 * <p>
-		 * fired as soon as the device detects a gesture
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchstart(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchstart</b>
@@ -1561,30 +1318,12 @@ public class TabGroup {
 	 * fired as soon as the device detects a gesture
 	 * @param touchstart event handler
 	 */
-	public native void addTouchstart(TouchstartHandler touchstart) /*-{
+	public native void addTouchstart(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchstartHandler touchstart) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('touchstart', function(source, type, globalPoint, y, x) {
-			touchstart.@com.pmt.wrap.titanium.ui.TabGroup.TouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchstart.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>twofingertap</b>
-	 * <p>
-	 * fired when the device detects a two-finger tap against the view
-	 */
-	public interface TwofingertapHandler {
-		/**
-		 * <b>twofingertap</b>
-		 * <p>
-		 * fired when the device detects a two-finger tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void twofingertap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>twofingertap</b>
@@ -1592,9 +1331,9 @@ public class TabGroup {
 	 * fired when the device detects a two-finger tap against the view
 	 * @param twofingertap event handler
 	 */
-	public native void addTwofingertap(TwofingertapHandler twofingertap) /*-{
+	public native void addTwofingertap(com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTwofingertapHandler twofingertap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TabGroup::handler.addEventListener('twofingertap', function(source, type, globalPoint, y, x) {
-			twofingertap.@com.pmt.wrap.titanium.ui.TabGroup.TwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			twofingertap.@com.pmt.wrap.titanium.sys.events.TitaniumUITabGroupTwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
 }

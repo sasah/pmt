@@ -1269,31 +1269,7 @@ public class TableViewRow {
 	 public native JavaScriptObject toImage(JavaScriptObject f) /*-{
 		return this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.toImage(f);
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when the device detects a click (longer than touch) against the view
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when the device detects a click (longer than touch) against the view
-		 * @param index table view row index
-		 * @param detail boolean to indicate if the right area was clicked
-		 * @param source the source object that fired the event
-		 * @param rowData table view row data object
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param section table view section object
-		 * @param searchMode boolean to indicate if the table is in search mode
-		 * @param row table view row object
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void click(JavaScriptObject index, JavaScriptObject detail, JavaScriptObject source, JavaScriptObject rowData, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject section, JavaScriptObject searchMode, JavaScriptObject row, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -1301,30 +1277,12 @@ public class TableViewRow {
 	 * fired when the device detects a click (longer than touch) against the view
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('click', function(index, detail, source, rowData, type, globalPoint, y, section, searchMode, row, x) {
-			click.@com.pmt.wrap.titanium.ui.TableViewRow.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(index, detail, source, rowData, type, globalPoint, y, section, searchMode, row, x);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(index, detail, source, rowData, type, globalPoint, y, section, searchMode, row, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>dblclick</b>
-	 * <p>
-	 * fired when the device detects a double click against the view
-	 */
-	public interface DblclickHandler {
-		/**
-		 * <b>dblclick</b>
-		 * <p>
-		 * fired when the device detects a double click against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void dblclick(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>dblclick</b>
@@ -1332,30 +1290,12 @@ public class TableViewRow {
 	 * fired when the device detects a double click against the view
 	 * @param dblclick event handler
 	 */
-	public native void addDblclick(DblclickHandler dblclick) /*-{
+	public native void addDblclick(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowDblclickHandler dblclick) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('dblclick', function(source, type, globalPoint, y, x) {
-			dblclick.@com.pmt.wrap.titanium.ui.TableViewRow.DblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			dblclick.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowDblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>doubletap</b>
-	 * <p>
-	 * fired when the device detects a double tap against the view
-	 */
-	public interface DoubletapHandler {
-		/**
-		 * <b>doubletap</b>
-		 * <p>
-		 * fired when the device detects a double tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void doubletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>doubletap</b>
@@ -1363,30 +1303,12 @@ public class TableViewRow {
 	 * fired when the device detects a double tap against the view
 	 * @param doubletap event handler
 	 */
-	public native void addDoubletap(DoubletapHandler doubletap) /*-{
+	public native void addDoubletap(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowDoubletapHandler doubletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('doubletap', function(source, type, globalPoint, y, x) {
-			doubletap.@com.pmt.wrap.titanium.ui.TableViewRow.DoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			doubletap.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowDoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>singletap</b>
-	 * <p>
-	 * fired when the device detects a single tap against the view
-	 */
-	public interface SingletapHandler {
-		/**
-		 * <b>singletap</b>
-		 * <p>
-		 * fired when the device detects a single tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void singletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>singletap</b>
@@ -1394,31 +1316,12 @@ public class TableViewRow {
 	 * fired when the device detects a single tap against the view
 	 * @param singletap event handler
 	 */
-	public native void addSingletap(SingletapHandler singletap) /*-{
+	public native void addSingletap(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowSingletapHandler singletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('singletap', function(source, type, globalPoint, y, x) {
-			singletap.@com.pmt.wrap.titanium.ui.TableViewRow.SingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			singletap.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowSingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>swipe</b>
-	 * <p>
-	 * fired when the device detects a swipe (left or right) against the view
-	 */
-	public interface SwipeHandler {
-		/**
-		 * <b>swipe</b>
-		 * <p>
-		 * fired when the device detects a swipe (left or right) against the view
-		 * @param source the source object that fired the event
-		 * @param direction direction of the swipe - either left or right
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void swipe(JavaScriptObject source, JavaScriptObject direction, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>swipe</b>
@@ -1426,30 +1329,12 @@ public class TableViewRow {
 	 * fired when the device detects a swipe (left or right) against the view
 	 * @param swipe event handler
 	 */
-	public native void addSwipe(SwipeHandler swipe) /*-{
+	public native void addSwipe(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowSwipeHandler swipe) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('swipe', function(source, direction, type, globalPoint, y, x) {
-			swipe.@com.pmt.wrap.titanium.ui.TableViewRow.SwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
+			swipe.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowSwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchcancel</b>
-	 * <p>
-	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-	 */
-	public interface TouchcancelHandler {
-		/**
-		 * <b>touchcancel</b>
-		 * <p>
-		 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchcancel(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchcancel</b>
@@ -1457,30 +1342,12 @@ public class TableViewRow {
 	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
 	 * @param touchcancel event handler
 	 */
-	public native void addTouchcancel(TouchcancelHandler touchcancel) /*-{
+	public native void addTouchcancel(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchcancelHandler touchcancel) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('touchcancel', function(source, type, globalPoint, y, x) {
-			touchcancel.@com.pmt.wrap.titanium.ui.TableViewRow.TouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchcancel.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchend</b>
-	 * <p>
-	 * fired when a touch event is completed
-	 */
-	public interface TouchendHandler {
-		/**
-		 * <b>touchend</b>
-		 * <p>
-		 * fired when a touch event is completed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchend(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchend</b>
@@ -1488,30 +1355,12 @@ public class TableViewRow {
 	 * fired when a touch event is completed
 	 * @param touchend event handler
 	 */
-	public native void addTouchend(TouchendHandler touchend) /*-{
+	public native void addTouchend(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchendHandler touchend) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('touchend', function(source, type, globalPoint, y, x) {
-			touchend.@com.pmt.wrap.titanium.ui.TableViewRow.TouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchend.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchmove</b>
-	 * <p>
-	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-	 */
-	public interface TouchmoveHandler {
-		/**
-		 * <b>touchmove</b>
-		 * <p>
-		 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchmove(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchmove</b>
@@ -1519,30 +1368,12 @@ public class TableViewRow {
 	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
 	 * @param touchmove event handler
 	 */
-	public native void addTouchmove(TouchmoveHandler touchmove) /*-{
+	public native void addTouchmove(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchmoveHandler touchmove) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('touchmove', function(source, type, globalPoint, y, x) {
-			touchmove.@com.pmt.wrap.titanium.ui.TableViewRow.TouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchmove.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchstart</b>
-	 * <p>
-	 * fired as soon as the device detects a gesture
-	 */
-	public interface TouchstartHandler {
-		/**
-		 * <b>touchstart</b>
-		 * <p>
-		 * fired as soon as the device detects a gesture
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchstart(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchstart</b>
@@ -1550,30 +1381,12 @@ public class TableViewRow {
 	 * fired as soon as the device detects a gesture
 	 * @param touchstart event handler
 	 */
-	public native void addTouchstart(TouchstartHandler touchstart) /*-{
+	public native void addTouchstart(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchstartHandler touchstart) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('touchstart', function(source, type, globalPoint, y, x) {
-			touchstart.@com.pmt.wrap.titanium.ui.TableViewRow.TouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchstart.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>twofingertap</b>
-	 * <p>
-	 * fired when the device detects a two-finger tap against the view
-	 */
-	public interface TwofingertapHandler {
-		/**
-		 * <b>twofingertap</b>
-		 * <p>
-		 * fired when the device detects a two-finger tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void twofingertap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>twofingertap</b>
@@ -1581,9 +1394,9 @@ public class TableViewRow {
 	 * fired when the device detects a two-finger tap against the view
 	 * @param twofingertap event handler
 	 */
-	public native void addTwofingertap(TwofingertapHandler twofingertap) /*-{
+	public native void addTwofingertap(com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTwofingertapHandler twofingertap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TableViewRow::handler.addEventListener('twofingertap', function(source, type, globalPoint, y, x) {
-			twofingertap.@com.pmt.wrap.titanium.ui.TableViewRow.TwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			twofingertap.@com.pmt.wrap.titanium.sys.events.TitaniumUITableViewRowTwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
 }

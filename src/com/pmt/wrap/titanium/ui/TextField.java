@@ -1503,26 +1503,7 @@ public class TextField {
 	 public native JavaScriptObject toImage(JavaScriptObject f) /*-{
 		return this.@com.pmt.wrap.titanium.ui.TextField::handler.toImage(f);
 	}-*/;
-
-	/**
-	 * <b>blur</b>
-	 * <p>
-	 * fired when the field loses focus
-	 */
-	public interface BlurHandler {
-		/**
-		 * <b>blur</b>
-		 * <p>
-		 * fired when the field loses focus
-		 * @param source the source object that fired the event
-		 * @param value the value of the field upon blur
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void blur(JavaScriptObject source, JavaScriptObject value, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>blur</b>
@@ -1530,31 +1511,12 @@ public class TextField {
 	 * fired when the field loses focus
 	 * @param blur event handler
 	 */
-	public native void addBlur(BlurHandler blur) /*-{
+	public native void addBlur(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldBlurHandler blur) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('blur', function(source, value, type, globalPoint, y, x) {
-			blur.@com.pmt.wrap.titanium.ui.TextField.BlurHandler::blur(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, value, type, globalPoint, y, x);
+			blur.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldBlurHandler::blur(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, value, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>change</b>
-	 * <p>
-	 * fired when the field value changes
-	 */
-	public interface ChangeHandler {
-		/**
-		 * <b>change</b>
-		 * <p>
-		 * fired when the field value changes
-		 * @param source the source object that fired the event
-		 * @param value the value of the field upon change
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void change(JavaScriptObject source, JavaScriptObject value, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>change</b>
@@ -1562,30 +1524,12 @@ public class TextField {
 	 * fired when the field value changes
 	 * @param change event handler
 	 */
-	public native void addChange(ChangeHandler change) /*-{
+	public native void addChange(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldChangeHandler change) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('change', function(source, value, type, globalPoint, y, x) {
-			change.@com.pmt.wrap.titanium.ui.TextField.ChangeHandler::change(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, value, type, globalPoint, y, x);
+			change.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldChangeHandler::change(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, value, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when the device detects a click (longer than touch) against the view
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when the device detects a click (longer than touch) against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void click(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -1593,30 +1537,12 @@ public class TextField {
 	 * fired when the device detects a click (longer than touch) against the view
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('click', function(source, type, globalPoint, y, x) {
-			click.@com.pmt.wrap.titanium.ui.TextField.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>dblclick</b>
-	 * <p>
-	 * fired when the device detects a double click against the view
-	 */
-	public interface DblclickHandler {
-		/**
-		 * <b>dblclick</b>
-		 * <p>
-		 * fired when the device detects a double click against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void dblclick(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>dblclick</b>
@@ -1624,30 +1550,12 @@ public class TextField {
 	 * fired when the device detects a double click against the view
 	 * @param dblclick event handler
 	 */
-	public native void addDblclick(DblclickHandler dblclick) /*-{
+	public native void addDblclick(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldDblclickHandler dblclick) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('dblclick', function(source, type, globalPoint, y, x) {
-			dblclick.@com.pmt.wrap.titanium.ui.TextField.DblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			dblclick.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldDblclickHandler::dblclick(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>doubletap</b>
-	 * <p>
-	 * fired when the device detects a double tap against the view
-	 */
-	public interface DoubletapHandler {
-		/**
-		 * <b>doubletap</b>
-		 * <p>
-		 * fired when the device detects a double tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void doubletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>doubletap</b>
@@ -1655,31 +1563,12 @@ public class TextField {
 	 * fired when the device detects a double tap against the view
 	 * @param doubletap event handler
 	 */
-	public native void addDoubletap(DoubletapHandler doubletap) /*-{
+	public native void addDoubletap(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldDoubletapHandler doubletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('doubletap', function(source, type, globalPoint, y, x) {
-			doubletap.@com.pmt.wrap.titanium.ui.TextField.DoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			doubletap.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldDoubletapHandler::doubletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>focus</b>
-	 * <p>
-	 * fired when the field gains focus
-	 */
-	public interface FocusHandler {
-		/**
-		 * <b>focus</b>
-		 * <p>
-		 * fired when the field gains focus
-		 * @param source the source object that fired the event
-		 * @param value the value of the field upon focus
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void focus(JavaScriptObject source, JavaScriptObject value, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>focus</b>
@@ -1687,30 +1576,12 @@ public class TextField {
 	 * fired when the field gains focus
 	 * @param focus event handler
 	 */
-	public native void addFocus(FocusHandler focus) /*-{
+	public native void addFocus(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldFocusHandler focus) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('focus', function(source, value, type, globalPoint, y, x) {
-			focus.@com.pmt.wrap.titanium.ui.TextField.FocusHandler::focus(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, value, type, globalPoint, y, x);
+			focus.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldFocusHandler::focus(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, value, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>return</b>
-	 * <p>
-	 * fired when the field return key is pressed on the keyboard
-	 */
-	public interface ReturnHandler {
-		/**
-		 * <b>return</b>
-		 * <p>
-		 * fired when the field return key is pressed on the keyboard
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void returnEvent(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>return</b>
@@ -1718,30 +1589,12 @@ public class TextField {
 	 * fired when the field return key is pressed on the keyboard
 	 * @param returnEvent event handler
 	 */
-	public native void addReturn(ReturnHandler returnEvent) /*-{
+	public native void addReturn(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldReturnHandler returnEvent) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('return', function(source, type, globalPoint, y, x) {
-			returnEvent.@com.pmt.wrap.titanium.ui.TextField.ReturnHandler::returnEvent(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			returnEvent.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldReturnHandler::returnEvent(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>singletap</b>
-	 * <p>
-	 * fired when the device detects a single tap against the view
-	 */
-	public interface SingletapHandler {
-		/**
-		 * <b>singletap</b>
-		 * <p>
-		 * fired when the device detects a single tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void singletap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>singletap</b>
@@ -1749,31 +1602,12 @@ public class TextField {
 	 * fired when the device detects a single tap against the view
 	 * @param singletap event handler
 	 */
-	public native void addSingletap(SingletapHandler singletap) /*-{
+	public native void addSingletap(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldSingletapHandler singletap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('singletap', function(source, type, globalPoint, y, x) {
-			singletap.@com.pmt.wrap.titanium.ui.TextField.SingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			singletap.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldSingletapHandler::singletap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>swipe</b>
-	 * <p>
-	 * fired when the device detects a swipe (left or right) against the view
-	 */
-	public interface SwipeHandler {
-		/**
-		 * <b>swipe</b>
-		 * <p>
-		 * fired when the device detects a swipe (left or right) against the view
-		 * @param source the source object that fired the event
-		 * @param direction direction of the swipe - either left or right
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void swipe(JavaScriptObject source, JavaScriptObject direction, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>swipe</b>
@@ -1781,30 +1615,12 @@ public class TextField {
 	 * fired when the device detects a swipe (left or right) against the view
 	 * @param swipe event handler
 	 */
-	public native void addSwipe(SwipeHandler swipe) /*-{
+	public native void addSwipe(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldSwipeHandler swipe) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('swipe', function(source, direction, type, globalPoint, y, x) {
-			swipe.@com.pmt.wrap.titanium.ui.TextField.SwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
+			swipe.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldSwipeHandler::swipe(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, direction, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchcancel</b>
-	 * <p>
-	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-	 */
-	public interface TouchcancelHandler {
-		/**
-		 * <b>touchcancel</b>
-		 * <p>
-		 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchcancel(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchcancel</b>
@@ -1812,30 +1628,12 @@ public class TextField {
 	 * fired when a touch event is interrupted by the device. this happens in circumenstances such as an incoming call to allow the UI to clean up state.
 	 * @param touchcancel event handler
 	 */
-	public native void addTouchcancel(TouchcancelHandler touchcancel) /*-{
+	public native void addTouchcancel(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchcancelHandler touchcancel) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('touchcancel', function(source, type, globalPoint, y, x) {
-			touchcancel.@com.pmt.wrap.titanium.ui.TextField.TouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchcancel.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchcancelHandler::touchcancel(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchend</b>
-	 * <p>
-	 * fired when a touch event is completed
-	 */
-	public interface TouchendHandler {
-		/**
-		 * <b>touchend</b>
-		 * <p>
-		 * fired when a touch event is completed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchend(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchend</b>
@@ -1843,30 +1641,12 @@ public class TextField {
 	 * fired when a touch event is completed
 	 * @param touchend event handler
 	 */
-	public native void addTouchend(TouchendHandler touchend) /*-{
+	public native void addTouchend(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchendHandler touchend) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('touchend', function(source, type, globalPoint, y, x) {
-			touchend.@com.pmt.wrap.titanium.ui.TextField.TouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchend.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchendHandler::touchend(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchmove</b>
-	 * <p>
-	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-	 */
-	public interface TouchmoveHandler {
-		/**
-		 * <b>touchmove</b>
-		 * <p>
-		 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchmove(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchmove</b>
@@ -1874,30 +1654,12 @@ public class TextField {
 	 * fired as soon as the device detects movement of a touch.  Event coordinates are always relative to the view in which the initial touch occurred
 	 * @param touchmove event handler
 	 */
-	public native void addTouchmove(TouchmoveHandler touchmove) /*-{
+	public native void addTouchmove(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchmoveHandler touchmove) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('touchmove', function(source, type, globalPoint, y, x) {
-			touchmove.@com.pmt.wrap.titanium.ui.TextField.TouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchmove.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchmoveHandler::touchmove(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>touchstart</b>
-	 * <p>
-	 * fired as soon as the device detects a gesture
-	 */
-	public interface TouchstartHandler {
-		/**
-		 * <b>touchstart</b>
-		 * <p>
-		 * fired as soon as the device detects a gesture
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void touchstart(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>touchstart</b>
@@ -1905,30 +1667,12 @@ public class TextField {
 	 * fired as soon as the device detects a gesture
 	 * @param touchstart event handler
 	 */
-	public native void addTouchstart(TouchstartHandler touchstart) /*-{
+	public native void addTouchstart(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchstartHandler touchstart) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('touchstart', function(source, type, globalPoint, y, x) {
-			touchstart.@com.pmt.wrap.titanium.ui.TextField.TouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			touchstart.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTouchstartHandler::touchstart(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
-
-	/**
-	 * <b>twofingertap</b>
-	 * <p>
-	 * fired when the device detects a two-finger tap against the view
-	 */
-	public interface TwofingertapHandler {
-		/**
-		 * <b>twofingertap</b>
-		 * <p>
-		 * fired when the device detects a two-finger tap against the view
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
-		 * @param y the y point of the event, in receiving view coordinates
-		 * @param x the x point of the event in receiving view coordiantes
-		 */
-		void twofingertap(JavaScriptObject source, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>twofingertap</b>
@@ -1936,9 +1680,9 @@ public class TextField {
 	 * fired when the device detects a two-finger tap against the view
 	 * @param twofingertap event handler
 	 */
-	public native void addTwofingertap(TwofingertapHandler twofingertap) /*-{
+	public native void addTwofingertap(com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTwofingertapHandler twofingertap) /*-{
 		this.@com.pmt.wrap.titanium.ui.TextField::handler.addEventListener('twofingertap', function(source, type, globalPoint, y, x) {
-			twofingertap.@com.pmt.wrap.titanium.ui.TextField.TwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
+			twofingertap.@com.pmt.wrap.titanium.sys.events.TitaniumUITextFieldTwofingertapHandler::twofingertap(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, globalPoint, y, x);
 		});
 	}-*/;
 }

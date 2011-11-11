@@ -299,7 +299,7 @@ public class TCP {
 	 * Tells a LISTENING socket to accept a connection request at the top of a listener's request queue when one becomes available. Takes an argument, a box object which assigns callbacks to the created socket. Note that the connected callback is not called (the socket does not "transition to" the CONNECTED state - it's created in the CONNECTED state) on the newly created socket.  The accepted callback is called when a new connection is accepted as a result of calling accept().  If the socket is already flagged to accept the next connection, the existing accept options will be update to use the newly specified options object. Throws an exception if the socket is not in a LISTENING state
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param params (Object) parameters that contain callbacks to be set on next accepted socket. The <tt>timeout</tt> member specifies timeout for connect and write operations.  The <tt>error</tt> member specifies a callback to be invoked if an error occurs.  See the <tt>error</tt> property for details of the callback.
+	 * @param params (Object) parameters that contain callbacks to be set on next accepted socket. The timeout member specifies timeout for connect and write operations.  The error member specifies a callback to be invoked if an error occurs.  See the error property for details of the callback.
 	 * @return void
 	 */
 	 public native void accept(JavaScriptObject params) /*-{

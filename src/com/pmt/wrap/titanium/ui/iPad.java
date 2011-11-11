@@ -115,7 +115,7 @@ public class iPad {
 	 * create and return an instance of Titanium.UI.iPad.Popover
 	 * <p>
 	 * <b>Platforms:</b> ipad, <b>Since:</b> 1.2
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.iPad.Popover.html">Titanium.UI.iPad.Popover</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.iPad.Popover
 	 * @return object
 	 */
 	 public static native JavaScriptObject createPopover(JavaScriptObject parameters) /*-{
@@ -128,7 +128,7 @@ public class iPad {
 	 * create and return an instance of Titanium.UI.iPad.SplitWindow
 	 * <p>
 	 * <b>Platforms:</b> ipad, <b>Since:</b> 1.2
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.iPad.SplitWindow.html">Titanium.UI.iPad.SplitWindow</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.iPad.SplitWindow
 	 * @return object
 	 */
 	 public static native JavaScriptObject createSplitWindow(JavaScriptObject parameters) /*-{

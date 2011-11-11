@@ -30,7 +30,7 @@ public class Android {
 	}
 
 	/**
-	 * <b>R</b> (`Titanium.App.Android.R`) static
+	 * <b>R</b> (Titanium.App.Android.R) static
 	 * <p>
 	 * The R namespace for Application Resources
 	 * <p>

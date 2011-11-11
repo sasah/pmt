@@ -214,7 +214,7 @@ public class Filesystem {
 	 * create and return an instance of Titanium.Filesystem.File
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Filesystem.File.html">Titanium.Filesystem.File</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Filesystem.File
 	 * @return object
 	 */
 	 public static native JavaScriptObject createFile(JavaScriptObject parameters) /*-{

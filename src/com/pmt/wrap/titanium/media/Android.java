@@ -77,8 +77,8 @@ public class Android {
 	 * Use the Android MediaScannerConnection to request immediate scan of particular files so that they become available to the appropriate media providers (Gallery, etc.).
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.7.0
-	 * @param paths (Array<String>) Array of paths to the files you want to be scanned.
-	 * @param mimeTypes (Array<String>) Array of mime types for the files in the paths parameter.  Can be null, in which case the mime type will be inferred at scan time.
+	 * @param paths (Array) Array of paths to the files you want to be scanned.
+	 * @param mimeTypes (Array) Array of mime types for the files in the paths parameter.  Can be null, in which case the mime type will be inferred at scan time.
 	 * @param callback (function) A function that will be called when each file is finished being scanned.  Check the callback argument's "path" and "uri" properties to see the path that was scanned and the resulting content uri.
 	 * @return void
 	 */
@@ -92,7 +92,7 @@ public class Android {
 	 * (Android only) Set the system homescreen wallpaper
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.7.0
-	 * @param image (object) Image blob such as what can be retrieved via callbacks for <a href="Titanium.Media.openPhotoGallery-method.html">Titanium.Media.openPhotoGallery</a> and <a href="Titanium.Media.showCamera-method.html">Titanium.Media.showCamera</a>, as well as from the return value of <a href="Titanium.Filesystem.File.read-method.html">Titanium.Filesystem.File.read</a>.
+	 * @param image (object) Image blob such as what can be retrieved via callbacks for Titanium.Media.openPhotoGallery and Titanium.Media.showCamera, as well as from the return value of Titanium.Filesystem.File.read.
 	 * @param scale (boolean) Set to true if you want the image to be scaled with respect to the system wallpaper desired width, or false to leave it as-is.
 	 * @return void
 	 */

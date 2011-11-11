@@ -114,7 +114,7 @@ public class DB {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param sql (string) the SQL to execute
-	 * @param vararg (Array<Object>) one or more optional variable arguments passed to this function or an array of objects to be replaced in the query using <tt>?</tt> substitution.
+	 * @param vararg (Array) one or more optional variable arguments passed to this function or an array of objects to be replaced in the query using ? substitution.
 	 * @return object
 	 */
 	 public native JavaScriptObject execute(String sql, JavaScriptObject vararg) /*-{

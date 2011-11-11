@@ -211,7 +211,7 @@ public class Buffer {
 	 * appends sourceBuffer to the current buffer.  Buffer is grown dynamically to accommodate the additional data if need be.  returns the number of bytes appended. Optional offset and length arguments to specify from where in -- and how much of -- source buffer to take.
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param sourceBuffer (<a href="Titanium.Buffer-object.html">Titanium.Buffer</a>) buffer to append to current buffer
+	 * @param sourceBuffer (Titanium.Buffer) buffer to append to current buffer
 	 * @param sourceOffset (Number) (Optional) offset to start reading buffer data from
 	 * @param sourceLength (Number) (Optional) length of data to read from buffer
 	 * @return Number
@@ -252,7 +252,7 @@ public class Buffer {
 	 * copies the contents of sourceBuffer into the current buffer at offset.  will not expand buffer if there is not enough room in the current buffer to accomodate all the requested data from sourceBuffer.  returns the number of bytes copied.  Optional sourceOffset and length arguments to specify from where in -- and how much of -- source buffer to take.
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param sourceBuffer (<a href="Titanium.Buffer-object.html">Titanium.Buffer</a>) buffer to copy into current buffer
+	 * @param sourceBuffer (Titanium.Buffer) buffer to copy into current buffer
 	 * @param offset (Number) offset to copy new buffer at
 	 * @param sourceOffset (Number) (Optional) offset of sourceBuffer to copy data from
 	 * @param sourceLength (Number) (Optional) length of data from sourceBuffer to copy
@@ -283,7 +283,7 @@ public class Buffer {
 	 * inserts sourceBuffer into the current buffer at offset.  Buffer is grown to accommodate the new data.  returns the number of bytes inserted.  Optional sourceOffset and length arguments to specify from where in -- and how much of -- source buffer to take.
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param sourceBuffer (<a href="Titanium.Buffer-object.html">Titanium.Buffer</a>) buffer to insert into current buffer
+	 * @param sourceBuffer (Titanium.Buffer) buffer to insert into current buffer
 	 * @param offset (Number) offset to insert new buffer at
 	 * @param sourceOffset (Number) (Optional) offset of sourceBuffer to insert data from
 	 * @param sourceLength (Number) (Optional) length of data from sourceBuffer to insert

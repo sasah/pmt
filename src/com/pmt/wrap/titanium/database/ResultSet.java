@@ -92,7 +92,7 @@ public class ResultSet {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param index (int) column index (which is zero based)
-	 * @param type (int) [optional] one of (<a href="Titanium.Database.FIELD_TYPE_STRING-property.html">Titanium.Database.FIELD_TYPE_STRING</a> | <a href="Titanium.Database.FIELD_TYPE_INT-property.html">Titanium.Database.FIELD_TYPE_INT</a> | <a href="Titanium.Database.FIELD_TYPE_FLOAT-property.html">Titanium.Database.FIELD_TYPE_FLOAT</a> | <a href="Titanium.Database.FIELD_TYPE_DOUBLE-property.html">Titanium.Database.FIELD_TYPE_DOUBLE</a>)
+	 * @param type (int) [optional] one of (Titanium.Database.FIELD_TYPE_STRING | Titanium.Database.FIELD_TYPE_INT | Titanium.Database.FIELD_TYPE_FLOAT | Titanium.Database.FIELD_TYPE_DOUBLE)
 	 * @return object
 	 */
 	 public native JavaScriptObject field(int index, int type) /*-{
@@ -106,7 +106,7 @@ public class ResultSet {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param name (string) column name from SQL query
-	 * @param type (int) [optional] one of (<a href="Titanium.Database.FIELD_TYPE_STRING-property.html">Titanium.Database.FIELD_TYPE_STRING</a> | <a href="Titanium.Database.FIELD_TYPE_INT-property.html">Titanium.Database.FIELD_TYPE_INT</a> | <a href="Titanium.Database.FIELD_TYPE_FLOAT-property.html">Titanium.Database.FIELD_TYPE_FLOAT</a> | <a href="Titanium.Database.FIELD_TYPE_DOUBLE-property.html">Titanium.Database.FIELD_TYPE_DOUBLE</a>)
+	 * @param type (int) [optional] one of (Titanium.Database.FIELD_TYPE_STRING | Titanium.Database.FIELD_TYPE_INT | Titanium.Database.FIELD_TYPE_FLOAT | Titanium.Database.FIELD_TYPE_DOUBLE)
 	 * @return object
 	 */
 	 public native JavaScriptObject fieldByName(String name, int type) /*-{

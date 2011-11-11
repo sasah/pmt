@@ -215,7 +215,7 @@ public class MusicPlayer {
 	 * set the media queue
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.4.0
-	 * @param queue (object) a queue representation to set the player queue to.  Can be any of: A dictionary with an <tt>items</tt> key that is an array of <a href="Titanium.Media.Item-object.html">Titanium.Media.Item</a> objects, an array of <a href="Titanium.Media.Item-object.html">Titanium.Media.Item</a> objects, or a single <a href="Titanium.Media.Item-object.html">Titanium.Media.Item</a> object.
+	 * @param queue (object) a queue representation to set the player queue to.  Can be any of: A dictionary with an items key that is an array of Titanium.Media.Item objects, an array of Titanium.Media.Item objects, or a single Titanium.Media.Item object.
 	 * @return void
 	 */
 	 public native void setQueue(JavaScriptObject queue) /*-{
@@ -281,22 +281,7 @@ public class MusicPlayer {
 	 public native void stopSeeking() /*-{
 		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.stopSeeking();
 	}-*/;
-
-	/**
-	 * <b>playingChange</b>
-	 * <p>
-	 * the currently playing media changed
-	 */
-	public interface PlayingChangeHandler {
-		/**
-		 * <b>playingChange</b>
-		 * <p>
-		 * the currently playing media changed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void playingChange(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>playingChange</b>
@@ -304,27 +289,12 @@ public class MusicPlayer {
 	 * the currently playing media changed
 	 * @param playingChange event handler
 	 */
-	public native void addPlayingChange(PlayingChangeHandler playingChange) /*-{
+	public native void addPlayingChange(com.pmt.wrap.titanium.sys.events.TitaniumMediaMusicPlayerPlayingChangeHandler playingChange) /*-{
 		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.addEventListener('playingChange', function(source, type) {
-			playingChange.@com.pmt.wrap.titanium.media.MusicPlayer.PlayingChangeHandler::playingChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			playingChange.@com.pmt.wrap.titanium.sys.events.TitaniumMediaMusicPlayerPlayingChangeHandler::playingChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>stateChange</b>
-	 * <p>
-	 * the playback state changed
-	 */
-	public interface StateChangeHandler {
-		/**
-		 * <b>stateChange</b>
-		 * <p>
-		 * the playback state changed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void stateChange(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>stateChange</b>
@@ -332,27 +302,12 @@ public class MusicPlayer {
 	 * the playback state changed
 	 * @param stateChange event handler
 	 */
-	public native void addStateChange(StateChangeHandler stateChange) /*-{
+	public native void addStateChange(com.pmt.wrap.titanium.sys.events.TitaniumMediaMusicPlayerStateChangeHandler stateChange) /*-{
 		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.addEventListener('stateChange', function(source, type) {
-			stateChange.@com.pmt.wrap.titanium.media.MusicPlayer.StateChangeHandler::stateChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			stateChange.@com.pmt.wrap.titanium.sys.events.TitaniumMediaMusicPlayerStateChangeHandler::stateChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>volumeChange</b>
-	 * <p>
-	 * the volume changed
-	 */
-	public interface VolumeChangeHandler {
-		/**
-		 * <b>volumeChange</b>
-		 * <p>
-		 * the volume changed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void volumeChange(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>volumeChange</b>
@@ -360,9 +315,9 @@ public class MusicPlayer {
 	 * the volume changed
 	 * @param volumeChange event handler
 	 */
-	public native void addVolumeChange(VolumeChangeHandler volumeChange) /*-{
+	public native void addVolumeChange(com.pmt.wrap.titanium.sys.events.TitaniumMediaMusicPlayerVolumeChangeHandler volumeChange) /*-{
 		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.addEventListener('volumeChange', function(source, type) {
-			volumeChange.@com.pmt.wrap.titanium.media.MusicPlayer.VolumeChangeHandler::volumeChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			volumeChange.@com.pmt.wrap.titanium.sys.events.TitaniumMediaMusicPlayerVolumeChangeHandler::volumeChange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
 }

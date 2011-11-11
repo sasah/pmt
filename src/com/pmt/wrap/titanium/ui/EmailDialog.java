@@ -286,7 +286,7 @@ public class EmailDialog {
 	 * open the email dialog. the email dialog itself is a modal window
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.8
-	 * @param properties (object) object of animation properties. pass <tt>animated</tt> property (as boolean) to indicate if the dialog should be animated on open.
+	 * @param properties (object) object of animation properties. pass animated property (as boolean) to indicate if the dialog should be animated on open.
 	 * @return void
 	 */
 	 public native void open(JavaScriptObject properties) /*-{
@@ -306,25 +306,7 @@ public class EmailDialog {
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>complete</b>
-	 * <p>
-	 * fired when the email dialog has completed sending the email
-	 */
-	public interface CompleteHandler {
-		/**
-		 * <b>complete</b>
-		 * <p>
-		 * fired when the email dialog has completed sending the email
-		 * @param result result status either as SENT, SAVED, CANCELLED or FAILED. (Note: Android result will be SENT even if user discards or saves the message.  SAVED and CANCELLED are not supported on Android.)
-		 * @param source the source object that fired the event
-		 * @param error string message of the error or null if successfully sent
-		 * @param type the name of the event fired
-		 * @param success boolean to indicate if the email was successfully sent
-		 */
-		void complete(JavaScriptObject result, JavaScriptObject source, JavaScriptObject error, JavaScriptObject type, JavaScriptObject success);
-	}
+	
 
 	/**
 	 * <b>complete</b>
@@ -332,9 +314,9 @@ public class EmailDialog {
 	 * fired when the email dialog has completed sending the email
 	 * @param complete event handler
 	 */
-	public native void addComplete(CompleteHandler complete) /*-{
+	public native void addComplete(com.pmt.wrap.titanium.sys.events.TitaniumUIEmailDialogCompleteHandler complete) /*-{
 		this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.addEventListener('complete', function(result, source, error, type, success) {
-			complete.@com.pmt.wrap.titanium.ui.EmailDialog.CompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(result, source, error, type, success);
+			complete.@com.pmt.wrap.titanium.sys.events.TitaniumUIEmailDialogCompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(result, source, error, type, success);
 		});
 	}-*/;
 }

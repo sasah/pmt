@@ -123,7 +123,7 @@ public class Calendar {
 	 * Add an event to the calendar. Returns the created Titanium.Android.Calendar.Event.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param properties (object) An object defining the properties of the event.  These correspond to properties of <a href="Titanium.Android.Calendar.Event.html">Titanium.Android.Calendar.Event</a>.
+	 * @param properties (object) An object defining the properties of the event.  These correspond to properties of Titanium.Android.Calendar.Event.
 	 * @return object
 	 */
 	 public native JavaScriptObject createEvent(JavaScriptObject properties) /*-{

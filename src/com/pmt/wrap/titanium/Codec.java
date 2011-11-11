@@ -225,7 +225,7 @@ public class Codec {
 	 * Decodes the source buffer (starting at the optional position) into a number using the passed in data type.  Throws an Exception if source is null, or position is greater than source.length
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param options (Object) decodeNumber named options.  These are: <tt>source</tt>, the <a href="Titanium.Buffer-object.html">Titanium.Buffer</a> to decode.  <tt>type</tt>, the encoding type to use, which must be one of <a href="Titanium.Codec.TYPE_BYTE-property.html">Titanium.Codec.TYPE_BYTE</a>, <a href="Titanium.Codec.TYPE_SHORT-property.html">Titanium.Codec.TYPE_SHORT</a>, <a href="Titanium.Codec.TYPE_INT-property.html">Titanium.Codec.TYPE_INT</a>, <a href="Titanium.Codec.TYPE_FLOAT-property.html">Titanium.Codec.TYPE_FLOAT</a>, <a href="Titanium.Codec.TYPE_LONG-property.html">Titanium.Codec.TYPE_LONG</a>, or <a href="Titanium.Codec.TYPE_DOUBLE-property.html">Titanium.Codec.TYPE_DOUBLE</a>.  <tt>position</tt>, the position in <tt>source</tt> to start at (optional, default is 0).  <tt>byteOrder</tt>, the byte order to decode with (optional, default is <a href="Titanium.Codec.getNativeByteOrder-method.html">Titanium.Codec.getNativeByteOrder</a>).
+	 * @param options (Object) decodeNumber named options.  These are: source, the Titanium.Buffer to decode.  type, the encoding type to use, which must be one of Titanium.Codec.TYPE_BYTE, Titanium.Codec.TYPE_SHORT, Titanium.Codec.TYPE_INT, Titanium.Codec.TYPE_FLOAT, Titanium.Codec.TYPE_LONG, or Titanium.Codec.TYPE_DOUBLE.  position, the position in source to start at (optional, default is 0).  byteOrder, the byte order to decode with (optional, default is Titanium.Codec.getNativeByteOrder).
 	 * @return Number
 	 */
 	 public static native double decodeNumber(JavaScriptObject options) /*-{
@@ -238,7 +238,7 @@ public class Codec {
 	 * Decodes the source buffer into a String starting at position, with length bytes, using the supplied character set charset. Throws an Exception if charset is not a valid character set, source is null, or either position, length, or position+length is greater than source.length.
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param options (Object) decodeString named options.  These are: <tt>source</tt>, the <a href="Titanium.Buffer-object.html">Titanium.Buffer</a> to decode.  <tt>position</tt>, the position to start decoding (optional, default is 0).  <tt>length</tt>, the number of bytes to decode (optional, default is the length of the source buffer).  <tt>charset</tt>, the character set to decode from (optional, default is <a href="Titanium.Codec.CHARSET_UTF8-property.html">Titanium.Codec.CHARSET_UTF8</a>).
+	 * @param options (Object) decodeString named options.  These are: source, the Titanium.Buffer to decode.  position, the position to start decoding (optional, default is 0).  length, the number of bytes to decode (optional, default is the length of the source buffer).  charset, the character set to decode from (optional, default is Titanium.Codec.CHARSET_UTF8).
 	 * @return String
 	 */
 	 public static native String decodeString(JavaScriptObject options) /*-{
@@ -251,7 +251,7 @@ public class Codec {
 	 * Encodes the Number source into dest using the passed in data type.  Returns the position after the encoded number in dest.'
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param options (Object) encodeNumber named options.  These are: <tt>source</tt>, the number to be encoded.  <tt>dest</tt>, the destination <a href="Titanium.Buffer-object.html">Titanium.Buffer</a> into which the encoded number will be written.  <tt>type</tt>, the encoding type to use, which must be one of <a href="Titanium.Codec.TYPE_BYTE-property.html">Titanium.Codec.TYPE_BYTE</a>, <a href="Titanium.Codec.TYPE_SHORT-property.html">Titanium.Codec.TYPE_SHORT</a>, <a href="Titanium.Codec.TYPE_INT-property.html">Titanium.Codec.TYPE_INT</a>, <a href="Titanium.Codec.TYPE_FLOAT-property.html">Titanium.Codec.TYPE_FLOAT</a>, <a href="Titanium.Codec.TYPE_LONG-property.html">Titanium.Codec.TYPE_LONG</a>, or <a href="Titanium.Codec.TYPE_DOUBLE-property.html">Titanium.Codec.TYPE_DOUBLE</a>.  <tt>position</tt>, the position in dest to set the encoded data (optional, default is 0).  <tt>byteOrder</tt>, the byte order to encode with (optional, default is <a href="Titanium.Codec.getNativeByteOrder-method.html">Titanium.Codec.getNativeByteOrder</a>).
+	 * @param options (Object) encodeNumber named options.  These are: source, the number to be encoded.  dest, the destination Titanium.Buffer into which the encoded number will be written.  type, the encoding type to use, which must be one of Titanium.Codec.TYPE_BYTE, Titanium.Codec.TYPE_SHORT, Titanium.Codec.TYPE_INT, Titanium.Codec.TYPE_FLOAT, Titanium.Codec.TYPE_LONG, or Titanium.Codec.TYPE_DOUBLE.  position, the position in dest to set the encoded data (optional, default is 0).  byteOrder, the byte order to encode with (optional, default is Titanium.Codec.getNativeByteOrder).
 	 * @return Number
 	 */
 	 public static native double encodeNumber(JavaScriptObject options) /*-{
@@ -264,7 +264,7 @@ public class Codec {
 	 * Encodes the String source into dest using charset. Returns the position after the encoded String inside dest.' Throws an Exception if charset is not a valid character set, source is null, or either sourcePosition, sourceLength, or sourcePosition+sourceLength is greater than source.length.
 	 * <p>
 	 * <b>Platforms:</b> iphone android ipad, <b>Since:</b> 1.7
-	 * @param options (Object) encodeString named options.  These are: <tt>source</tt>, the source string to encode.  <tt>dest</tt>, the destination <a href="Titanium.Buffer-object.html">Titanium.Buffer</a>.  <tt>destPosition</tt>, the position in <tt>dest</tt> to set the encoded string (optional, default is 0).  <tt>sourcePosition</tt>, the position in <tt>source</tt> to start encoding (optional, default is 0).  <tt>sourceLength</tt>, the number of characters in <tt>source</tt> to encode (optional, default is the length of the source).  <tt>charset</tt>, the character set to use when encoding this string to bytes (optional, default is <a href="Titanium.Codec.CHARSET_UTF8-property.html">Titanium.Codec.CHARSET_UTF8</a>).
+	 * @param options (Object) encodeString named options.  These are: source, the source string to encode.  dest, the destination Titanium.Buffer.  destPosition, the position in dest to set the encoded string (optional, default is 0).  sourcePosition, the position in source to start encoding (optional, default is 0).  sourceLength, the number of characters in source to encode (optional, default is the length of the source).  charset, the character set to use when encoding this string to bytes (optional, default is Titanium.Codec.CHARSET_UTF8).
 	 * @return Number
 	 */
 	 public static native double encodeString(JavaScriptObject options) /*-{

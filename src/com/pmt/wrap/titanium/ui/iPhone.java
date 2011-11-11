@@ -225,7 +225,7 @@ public class iPhone {
 	 * create and return an instance of Titanium.UI.iPhone.NavigationGroup
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 0.5
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.iPhone.NavigationGroup.html">Titanium.UI.iPhone.NavigationGroup</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.iPhone.NavigationGroup
 	 * @return object
 	 */
 	 public static native JavaScriptObject createNavigationGroup(JavaScriptObject parameters) /*-{

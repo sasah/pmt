@@ -341,7 +341,7 @@ public class Event {
 	 * create an alert for this event.  Pass a dictionary object containing attributes corresponding to properties of Titanium.Android.Calendar.Alert.  Returns the created alert.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param data (object) Properties for the new alert, corresponding to properties of <a href="Titanium.Android.Calendar.Alert-object.html">Titanium.Android.Calendar.Alert</a>.
+	 * @param data (object) Properties for the new alert, corresponding to properties of Titanium.Android.Calendar.Alert.
 	 * @return object
 	 */
 	 public native JavaScriptObject createAlert(JavaScriptObject data) /*-{
@@ -354,7 +354,7 @@ public class Event {
 	 * create a reminder for this event.  Pass a dictionary object containing attributes corresponding to properties of Titanium.Android.Calendar.Reminder.  Returns the created Reminder.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param data (object) Properties for the new reminder, corresponding to properties of <a href="Titanium.Android.Calendar.Reminder.html">Titanium.Android.Calendar.Reminder</a>.
+	 * @param data (object) Properties for the new reminder, corresponding to properties of Titanium.Android.Calendar.Reminder.
 	 * @return object
 	 */
 	 public native JavaScriptObject createReminder(JavaScriptObject data) /*-{

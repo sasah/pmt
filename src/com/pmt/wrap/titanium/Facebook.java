@@ -215,7 +215,7 @@ public class Facebook {
 	 * create and return an instance of Titanium.Facebook.LoginButton
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.8
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Facebook.LoginButton.html">Titanium.Facebook.LoginButton</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Facebook.LoginButton
 	 * @return object
 	 */
 	 public static native JavaScriptObject createLoginButton(JavaScriptObject parameters) /*-{
@@ -307,27 +307,7 @@ public class Facebook {
 	 public static native void requestWithGraphPath(String path, JavaScriptObject params, String httpMethod, JavaScriptObject callback) /*-{
 		return Titanium.Facebook.requestWithGraphPath(path, params, httpMethod, callback);
 	}-*/;
-
-	/**
-	 * <b>login</b>
-	 * <p>
-	 * fired at session login
-	 */
-	public interface LoginHandler {
-		/**
-		 * <b>login</b>
-		 * <p>
-		 * fired at session login
-		 * @param uid the user id returned by Facebook if the login was successful.
-		 * @param source the source object that fired the event
-		 * @param error error message if success was false
-		 * @param data data returned by Facebook when we query for the uid (using graph path "me") after successful login.  Data is in JSON format.  Includes information such as user name, locale and gender.
-		 * @param cancelled true if the user cancelled the request by closing the dialog
-		 * @param type the name of the event fired
-		 * @param success true if the login was successful
-		 */
-		void login(JavaScriptObject uid, JavaScriptObject source, JavaScriptObject error, JavaScriptObject data, JavaScriptObject cancelled, JavaScriptObject type, JavaScriptObject success);
-	}
+	
 
 	/**
 	 * <b>login</b>
@@ -335,27 +315,12 @@ public class Facebook {
 	 * fired at session login
 	 * @param login event handler
 	 */
-	public native void addLogin(LoginHandler login) /*-{
+	public native void addLogin(com.pmt.wrap.titanium.sys.events.TitaniumFacebookLoginHandler login) /*-{
 		this.@com.pmt.wrap.titanium.Facebook::handler.addEventListener('login', function(uid, source, error, data, cancelled, type, success) {
-			login.@com.pmt.wrap.titanium.Facebook.LoginHandler::login(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(uid, source, error, data, cancelled, type, success);
+			login.@com.pmt.wrap.titanium.sys.events.TitaniumFacebookLoginHandler::login(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(uid, source, error, data, cancelled, type, success);
 		});
 	}-*/;
-
-	/**
-	 * <b>logout</b>
-	 * <p>
-	 * fired at session logout
-	 */
-	public interface LogoutHandler {
-		/**
-		 * <b>logout</b>
-		 * <p>
-		 * fired at session logout
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void logout(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>logout</b>
@@ -363,9 +328,9 @@ public class Facebook {
 	 * fired at session logout
 	 * @param logout event handler
 	 */
-	public native void addLogout(LogoutHandler logout) /*-{
+	public native void addLogout(com.pmt.wrap.titanium.sys.events.TitaniumFacebookLogoutHandler logout) /*-{
 		this.@com.pmt.wrap.titanium.Facebook::handler.addEventListener('logout', function(source, type) {
-			logout.@com.pmt.wrap.titanium.Facebook.LogoutHandler::logout(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			logout.@com.pmt.wrap.titanium.sys.events.TitaniumFacebookLogoutHandler::logout(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
 }

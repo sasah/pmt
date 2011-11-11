@@ -30,7 +30,7 @@ public class Activity {
 	}
 
 	/**
-	 * <b>intent</b> (`Titanium.Android.Intent`)
+	 * <b>intent</b> (Titanium.Android.Intent)
 	 * <p>
 	 * The Intent that was used to start this Activity
 	 * <p>
@@ -41,7 +41,7 @@ public class Activity {
 	}-*/;
 
 	/**
-	 * <b>intent</b> (`Titanium.Android.Intent`)
+	 * <b>intent</b> (Titanium.Android.Intent)
 	 * <p>
 	 * The Intent that was used to start this Activity
 	 * <p>
@@ -148,7 +148,7 @@ public class Activity {
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
 	 * @param resourceId (int) A Resource ID from the Application or Android.
-	 * @param format (Array<Object>) Optional format arguments for the String resource
+	 * @param format (Array) Optional format arguments for the String resource
 	 * @return string
 	 */
 	 public native String getString(int resourceId, JavaScriptObject format) /*-{
@@ -161,7 +161,7 @@ public class Activity {
 	 * Set the requested Activity orientation. Also see Android's documentation for setRequestedOrientation
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param orientation (int) Can be one of <a href="Titanium.Android.SCREEN_ORIENTATION_BEHIND.html">Titanium.Android.SCREEN_ORIENTATION_BEHIND</a>, <a href="Titanium.Android.SCREEN_ORIENTATION_LANDSCAPE.html">Titanium.Android.SCREEN_ORIENTATION_LANDSCAPE</a>, <a href="Titanium.Android.SCREEN_ORIENTATION_NOSENSOR.html">Titanium.Android.SCREEN_ORIENTATION_NOSENSOR</a>, <a href="Titanium.Android.SCREEN_ORIENTATION_PORTRAIT.html">Titanium.Android.SCREEN_ORIENTATION_PORTRAIT</a>, <a href="Titanium.Android.SCREEN_ORIENTATION_SENSOR.html">Titanium.Android.SCREEN_ORIENTATION_SENSOR</a>, <a href="Titanium.Android.SCREEN_ORIENTATION_UNSPECIFIED.html">Titanium.Android.SCREEN_ORIENTATION_UNSPECIFIED</a>, <a href="Titanium.Android.SCREEN_ORIENTATION_USER.html">Titanium.Android.SCREEN_ORIENTATION_USER</a>
+	 * @param orientation (int) Can be one of Titanium.Android.SCREEN_ORIENTATION_BEHIND, Titanium.Android.SCREEN_ORIENTATION_LANDSCAPE, Titanium.Android.SCREEN_ORIENTATION_NOSENSOR, Titanium.Android.SCREEN_ORIENTATION_PORTRAIT, Titanium.Android.SCREEN_ORIENTATION_SENSOR, Titanium.Android.SCREEN_ORIENTATION_UNSPECIFIED, Titanium.Android.SCREEN_ORIENTATION_USER
 	 * @return void
 	 */
 	 public native void setRequestedOrientationMethod(int orientation) /*-{
@@ -174,8 +174,8 @@ public class Activity {
 	 * Sets the result of this Activity using an Intent. This should be used in the case when the Activity responds to startActivityForResult. Also see Android's documentation for setResult
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param resultCode (int) The result code for this Activity. Must be one of <a href="Titanium.Android.RESULT_OK.html">Titanium.Android.RESULT_OK</a>, <a href="Titanium.Android.RESULT_CANCELED.html">Titanium.Android.RESULT_CANCELED</a>, <a href="Titanium.Android.RESULT_FIRST_USER.html">Titanium.Android.RESULT_FIRST_USER</a>
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) An optional <a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a> with extra result data
+	 * @param resultCode (int) The result code for this Activity. Must be one of Titanium.Android.RESULT_OK, Titanium.Android.RESULT_CANCELED, Titanium.Android.RESULT_FIRST_USER
+	 * @param intent (Titanium.Android.Intent) An optional Titanium.Android.Intent with extra result data
 	 * @return void
 	 */
 	 public native void setResult(int resultCode, JavaScriptObject intent) /*-{
@@ -188,7 +188,7 @@ public class Activity {
 	 * Starts a new Activity, using the passed in Intent as the description. Also see Android's documentation for startActivity
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) Description of the Activity to start
+	 * @param intent (Titanium.Android.Intent) Description of the Activity to start
 	 * @return void
 	 */
 	 public native void startActivity(JavaScriptObject intent) /*-{
@@ -201,29 +201,14 @@ public class Activity {
 	 * The same as startActivity, but also accepts a callback function for handling the result of the started Activity. Also see Android's documentation for startActivityForResult
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param intent (<a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>) Description of the Activity to start
-	 * @param callback (function) A callback function that is executed when the Activity has set it's result. See example in <a href="Titanium.Android.Activity-object.html">Titanium.Android.Activity</a>.
+	 * @param intent (Titanium.Android.Intent) Description of the Activity to start
+	 * @param callback (function) A callback function that is executed when the Activity has set it's result. See example in Titanium.Android.Activity.
 	 * @return void
 	 */
 	 public native void startActivityForResult(JavaScriptObject intent, JavaScriptObject callback) /*-{
 		return this.@com.pmt.wrap.titanium.android.Activity::handler.startActivityForResult(intent, callback);
 	}-*/;
-
-	/**
-	 * <b>create</b>
-	 * <p>
-	 * Fired from the Activity's onCreate
-	 */
-	public interface CreateHandler {
-		/**
-		 * <b>create</b>
-		 * <p>
-		 * Fired from the Activity's onCreate
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void create(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>create</b>
@@ -231,27 +216,12 @@ public class Activity {
 	 * Fired from the Activity's onCreate
 	 * @param create event handler
 	 */
-	public native void addCreate(CreateHandler create) /*-{
+	public native void addCreate(com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityCreateHandler create) /*-{
 		this.@com.pmt.wrap.titanium.android.Activity::handler.addEventListener('create', function(source, type) {
-			create.@com.pmt.wrap.titanium.android.Activity.CreateHandler::create(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			create.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityCreateHandler::create(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>destroy</b>
-	 * <p>
-	 * Fired from the Activity's onDestroy
-	 */
-	public interface DestroyHandler {
-		/**
-		 * <b>destroy</b>
-		 * <p>
-		 * Fired from the Activity's onDestroy
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void destroy(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>destroy</b>
@@ -259,28 +229,12 @@ public class Activity {
 	 * Fired from the Activity's onDestroy
 	 * @param destroy event handler
 	 */
-	public native void addDestroy(DestroyHandler destroy) /*-{
+	public native void addDestroy(com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityDestroyHandler destroy) /*-{
 		this.@com.pmt.wrap.titanium.android.Activity::handler.addEventListener('destroy', function(source, type) {
-			destroy.@com.pmt.wrap.titanium.android.Activity.DestroyHandler::destroy(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			destroy.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityDestroyHandler::destroy(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>newIntent</b>
-	 * <p>
-	 * Fired when the application is already running and certain flags are set in the Intent. Fired from the Activity's onNewIntent
-	 */
-	public interface NewIntentHandler {
-		/**
-		 * <b>newIntent</b>
-		 * <p>
-		 * Fired when the application is already running and certain flags are set in the Intent. Fired from the Activity's onNewIntent
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param intent the Titanium.Android.Intent passed to the native onNewIntent method.
-		 */
-		void newIntent(JavaScriptObject source, JavaScriptObject type, JavaScriptObject intent);
-	}
+	
 
 	/**
 	 * <b>newIntent</b>
@@ -288,27 +242,12 @@ public class Activity {
 	 * Fired when the application is already running and certain flags are set in the Intent. Fired from the Activity's onNewIntent
 	 * @param newIntent event handler
 	 */
-	public native void addNewIntent(NewIntentHandler newIntent) /*-{
+	public native void addNewIntent(com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityNewIntentHandler newIntent) /*-{
 		this.@com.pmt.wrap.titanium.android.Activity::handler.addEventListener('newIntent', function(source, type, intent) {
-			newIntent.@com.pmt.wrap.titanium.android.Activity.NewIntentHandler::newIntent(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, intent);
+			newIntent.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityNewIntentHandler::newIntent(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, intent);
 		});
 	}-*/;
-
-	/**
-	 * <b>pause</b>
-	 * <p>
-	 * Fired from the Activity's onPause
-	 */
-	public interface PauseHandler {
-		/**
-		 * <b>pause</b>
-		 * <p>
-		 * Fired from the Activity's onPause
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void pause(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>pause</b>
@@ -316,27 +255,12 @@ public class Activity {
 	 * Fired from the Activity's onPause
 	 * @param pause event handler
 	 */
-	public native void addPause(PauseHandler pause) /*-{
+	public native void addPause(com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityPauseHandler pause) /*-{
 		this.@com.pmt.wrap.titanium.android.Activity::handler.addEventListener('pause', function(source, type) {
-			pause.@com.pmt.wrap.titanium.android.Activity.PauseHandler::pause(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			pause.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityPauseHandler::pause(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>resume</b>
-	 * <p>
-	 * Fired from the Activity's onResume
-	 */
-	public interface ResumeHandler {
-		/**
-		 * <b>resume</b>
-		 * <p>
-		 * Fired from the Activity's onResume
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void resume(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>resume</b>
@@ -344,27 +268,12 @@ public class Activity {
 	 * Fired from the Activity's onResume
 	 * @param resume event handler
 	 */
-	public native void addResume(ResumeHandler resume) /*-{
+	public native void addResume(com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityResumeHandler resume) /*-{
 		this.@com.pmt.wrap.titanium.android.Activity::handler.addEventListener('resume', function(source, type) {
-			resume.@com.pmt.wrap.titanium.android.Activity.ResumeHandler::resume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			resume.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityResumeHandler::resume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>start</b>
-	 * <p>
-	 * Fired from the Activity's onStart
-	 */
-	public interface StartHandler {
-		/**
-		 * <b>start</b>
-		 * <p>
-		 * Fired from the Activity's onStart
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void start(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>start</b>
@@ -372,27 +281,12 @@ public class Activity {
 	 * Fired from the Activity's onStart
 	 * @param start event handler
 	 */
-	public native void addStart(StartHandler start) /*-{
+	public native void addStart(com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityStartHandler start) /*-{
 		this.@com.pmt.wrap.titanium.android.Activity::handler.addEventListener('start', function(source, type) {
-			start.@com.pmt.wrap.titanium.android.Activity.StartHandler::start(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			start.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityStartHandler::start(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>stop</b>
-	 * <p>
-	 * Fired from the Activity's onStop
-	 */
-	public interface StopHandler {
-		/**
-		 * <b>stop</b>
-		 * <p>
-		 * Fired from the Activity's onStop
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void stop(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>stop</b>
@@ -400,9 +294,9 @@ public class Activity {
 	 * Fired from the Activity's onStop
 	 * @param stop event handler
 	 */
-	public native void addStop(StopHandler stop) /*-{
+	public native void addStop(com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityStopHandler stop) /*-{
 		this.@com.pmt.wrap.titanium.android.Activity::handler.addEventListener('stop', function(source, type) {
-			stop.@com.pmt.wrap.titanium.android.Activity.StopHandler::stop(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			stop.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidActivityStopHandler::stop(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
 }

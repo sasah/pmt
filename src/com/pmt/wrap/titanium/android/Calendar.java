@@ -269,7 +269,7 @@ public class Calendar {
 	 * create and return an instance of Titanium.Android.Calendar.Alert
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Android.Calendar.Alert.html">Titanium.Android.Calendar.Alert</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Android.Calendar.Alert
 	 * @return object
 	 */
 	 public static native JavaScriptObject createAlert(JavaScriptObject parameters) /*-{
@@ -282,7 +282,7 @@ public class Calendar {
 	 * create and return an instance of Titanium.Android.Calendar.Calendar
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Android.Calendar.Calendar.html">Titanium.Android.Calendar.Calendar</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Android.Calendar.Calendar
 	 * @return object
 	 */
 	 public static native JavaScriptObject createCalendar(JavaScriptObject parameters) /*-{
@@ -295,7 +295,7 @@ public class Calendar {
 	 * create and return an instance of Titanium.Android.Calendar.Event
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Android.Calendar.Event.html">Titanium.Android.Calendar.Event</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Android.Calendar.Event
 	 * @return object
 	 */
 	 public static native JavaScriptObject createEvent(JavaScriptObject parameters) /*-{
@@ -308,7 +308,7 @@ public class Calendar {
 	 * create and return an instance of Titanium.Android.Calendar.Reminder
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Android.Calendar.Reminder.html">Titanium.Android.Calendar.Reminder</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Android.Calendar.Reminder
 	 * @return object
 	 */
 	 public static native JavaScriptObject createReminder(JavaScriptObject parameters) /*-{

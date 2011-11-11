@@ -158,24 +158,7 @@ public class DashboardItem {
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when a Titanium.UI.DashboardItem is clicked
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when a Titanium.UI.DashboardItem is clicked
-		 * @param source the source object that fired the event
-		 * @param location the location object with the properties x and y of where in the parent view the click was
-		 * @param item the Titanium.UI.DashboardItem that was clicked
-		 * @param type the name of the event fired
-		 */
-		void click(JavaScriptObject source, JavaScriptObject location, JavaScriptObject item, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -183,28 +166,12 @@ public class DashboardItem {
 	 * fired when a Titanium.UI.DashboardItem is clicked
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumUIDashboardItemClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.addEventListener('click', function(source, location, item, type) {
-			click.@com.pmt.wrap.titanium.ui.DashboardItem.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, location, item, type);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumUIDashboardItemClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, location, item, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>delete</b>
-	 * <p>
-	 * fired when a  Titanium.UI.DashboardItem is deleted during editings
-	 */
-	public interface DeleteHandler {
-		/**
-		 * <b>delete</b>
-		 * <p>
-		 * fired when a  Titanium.UI.DashboardItem is deleted during editings
-		 * @param source the source object that fired the event
-		 * @param item the Titanium.UI.DashboardItem that was deleted
-		 * @param type the name of the event fired
-		 */
-		void delete(JavaScriptObject source, JavaScriptObject item, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>delete</b>
@@ -212,29 +179,12 @@ public class DashboardItem {
 	 * fired when a  Titanium.UI.DashboardItem is deleted during editings
 	 * @param deleteEvent event handler
 	 */
-	public native void addDelete(DeleteHandler deleteEvent) /*-{
+	public native void addDelete(com.pmt.wrap.titanium.sys.events.TitaniumUIDashboardItemDeleteHandler deleteEvent) /*-{
 		this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.addEventListener('delete', function(source, item, type) {
-			deleteEvent.@com.pmt.wrap.titanium.ui.DashboardItem.DeleteHandler::delete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, item, type);
+			deleteEvent.@com.pmt.wrap.titanium.sys.events.TitaniumUIDashboardItemDeleteHandler::delete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, item, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>move</b>
-	 * <p>
-	 * fired when a  Titanium.UI.DashboardItem is moved during editing
-	 */
-	public interface MoveHandler {
-		/**
-		 * <b>move</b>
-		 * <p>
-		 * fired when a  Titanium.UI.DashboardItem is moved during editing
-		 * @param source the source object that fired the event
-		 * @param items the pending data array in the new order (uncommitted)
-		 * @param item the Titanium.UI.DashboardItem that was moved
-		 * @param type the name of the event fired
-		 */
-		void move(JavaScriptObject source, JavaScriptObject items, JavaScriptObject item, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>move</b>
@@ -242,9 +192,9 @@ public class DashboardItem {
 	 * fired when a  Titanium.UI.DashboardItem is moved during editing
 	 * @param move event handler
 	 */
-	public native void addMove(MoveHandler move) /*-{
+	public native void addMove(com.pmt.wrap.titanium.sys.events.TitaniumUIDashboardItemMoveHandler move) /*-{
 		this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.addEventListener('move', function(source, items, item, type) {
-			move.@com.pmt.wrap.titanium.ui.DashboardItem.MoveHandler::move(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, items, item, type);
+			move.@com.pmt.wrap.titanium.sys.events.TitaniumUIDashboardItemMoveHandler::move(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, items, item, type);
 		});
 	}-*/;
 }

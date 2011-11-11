@@ -510,22 +510,7 @@ public class Animation {
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return this.@com.pmt.wrap.titanium.ui.Animation::handler.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>complete</b>
-	 * <p>
-	 * fired when the animation completes
-	 */
-	public interface CompleteHandler {
-		/**
-		 * <b>complete</b>
-		 * <p>
-		 * fired when the animation completes
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void complete(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>complete</b>
@@ -533,27 +518,12 @@ public class Animation {
 	 * fired when the animation completes
 	 * @param complete event handler
 	 */
-	public native void addComplete(CompleteHandler complete) /*-{
+	public native void addComplete(com.pmt.wrap.titanium.sys.events.TitaniumUIAnimationCompleteHandler complete) /*-{
 		this.@com.pmt.wrap.titanium.ui.Animation::handler.addEventListener('complete', function(source, type) {
-			complete.@com.pmt.wrap.titanium.ui.Animation.CompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			complete.@com.pmt.wrap.titanium.sys.events.TitaniumUIAnimationCompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>start</b>
-	 * <p>
-	 * fired when the animation starts
-	 */
-	public interface StartHandler {
-		/**
-		 * <b>start</b>
-		 * <p>
-		 * fired when the animation starts
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void start(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>start</b>
@@ -561,9 +531,9 @@ public class Animation {
 	 * fired when the animation starts
 	 * @param start event handler
 	 */
-	public native void addStart(StartHandler start) /*-{
+	public native void addStart(com.pmt.wrap.titanium.sys.events.TitaniumUIAnimationStartHandler start) /*-{
 		this.@com.pmt.wrap.titanium.ui.Animation::handler.addEventListener('start', function(source, type) {
-			start.@com.pmt.wrap.titanium.ui.Animation.StartHandler::start(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			start.@com.pmt.wrap.titanium.sys.events.TitaniumUIAnimationStartHandler::start(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
 }

@@ -204,24 +204,7 @@ public class AlertDialog {
 	 public native void show() /*-{
 		return this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.show();
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when a button in the dialog is clicked
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when a button in the dialog is clicked
-		 * @param index the button index that was pressed
-		 * @param source the source object that fired the event
-		 * @param cancel boolean to indicate if the cancel button was pressed
-		 * @param type the name of the event fired
-		 */
-		void click(JavaScriptObject index, JavaScriptObject source, JavaScriptObject cancel, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -229,9 +212,9 @@ public class AlertDialog {
 	 * fired when a button in the dialog is clicked
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumUIAlertDialogClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.addEventListener('click', function(index, source, cancel, type) {
-			click.@com.pmt.wrap.titanium.ui.AlertDialog.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(index, source, cancel, type);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumUIAlertDialogClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(index, source, cancel, type);
 		});
 	}-*/;
 }

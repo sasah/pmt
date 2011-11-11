@@ -194,26 +194,7 @@ public class OptionDialog {
 	 public native void show() /*-{
 		return this.@com.pmt.wrap.titanium.ui.OptionDialog::handler.show();
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when a button in the dialog is clicked
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when a button in the dialog is clicked
-		 * @param index the button index that was pressed
-		 * @param source the source object that fired the event
-		 * @param button boolean to indicate that the index refers to a button on the dialog and not an item. (Android)
-		 * @param destructive the index of the destructive button
-		 * @param cancel the index of the cancel button
-		 * @param type the name of the event fired
-		 */
-		void click(JavaScriptObject index, JavaScriptObject source, JavaScriptObject button, JavaScriptObject destructive, JavaScriptObject cancel, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -221,9 +202,9 @@ public class OptionDialog {
 	 * fired when a button in the dialog is clicked
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumUIOptionDialogClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.ui.OptionDialog::handler.addEventListener('click', function(index, source, button, destructive, cancel, type) {
-			click.@com.pmt.wrap.titanium.ui.OptionDialog.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(index, source, button, destructive, cancel, type);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumUIOptionDialogClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(index, source, button, destructive, cancel, type);
 		});
 	}-*/;
 }

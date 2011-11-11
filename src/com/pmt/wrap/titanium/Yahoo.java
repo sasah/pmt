@@ -78,7 +78,7 @@ public class Yahoo {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.8
 	 * @param yql (string) the YQL query to execute
-	 * @param callback (function) the function to execute when the query completes. The event will contain the boolean property <tt>success</tt> if successful. If <tt>success</tt> is false, the <tt>message</tt> property will contain the error message. If <tt>success</tt> is true, the <tt>data</tt> property will contain the data payload received from the YQL.
+	 * @param callback (function) the function to execute when the query completes. The event will contain the boolean property success if successful. If success is false, the message property will contain the error message. If success is true, the data property will contain the data payload received from the YQL.
 	 * @return void
 	 */
 	 public static native void yql(String yql, JavaScriptObject callback) /*-{

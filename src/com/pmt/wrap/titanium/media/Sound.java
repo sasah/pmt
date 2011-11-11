@@ -414,23 +414,7 @@ public class Sound {
 	 public native void stop() /*-{
 		return this.@com.pmt.wrap.titanium.media.Sound::handler.stop();
 	}-*/;
-
-	/**
-	 * <b>complete</b>
-	 * <p>
-	 * fired when the audio has completed
-	 */
-	public interface CompleteHandler {
-		/**
-		 * <b>complete</b>
-		 * <p>
-		 * fired when the audio has completed
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param success boolean to indicate if the sound was successfully played
-		 */
-		void complete(JavaScriptObject source, JavaScriptObject type, JavaScriptObject success);
-	}
+	
 
 	/**
 	 * <b>complete</b>
@@ -438,28 +422,12 @@ public class Sound {
 	 * fired when the audio has completed
 	 * @param complete event handler
 	 */
-	public native void addComplete(CompleteHandler complete) /*-{
+	public native void addComplete(com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundCompleteHandler complete) /*-{
 		this.@com.pmt.wrap.titanium.media.Sound::handler.addEventListener('complete', function(source, type, success) {
-			complete.@com.pmt.wrap.titanium.media.Sound.CompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, success);
+			complete.@com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundCompleteHandler::complete(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type, success);
 		});
 	}-*/;
-
-	/**
-	 * <b>error</b>
-	 * <p>
-	 * called when an error is received playing the audio.
-	 */
-	public interface ErrorHandler {
-		/**
-		 * <b>error</b>
-		 * <p>
-		 * called when an error is received playing the audio.
-		 * @param message error message
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void error(JavaScriptObject message, JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>error</b>
@@ -467,27 +435,12 @@ public class Sound {
 	 * called when an error is received playing the audio.
 	 * @param error event handler
 	 */
-	public native void addError(ErrorHandler error) /*-{
+	public native void addError(com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundErrorHandler error) /*-{
 		this.@com.pmt.wrap.titanium.media.Sound::handler.addEventListener('error', function(message, source, type) {
-			error.@com.pmt.wrap.titanium.media.Sound.ErrorHandler::error(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(message, source, type);
+			error.@com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundErrorHandler::error(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(message, source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>interrupted</b>
-	 * <p>
-	 * called when the audio is interrupted by the device. this is typically called during an interruption due to an incoming phone call.
-	 */
-	public interface InterruptedHandler {
-		/**
-		 * <b>interrupted</b>
-		 * <p>
-		 * called when the audio is interrupted by the device. this is typically called during an interruption due to an incoming phone call.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void interrupted(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>interrupted</b>
@@ -495,28 +448,12 @@ public class Sound {
 	 * called when the audio is interrupted by the device. this is typically called during an interruption due to an incoming phone call.
 	 * @param interrupted event handler
 	 */
-	public native void addInterrupted(InterruptedHandler interrupted) /*-{
+	public native void addInterrupted(com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundInterruptedHandler interrupted) /*-{
 		this.@com.pmt.wrap.titanium.media.Sound::handler.addEventListener('interrupted', function(source, type) {
-			interrupted.@com.pmt.wrap.titanium.media.Sound.InterruptedHandler::interrupted(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			interrupted.@com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundInterruptedHandler::interrupted(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>resume</b>
-	 * <p>
-	 * called when the audio is resumed after an interruption.
-	 */
-	public interface ResumeHandler {
-		/**
-		 * <b>resume</b>
-		 * <p>
-		 * called when the audio is resumed after an interruption.
-		 * @param interruption boolean to indicate if the resume was from an interruption
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void resume(JavaScriptObject interruption, JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>resume</b>
@@ -524,9 +461,9 @@ public class Sound {
 	 * called when the audio is resumed after an interruption.
 	 * @param resume event handler
 	 */
-	public native void addResume(ResumeHandler resume) /*-{
+	public native void addResume(com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundResumeHandler resume) /*-{
 		this.@com.pmt.wrap.titanium.media.Sound::handler.addEventListener('resume', function(interruption, source, type) {
-			resume.@com.pmt.wrap.titanium.media.Sound.ResumeHandler::resume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(interruption, source, type);
+			resume.@com.pmt.wrap.titanium.sys.events.TitaniumMediaSoundResumeHandler::resume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(interruption, source, type);
 		});
 	}-*/;
 }

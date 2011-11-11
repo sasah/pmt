@@ -548,24 +548,7 @@ public class Platform {
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return Titanium.Platform.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>battery</b>
-	 * <p>
-	 * fired when the battery state changes.  the battery state changes are only tracked on iPhone/iPad at 5% increments.
-	 */
-	public interface BatteryHandler {
-		/**
-		 * <b>battery</b>
-		 * <p>
-		 * fired when the battery state changes.  the battery state changes are only tracked on iPhone/iPad at 5% increments.
-		 * @param level the new battery level
-		 * @param source the source object that fired the event
-		 * @param state the new battery state
-		 * @param type the name of the event fired
-		 */
-		void battery(JavaScriptObject level, JavaScriptObject source, JavaScriptObject state, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>battery</b>
@@ -573,9 +556,9 @@ public class Platform {
 	 * fired when the battery state changes.  the battery state changes are only tracked on iPhone/iPad at 5% increments.
 	 * @param battery event handler
 	 */
-	public native void addBattery(BatteryHandler battery) /*-{
+	public native void addBattery(com.pmt.wrap.titanium.sys.events.TitaniumPlatformBatteryHandler battery) /*-{
 		this.@com.pmt.wrap.titanium.Platform::handler.addEventListener('battery', function(level, source, state, type) {
-			battery.@com.pmt.wrap.titanium.Platform.BatteryHandler::battery(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(level, source, state, type);
+			battery.@com.pmt.wrap.titanium.sys.events.TitaniumPlatformBatteryHandler::battery(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(level, source, state, type);
 		});
 	}-*/;
 }

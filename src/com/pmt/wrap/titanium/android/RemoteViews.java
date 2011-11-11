@@ -35,7 +35,7 @@ public class RemoteViews {
 	 * Call a method taking one boolean on a view in the layout for this RemoteViews. See Android's documentation for setBoolean
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the View (also see Titanium.App.Android.R)
 	 * @param methodName (string) The name of the method to call
 	 * @param value (boolean) The boolean to pass to the method
 	 * @return void
@@ -50,7 +50,7 @@ public class RemoteViews {
 	 * Sets a chronometer's base, format, and started flag. See Android's documentation for setChronometer
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the Chronometer whose values will change (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the Chronometer whose values will change (also see Titanium.App.Android.R)
 	 * @param base (date) The time at which the timer would have read 0:00
 	 * @param format (string) The Chronometer format string, or null to simply display the timer value
 	 * @param started (boolean) True if you want the clock to be started, false if not
@@ -66,7 +66,7 @@ public class RemoteViews {
 	 * Call a method taking one double on a view in the layout for this RemoteViews. See Android's documentation for setDouble
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the View (also see Titanium.App.Android.R)
 	 * @param methodName (string) The name of the method to call
 	 * @param value (double) The double to pass to the method
 	 * @return void
@@ -81,7 +81,7 @@ public class RemoteViews {
 	 * Sets an ImageView's source given a Resource ID. See Android's documentation for setImageViewResource
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the ImageView whose image should change (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the ImageView whose image should change (also see Titanium.App.Android.R)
 	 * @param srcId (int) The resource id of the image
 	 * @return void
 	 */
@@ -95,7 +95,7 @@ public class RemoteViews {
 	 * Sets an ImageView's source given a URI (supports both Android and Titanium URLs). See Android's documentation for setImageViewUri
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the ImageView whose image should change (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the ImageView whose image should change (also see Titanium.App.Android.R)
 	 * @param uri (string) The URI of the image (both Android and Titanium URLs are supported)
 	 * @return void
 	 */
@@ -109,7 +109,7 @@ public class RemoteViews {
 	 * Call a method taking one int on a view in the layout for this RemoteViews. See Android's documentation for setInt
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the View (also see Titanium.App.Android.R)
 	 * @param methodName (string) The name of the method to call
 	 * @param value (int) The int to pass to the method
 	 * @return void
@@ -124,8 +124,8 @@ public class RemoteViews {
 	 * Launches a Titanium.Android.PendingIntent when the specified view is clicked. See Android's documentation for setOnClickPendingIntent
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View to add a click listener to (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
-	 * @param pendingIntent (<tt>Ti.Android.PendingIntent</tt>) The PendingIntent to execute when this view is clicked
+	 * @param viewId (int) The resource id of the View to add a click listener to (also see Titanium.App.Android.R)
+	 * @param pendingIntent (Ti.Android.PendingIntent) The PendingIntent to execute when this view is clicked
 	 * @return void
 	 */
 	 public native void setOnClickPendingIntent(int viewId, JavaScriptObject pendingIntent) /*-{
@@ -138,7 +138,7 @@ public class RemoteViews {
 	 * Sets the progress, max value, and indeterminate flag of a ProgressBar. See Android's documentation for setProgressBar
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the ProgressBar to change (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the ProgressBar to change (also see Titanium.App.Android.R)
 	 * @param max (int) The new max value of the ProgressBar
 	 * @param progress (int) The new progress value of the ProgressBar (from 0..max)
 	 * @param indeterminate (boolean) Whether or not the progress in indeterminate
@@ -154,7 +154,7 @@ public class RemoteViews {
 	 * Call a method taking one String on a view in the layout for this RemoteViews. See Android's documentation for setString
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the View (also see Titanium.App.Android.R)
 	 * @param methodName (string) The name of the method to call
 	 * @param value (string) The String to pass to the method
 	 * @return void
@@ -169,7 +169,7 @@ public class RemoteViews {
 	 * Sets the text color of a view. See Android's documentation for setTextColor
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View whose text color will change (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the View whose text color will change (also see Titanium.App.Android.R)
 	 * @param color (int) A color as an integer
 	 * @return void
 	 */
@@ -183,7 +183,7 @@ public class RemoteViews {
 	 * Sets the text of a TextView. See Android's documentation for setTextViewText
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the TextView whose text will change (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the TextView whose text will change (also see Titanium.App.Android.R)
 	 * @param text (string) The new text of the TextView
 	 * @return void
 	 */
@@ -197,7 +197,7 @@ public class RemoteViews {
 	 * Call a method taking one Uri on a view in the layout for this RemoteViews. See Android's documentation for setUri
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
+	 * @param viewId (int) The resource id of the View (also see Titanium.App.Android.R)
 	 * @param methodName (string) The name of the method to call
 	 * @param value (string) The URI (as a string) to pass to the method
 	 * @return void
@@ -212,8 +212,8 @@ public class RemoteViews {
 	 * Sets the visibility of a View. See Android's documentation for setViewVisibility
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.6
-	 * @param viewId (int) The resource id of the View whose visibility will change (also see <a href="Titanium.App.Android.R.html">Titanium.App.Android.R</a>)
-	 * @param visibility (int) The visibility, one of <a href="Titanium.Android.VISIBLE.html">Titanium.Android.VISIBLE</a>, <a href="Titanium.Android.INVISIBLE.html">Titanium.Android.INVISIBLE</a>, or <a href="Titanium.Android.GONE.html">Titanium.Android.GONE</a>
+	 * @param viewId (int) The resource id of the View whose visibility will change (also see Titanium.App.Android.R)
+	 * @param visibility (int) The visibility, one of Titanium.Android.VISIBLE, Titanium.Android.INVISIBLE, or Titanium.Android.GONE
 	 * @return void
 	 */
 	 public native void setViewVisibility(int viewId, int visibility) /*-{

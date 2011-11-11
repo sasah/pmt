@@ -1,0 +1,25 @@
+package com.pmt.wrap.titanium.sys.events;
+
+import com.google.gwt.core.client.JavaScriptObject;
+
+/**
+ * <b>scrollEnd</b>
+ * <p>
+ * fired when the table view stops scrolling
+ */
+public interface TitaniumUITableViewScrollEndHandler {
+	/**
+	 * <b>scrollEnd</b>
+	 * <p>
+	 * fired when the table view stops scrolling
+	 * @param source the source object that fired the event
+	 * @param contentSize dictionary with width and height properties containing the size of the content (regardless of the display size in the case of scrolling) (iOS only)
+	 * @param contentOffset dictionary with x and y properties containing the content offset (iOS only)
+	 * @param type the name of the event fired
+	 * @param globalPoint a dictionary with properties x and y describing the point of the event in screen coordinates
+	 * @param y the y point of the event, in receiving view coordinates
+	 * @param x the x point of the event in receiving view coordiantes
+	 * @param size dictionary with width and height properties containing the size of the visible table view
+	 */
+	void scrollEnd(JavaScriptObject source, JavaScriptObject contentSize, JavaScriptObject contentOffset, JavaScriptObject type, JavaScriptObject globalPoint, JavaScriptObject y, JavaScriptObject x, JavaScriptObject size);
+}

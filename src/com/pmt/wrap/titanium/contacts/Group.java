@@ -57,7 +57,7 @@ public class Group {
 	 * Adds a person to the group
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.4.0
-	 * @param person (object) <a href="Titanium.Contacts.Person.html">Titanium.Contacts.Person</a> object to remove from the group
+	 * @param person (object) Titanium.Contacts.Person object to remove from the group
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject person) /*-{
@@ -82,7 +82,7 @@ public class Group {
 	 * Removes a person from the group
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.4.0
-	 * @param person (object) <a href="Titanium.Contacts.Person.html">Titanium.Contacts.Person</a> object to remove from the group
+	 * @param person (object) Titanium.Contacts.Person object to remove from the group
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject person) /*-{
@@ -95,7 +95,7 @@ public class Group {
 	 * A list of sorted members
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.4.0
-	 * @param sortBy (int) Method for sorting.  Must be one of  <a href="Titanium.Contacts.CONTACTS_SORT_FIRST_NAME-property.html">Titanium.Contacts.CONTACTS_SORT_FIRST_NAME</a> or <a href="Titanium.Contacts.CONTACTS_SORT_LAST_NAME-property.html">Titanium.Contacts.CONTACTS_SORT_LAST_NAME</a>
+	 * @param sortBy (int) Method for sorting.  Must be one of  Titanium.Contacts.CONTACTS_SORT_FIRST_NAME or Titanium.Contacts.CONTACTS_SORT_LAST_NAME
 	 * @return void
 	 */
 	 public native void sortedMembers(int sortBy) /*-{

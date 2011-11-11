@@ -49,7 +49,7 @@ public class iOS {
 	 * create and return an instance of Titanium.UI.iOS.AdView
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.iOS.AdView.html">Titanium.UI.iOS.AdView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.iOS.AdView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createAdView(JavaScriptObject parameters) /*-{

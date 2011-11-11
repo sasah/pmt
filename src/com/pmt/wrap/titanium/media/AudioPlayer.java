@@ -463,24 +463,7 @@ public class AudioPlayer {
 	 public native void stop() /*-{
 		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.stop();
 	}-*/;
-
-	/**
-	 * <b>change</b>
-	 * <p>
-	 * fired when the state of the playback changes
-	 */
-	public interface ChangeHandler {
-		/**
-		 * <b>change</b>
-		 * <p>
-		 * fired when the state of the playback changes
-		 * @param source the source object that fired the event
-		 * @param description textual description of the state of playback
-		 * @param state current state of playback
-		 * @param type the name of the event fired
-		 */
-		void change(JavaScriptObject source, JavaScriptObject description, JavaScriptObject state, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>change</b>
@@ -488,28 +471,12 @@ public class AudioPlayer {
 	 * fired when the state of the playback changes
 	 * @param change event handler
 	 */
-	public native void addChange(ChangeHandler change) /*-{
+	public native void addChange(com.pmt.wrap.titanium.sys.events.TitaniumMediaAudioPlayerChangeHandler change) /*-{
 		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.addEventListener('change', function(source, description, state, type) {
-			change.@com.pmt.wrap.titanium.media.AudioPlayer.ChangeHandler::change(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, description, state, type);
+			change.@com.pmt.wrap.titanium.sys.events.TitaniumMediaAudioPlayerChangeHandler::change(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, description, state, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>progress</b>
-	 * <p>
-	 * fired once per second with the current progress during playback
-	 */
-	public interface ProgressHandler {
-		/**
-		 * <b>progress</b>
-		 * <p>
-		 * fired once per second with the current progress during playback
-		 * @param progress current progress value
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void progress(JavaScriptObject progress, JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>progress</b>
@@ -517,9 +484,9 @@ public class AudioPlayer {
 	 * fired once per second with the current progress during playback
 	 * @param progress event handler
 	 */
-	public native void addProgress(ProgressHandler progress) /*-{
+	public native void addProgress(com.pmt.wrap.titanium.sys.events.TitaniumMediaAudioPlayerProgressHandler progress) /*-{
 		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.addEventListener('progress', function(progress, source, type) {
-			progress.@com.pmt.wrap.titanium.media.AudioPlayer.ProgressHandler::progress(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(progress, source, type);
+			progress.@com.pmt.wrap.titanium.sys.events.TitaniumMediaAudioPlayerProgressHandler::progress(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(progress, source, type);
 		});
 	}-*/;
 }

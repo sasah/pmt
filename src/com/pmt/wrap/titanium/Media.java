@@ -1359,7 +1359,7 @@ public class Media {
 	 * create and return an instance of Titanium.Media.AudioPlayer
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Media.AudioPlayer.html">Titanium.Media.AudioPlayer</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Media.AudioPlayer
 	 * @return object
 	 */
 	 public static native JavaScriptObject createAudioPlayer(JavaScriptObject parameters) /*-{
@@ -1372,7 +1372,7 @@ public class Media {
 	 * create and return an instance of Titanium.Media.AudioRecorder
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Media.AudioRecorder.html">Titanium.Media.AudioRecorder</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Media.AudioRecorder
 	 * @return object
 	 */
 	 public static native JavaScriptObject createAudioRecorder(JavaScriptObject parameters) /*-{
@@ -1385,7 +1385,7 @@ public class Media {
 	 * create and return an instance of Titanium.Media.Item
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Media.Item.html">Titanium.Media.Item</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Media.Item
 	 * @return object
 	 */
 	 public static native JavaScriptObject createItem(JavaScriptObject parameters) /*-{
@@ -1398,7 +1398,7 @@ public class Media {
 	 * create and return an instance of Titanium.Media.MusicPlayer
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Media.MusicPlayer.html">Titanium.Media.MusicPlayer</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Media.MusicPlayer
 	 * @return object
 	 */
 	 public static native JavaScriptObject createMusicPlayer(JavaScriptObject parameters) /*-{
@@ -1411,7 +1411,7 @@ public class Media {
 	 * create and return an instance of Titanium.Media.Sound
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Media.Sound.html">Titanium.Media.Sound</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Media.Sound
 	 * @return object
 	 */
 	 public static native JavaScriptObject createSound(JavaScriptObject parameters) /*-{
@@ -1424,7 +1424,7 @@ public class Media {
 	 * create and return an instance of Titanium.Media.VideoPlayer
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Media.VideoPlayer.html">Titanium.Media.VideoPlayer</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Media.VideoPlayer
 	 * @return object
 	 */
 	 public static native JavaScriptObject createVideoPlayer(JavaScriptObject parameters) /*-{
@@ -1475,7 +1475,7 @@ public class Media {
 	 * return boolean to indicate if the media type is supported
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param media (string) media type as a string of either <tt>camera</tt>, <tt>photo</tt> or <tt>photogallery</tt>.
+	 * @param media (string) media type as a string of either camera, photo or photogallery.
 	 * @param type (string) the type of media to check
 	 * @return boolean
 	 */
@@ -1489,7 +1489,7 @@ public class Media {
 	 * open the photo gallery picker
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param options (object) pass a dictionary with the following supported keys: <tt>success</tt> a function that will be called when the camera is completed, <tt>error</tt> a function that will be called upon receiving an error, <tt>cancel</tt> a function that will be called if the user presses the cancel button, <tt>autohide</tt> boolean if the camera should auto hide after the media capture is completed (defaults to true), <tt>animated</tt> boolean if the dialog should be animated (defaults to true) upon showing and hiding, <tt>saveToPhotoGallery</tt> boolean if the media should be saved to the photo gallery upon successful capture, <tt>allowEditing</tt> boolean if the media should be editable after capture in the UI interface, <tt>mediaTypes</tt> an array of media type constants supported by the capture device UI, <tt>showControls</tt> boolean to indicate if the built-in UI controls should be displayed, <tt>overlay</tt> view which is added as an overlay to the UI (on top), <tt>transform</tt> an transformation matrix that applies to the UI transform. For iPad, <tt>popoverView</tt> can be provided to position the photo gallery popover a specific view and <tt>arrowDirection</tt> can be provided to control the type of arrow and position of the gallery.
+	 * @param options (object) pass a dictionary with the following supported keys: success a function that will be called when the camera is completed, error a function that will be called upon receiving an error, cancel a function that will be called if the user presses the cancel button, autohide boolean if the camera should auto hide after the media capture is completed (defaults to true), animated boolean if the dialog should be animated (defaults to true) upon showing and hiding, saveToPhotoGallery boolean if the media should be saved to the photo gallery upon successful capture, allowEditing boolean if the media should be editable after capture in the UI interface, mediaTypes an array of media type constants supported by the capture device UI, showControls boolean to indicate if the built-in UI controls should be displayed, overlay view which is added as an overlay to the UI (on top), transform an transformation matrix that applies to the UI transform. For iPad, popoverView can be provided to position the photo gallery popover a specific view and arrowDirection can be provided to control the type of arrow and position of the gallery.
 	 * @return void
 	 */
 	 public static native void openPhotoGallery(JavaScriptObject options) /*-{
@@ -1517,7 +1517,7 @@ public class Media {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param media (object) save the media passed to the cameras photo roll/media gallery. must be one of Blob object or File object or an error will be generated.
-	 * @param callbacks (object) pass a dictionary with the following supported keys: <tt>success</tt> a function that will be called when the save succeeds, and <tt>error</tt> a function that will be called upon anreceiving an error
+	 * @param callbacks (object) pass a dictionary with the following supported keys: success a function that will be called when the save succeeds, and error a function that will be called upon anreceiving an error
 	 * @return void
 	 */
 	 public static native void saveToPhotoGallery(JavaScriptObject media, JavaScriptObject callbacks) /*-{
@@ -1530,7 +1530,7 @@ public class Media {
 	 * show the camera
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param options (object) pass a dictionary with the following supported keys: <tt>success</tt> a function that will be called when the camera is completed, <tt>error</tt> a function that will be called upon receiving an error, <tt>cancel</tt> a function that will be called if the user presses the cancel button, <tt>autohide</tt> boolean if the camera should auto hide after the media capture is completed (defaults to true), <tt>animated</tt> boolean if the dialog should be animated (defaults to true) upon showing and hiding, <tt>saveToPhotoGallery</tt> boolean if the media should be saved to the photo gallery upon successful capture, <tt>allowEditing</tt> boolean if the media should be editable after capture in the UI interface, <tt>mediaTypes</tt> an array of media type constants supported by the capture device UI, <tt>videoMaximumDuration</tt> float duration on how long in milliseconds to allow capture before completing, <tt>videoQuality</tt> constant to indicate the video quality during capture, <tt>showControls</tt> boolean to indicate if the built-in UI controls should be displayed, <tt>overlay</tt> view which is added as an overlay to the camera UI (on top), <tt>transform</tt> an transformation matrix that applies to the camera UI transform.
+	 * @param options (object) pass a dictionary with the following supported keys: success a function that will be called when the camera is completed, error a function that will be called upon receiving an error, cancel a function that will be called if the user presses the cancel button, autohide boolean if the camera should auto hide after the media capture is completed (defaults to true), animated boolean if the dialog should be animated (defaults to true) upon showing and hiding, saveToPhotoGallery boolean if the media should be saved to the photo gallery upon successful capture, allowEditing boolean if the media should be editable after capture in the UI interface, mediaTypes an array of media type constants supported by the capture device UI, videoMaximumDuration float duration on how long in milliseconds to allow capture before completing, videoQuality constant to indicate the video quality during capture, showControls boolean to indicate if the built-in UI controls should be displayed, overlay view which is added as an overlay to the camera UI (on top), transform an transformation matrix that applies to the camera UI transform.
 	 * @return void
 	 */
 	 public static native void showCamera(JavaScriptObject options) /*-{
@@ -1543,7 +1543,7 @@ public class Media {
 	 * show the music library.  iPhone and iPad only.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param options (object) pass a dictionary with the following supported keys: <tt>success</tt> a function that will be called when the camera is completed, <tt>error</tt> a function that will be called upon receiving an error, <tt>cancel</tt> a function that will be called if the user presses the cancel button, <tt>autohide</tt> boolean if the library listing should auto hide after selection is completed (defaults to true), <tt>animated</tt> boolean if the dialog should be animated (defaults to true) upon showing and hiding, <tt>mediaTypes</tt> an array of media type constants defining selectable media (see MUSIC_MEDIA_TYPE_* properties below) as either an array or a bitwise-or single value, <tt>allowMultipleSelections</tt> boolean whether or not more than one media selection is allowed
+	 * @param options (object) pass a dictionary with the following supported keys: success a function that will be called when the camera is completed, error a function that will be called upon receiving an error, cancel a function that will be called if the user presses the cancel button, autohide boolean if the library listing should auto hide after selection is completed (defaults to true), animated boolean if the dialog should be animated (defaults to true) upon showing and hiding, mediaTypes an array of media type constants defining selectable media (see MUSIC_MEDIA_TYPE_* properties below) as either an array or a bitwise-or single value, allowMultipleSelections boolean whether or not more than one media selection is allowed
 	 * @return void
 	 */
 	 public static native void showMusicLibrary(JavaScriptObject options) /*-{
@@ -1592,7 +1592,7 @@ public class Media {
 	 * take a screen shot of the visible UI on the device
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param callback (function) function that will be called upon capture. the event property <tt>media</tt> will contain an image Blob object of the screenshot
+	 * @param callback (function) function that will be called upon capture. the event property media will contain an image Blob object of the screenshot
 	 * @return void
 	 */
 	 public static native void takeScreenshot(JavaScriptObject callback) /*-{
@@ -1610,22 +1610,7 @@ public class Media {
 	 public static native void vibrate() /*-{
 		return Titanium.Media.vibrate();
 	}-*/;
-
-	/**
-	 * <b>linechange</b>
-	 * <p>
-	 * fired when a audio line type change is detected
-	 */
-	public interface LinechangeHandler {
-		/**
-		 * <b>linechange</b>
-		 * <p>
-		 * fired when a audio line type change is detected
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void linechange(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>linechange</b>
@@ -1633,28 +1618,12 @@ public class Media {
 	 * fired when a audio line type change is detected
 	 * @param linechange event handler
 	 */
-	public native void addLinechange(LinechangeHandler linechange) /*-{
+	public native void addLinechange(com.pmt.wrap.titanium.sys.events.TitaniumMediaLinechangeHandler linechange) /*-{
 		this.@com.pmt.wrap.titanium.Media::handler.addEventListener('linechange', function(source, type) {
-			linechange.@com.pmt.wrap.titanium.Media.LinechangeHandler::linechange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			linechange.@com.pmt.wrap.titanium.sys.events.TitaniumMediaLinechangeHandler::linechange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>recordinginput</b>
-	 * <p>
-	 * fired when availablity of recording input changes
-	 */
-	public interface RecordinginputHandler {
-		/**
-		 * <b>recordinginput</b>
-		 * <p>
-		 * fired when availablity of recording input changes
-		 * @param source the source object that fired the event
-		 * @param available bool indicating availability of recording device
-		 * @param type the name of the event fired
-		 */
-		void recordinginput(JavaScriptObject source, JavaScriptObject available, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>recordinginput</b>
@@ -1662,28 +1631,12 @@ public class Media {
 	 * fired when availablity of recording input changes
 	 * @param recordinginput event handler
 	 */
-	public native void addRecordinginput(RecordinginputHandler recordinginput) /*-{
+	public native void addRecordinginput(com.pmt.wrap.titanium.sys.events.TitaniumMediaRecordinginputHandler recordinginput) /*-{
 		this.@com.pmt.wrap.titanium.Media::handler.addEventListener('recordinginput', function(source, available, type) {
-			recordinginput.@com.pmt.wrap.titanium.Media.RecordinginputHandler::recordinginput(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, available, type);
+			recordinginput.@com.pmt.wrap.titanium.sys.events.TitaniumMediaRecordinginputHandler::recordinginput(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, available, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>volume</b>
-	 * <p>
-	 * fired when the volume output changes
-	 */
-	public interface VolumeHandler {
-		/**
-		 * <b>volume</b>
-		 * <p>
-		 * fired when the volume output changes
-		 * @param source the source object that fired the event
-		 * @param volume float of the new volume in dB
-		 * @param type the name of the event fired
-		 */
-		void volume(JavaScriptObject source, JavaScriptObject volume, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>volume</b>
@@ -1691,9 +1644,9 @@ public class Media {
 	 * fired when the volume output changes
 	 * @param volume event handler
 	 */
-	public native void addVolume(VolumeHandler volume) /*-{
+	public native void addVolume(com.pmt.wrap.titanium.sys.events.TitaniumMediaVolumeHandler volume) /*-{
 		this.@com.pmt.wrap.titanium.Media::handler.addEventListener('volume', function(source, volume, type) {
-			volume.@com.pmt.wrap.titanium.Media.VolumeHandler::volume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, volume, type);
+			volume.@com.pmt.wrap.titanium.sys.events.TitaniumMediaVolumeHandler::volume(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, volume, type);
 		});
 	}-*/;
 }

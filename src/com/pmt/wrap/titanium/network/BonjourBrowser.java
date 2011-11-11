@@ -118,23 +118,7 @@ public class BonjourBrowser {
 	 public native void stopSearch() /*-{
 		return this.@com.pmt.wrap.titanium.network.BonjourBrowser::handler.stopSearch();
 	}-*/;
-
-	/**
-	 * <b>updatedServices</b>
-	 * <p>
-	 * Fired when the discovered services list is updated
-	 */
-	public interface UpdatedServicesHandler {
-		/**
-		 * <b>updatedServices</b>
-		 * <p>
-		 * Fired when the discovered services list is updated
-		 * @param services An array of BonjourService objects corresponding to currently available services.  If you cache this value, including using it as table data, be aware that it could become out of date at any time due to the asynchronous nature of Bonjour service discovery.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void updatedServices(JavaScriptObject services, JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>updatedServices</b>
@@ -142,9 +126,9 @@ public class BonjourBrowser {
 	 * Fired when the discovered services list is updated
 	 * @param updatedServices event handler
 	 */
-	public native void addUpdatedServices(UpdatedServicesHandler updatedServices) /*-{
+	public native void addUpdatedServices(com.pmt.wrap.titanium.sys.events.TitaniumNetworkBonjourBrowserUpdatedServicesHandler updatedServices) /*-{
 		this.@com.pmt.wrap.titanium.network.BonjourBrowser::handler.addEventListener('updatedServices', function(services, source, type) {
-			updatedServices.@com.pmt.wrap.titanium.network.BonjourBrowser.UpdatedServicesHandler::updatedServices(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(services, source, type);
+			updatedServices.@com.pmt.wrap.titanium.sys.events.TitaniumNetworkBonjourBrowserUpdatedServicesHandler::updatedServices(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(services, source, type);
 		});
 	}-*/;
 }

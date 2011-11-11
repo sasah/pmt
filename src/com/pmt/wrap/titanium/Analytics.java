@@ -92,8 +92,8 @@ public class Analytics {
 	 * send an analytics nav event for the application session
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param from (string) the <tt>from</tt> location in the nav event
-	 * @param to (string) the <tt>to</tt> location in the nav event
+	 * @param from (string) the from location in the nav event
+	 * @param to (string) the to location in the nav event
 	 * @param name (string) the event name
 	 * @param data (object) event data or null if not specified. the object must be serializable as JSON
 	 * @return void

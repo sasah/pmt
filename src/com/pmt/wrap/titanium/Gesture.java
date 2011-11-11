@@ -70,23 +70,7 @@ public class Gesture {
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return Titanium.Gesture.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>orientationchange</b>
-	 * <p>
-	 * fired when the device orientation changes
-	 */
-	public interface OrientationchangeHandler {
-		/**
-		 * <b>orientationchange</b>
-		 * <p>
-		 * fired when the device orientation changes
-		 * @param orientation the orientation constant
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void orientationchange(JavaScriptObject orientation, JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>orientationchange</b>
@@ -94,28 +78,12 @@ public class Gesture {
 	 * fired when the device orientation changes
 	 * @param orientationchange event handler
 	 */
-	public native void addOrientationchange(OrientationchangeHandler orientationchange) /*-{
+	public native void addOrientationchange(com.pmt.wrap.titanium.sys.events.TitaniumGestureOrientationchangeHandler orientationchange) /*-{
 		this.@com.pmt.wrap.titanium.Gesture::handler.addEventListener('orientationchange', function(orientation, source, type) {
-			orientationchange.@com.pmt.wrap.titanium.Gesture.OrientationchangeHandler::orientationchange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(orientation, source, type);
+			orientationchange.@com.pmt.wrap.titanium.sys.events.TitaniumGestureOrientationchangeHandler::orientationchange(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(orientation, source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>shake</b>
-	 * <p>
-	 * fired when the device is shaken
-	 */
-	public interface ShakeHandler {
-		/**
-		 * <b>shake</b>
-		 * <p>
-		 * fired when the device is shaken
-		 * @param timestamp timestamp reference since previous shake
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void shake(JavaScriptObject timestamp, JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>shake</b>
@@ -123,9 +91,9 @@ public class Gesture {
 	 * fired when the device is shaken
 	 * @param shake event handler
 	 */
-	public native void addShake(ShakeHandler shake) /*-{
+	public native void addShake(com.pmt.wrap.titanium.sys.events.TitaniumGestureShakeHandler shake) /*-{
 		this.@com.pmt.wrap.titanium.Gesture::handler.addEventListener('shake', function(timestamp, source, type) {
-			shake.@com.pmt.wrap.titanium.Gesture.ShakeHandler::shake(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(timestamp, source, type);
+			shake.@com.pmt.wrap.titanium.sys.events.TitaniumGestureShakeHandler::shake(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(timestamp, source, type);
 		});
 	}-*/;
 }

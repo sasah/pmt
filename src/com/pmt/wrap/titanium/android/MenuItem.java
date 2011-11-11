@@ -331,22 +331,7 @@ public class MenuItem {
 	 public native void setVisibleMethod(boolean visible) /*-{
 		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.setVisibleMethod(visible);
 	}-*/;
-
-	/**
-	 * <b>click</b>
-	 * <p>
-	 * fired when the user presses the button
-	 */
-	public interface ClickHandler {
-		/**
-		 * <b>click</b>
-		 * <p>
-		 * fired when the user presses the button
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void click(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>click</b>
@@ -354,9 +339,9 @@ public class MenuItem {
 	 * fired when the user presses the button
 	 * @param click event handler
 	 */
-	public native void addClick(ClickHandler click) /*-{
+	public native void addClick(com.pmt.wrap.titanium.sys.events.TitaniumAndroidMenuItemClickHandler click) /*-{
 		this.@com.pmt.wrap.titanium.android.MenuItem::handler.addEventListener('click', function(source, type) {
-			click.@com.pmt.wrap.titanium.android.MenuItem.ClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			click.@com.pmt.wrap.titanium.sys.events.TitaniumAndroidMenuItemClickHandler::click(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
 }

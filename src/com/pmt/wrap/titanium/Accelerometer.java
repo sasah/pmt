@@ -70,26 +70,7 @@ public class Accelerometer {
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return Titanium.Accelerometer.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>update</b>
-	 * <p>
-	 * fired when the accelerometer changes
-	 */
-	public interface UpdateHandler {
-		/**
-		 * <b>update</b>
-		 * <p>
-		 * fired when the accelerometer changes
-		 * @param timestamp reference timestamp since the previous change. this is not a valid timestamp and should simply be used to determine the time between events and not an exact timestamp.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param z the z axis of the device
-		 * @param y the y axis of the device
-		 * @param x the x axis of the device
-		 */
-		void update(JavaScriptObject timestamp, JavaScriptObject source, JavaScriptObject type, JavaScriptObject z, JavaScriptObject y, JavaScriptObject x);
-	}
+	
 
 	/**
 	 * <b>update</b>
@@ -97,9 +78,9 @@ public class Accelerometer {
 	 * fired when the accelerometer changes
 	 * @param update event handler
 	 */
-	public native void addUpdate(UpdateHandler update) /*-{
+	public native void addUpdate(com.pmt.wrap.titanium.sys.events.TitaniumAccelerometerUpdateHandler update) /*-{
 		this.@com.pmt.wrap.titanium.Accelerometer::handler.addEventListener('update', function(timestamp, source, type, z, y, x) {
-			update.@com.pmt.wrap.titanium.Accelerometer.UpdateHandler::update(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(timestamp, source, type, z, y, x);
+			update.@com.pmt.wrap.titanium.sys.events.TitaniumAccelerometerUpdateHandler::update(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(timestamp, source, type, z, y, x);
 		});
 	}-*/;
 }

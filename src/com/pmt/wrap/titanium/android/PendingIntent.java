@@ -52,7 +52,7 @@ public class PendingIntent {
 	}-*/;
 
 	/**
-	 * <b>intent</b> (`Titanium.Android.Intent`)
+	 * <b>intent</b> (Titanium.Android.Intent)
 	 * <p>
 	 * The intent data to pass to the Activity launched by this PendingIntent
 	 * <p>
@@ -63,7 +63,7 @@ public class PendingIntent {
 	}-*/;
 
 	/**
-	 * <b>intent</b> (`Titanium.Android.Intent`)
+	 * <b>intent</b> (Titanium.Android.Intent)
 	 * <p>
 	 * The intent data to pass to the Activity launched by this PendingIntent
 	 * <p>

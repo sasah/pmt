@@ -210,7 +210,7 @@ public class NotificationManager {
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
 	 * @param id (int) An id that may be used to cancel a shown notification.
-	 * @param notification (<a href="Titanium.Android.Notification-object.html">Titanium.Android.Notification</a>) An instance of <a href="Titanium.Android.Notification-object.html">Titanium.Android.Notification</a> created with <a href="Titanium.Android.createNotification-method.html">Titanium.Android.createNotification</a>.
+	 * @param notification (Titanium.Android.Notification) An instance of Titanium.Android.Notification created with Titanium.Android.createNotification.
 	 * @return void
 	 */
 	 public static native void notify(int id, JavaScriptObject notification) /*-{

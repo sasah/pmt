@@ -416,7 +416,7 @@ public class Geolocation {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param address (string) address to resolve.
-	 * @param callback (function) function to invoke on success or failure. The event object contains the properties described as the <tt>place</tt> dictionary in <a href="Titanium.Geolocation.reverseGeocoder-method.html">Titanium.Geolocation.reverseGeocoder</a>.
+	 * @param callback (function) function to invoke on success or failure. The event object contains the properties described as the place dictionary in Titanium.Geolocation.reverseGeocoder.
 	 * @return void
 	 */
 	 public static native void forwardGeocoder(String address, JavaScriptObject callback) /*-{
@@ -429,7 +429,7 @@ public class Geolocation {
 	 * retrieve the current compass heading.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param callback (function) function to invoke on success or failure of obtaining the current heading. See heading event in <a href="Titanium.Geolocation-module.html">Titanium.Geolocation</a>.
+	 * @param callback (function) function to invoke on success or failure of obtaining the current heading. See heading event in Titanium.Geolocation.
 	 * @return void
 	 */
 	 public static native void getCurrentHeading(JavaScriptObject callback) /*-{
@@ -442,7 +442,7 @@ public class Geolocation {
 	 * retrieve the last known location from the device. On Android, the radios are not turned on to update the location. On iOS the radios MAY be used if the location is too "old".
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param callback (function) function to invoke on success or failure of obtaining the current location. See location event in <a href="Titanium.Geolocation-module.html">Titanium.Geolocation</a>.
+	 * @param callback (function) function to invoke on success or failure of obtaining the current location. See location event in Titanium.Geolocation.
 	 * @return void
 	 */
 	 public static native void getCurrentPosition(JavaScriptObject callback) /*-{
@@ -471,7 +471,7 @@ public class Geolocation {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param latitude (double) latitude to search
 	 * @param longitude (double) longitude to search
-	 * @param callback (function) function to invoke on success or failure. The event object passed contains a <tt>places</tt> array of zero or more place dictionaries. Each <tt>place</tt> dictionary contains the following properties: <tt>street</tt>, <tt>street1</tt>, <tt>city</tt>, <tt>region1</tt>, <tt>region2</tt>, <tt>postalCode</tt>, <tt>country</tt>, <tt>countryCode</tt>, <tt>longitude</tt>, <tt>latitude</tt>, <tt>displayAddress</tt>, <tt>address</tt>.
+	 * @param callback (function) function to invoke on success or failure. The event object passed contains a places array of zero or more place dictionaries. Each place dictionary contains the following properties: street, street1, city, region1, region2, postalCode, country, countryCode, longitude, latitude, displayAddress, address.
 	 * @return void
 	 */
 	 public static native void reverseGeocoder(double latitude, double longitude, JavaScriptObject callback) /*-{
@@ -489,22 +489,7 @@ public class Geolocation {
 	 public static native void setShowCalibrationMethod() /*-{
 		return Titanium.Geolocation.setShowCalibrationMethod();
 	}-*/;
-
-	/**
-	 * <b>calibration</b>
-	 * <p>
-	 * fired only on iPhone/iPad when the device detects interface and requires calibration. when this event is fired, the calibration UI is being displayed to the end user.
-	 */
-	public interface CalibrationHandler {
-		/**
-		 * <b>calibration</b>
-		 * <p>
-		 * fired only on iPhone/iPad when the device detects interface and requires calibration. when this event is fired, the calibration UI is being displayed to the end user.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void calibration(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>calibration</b>
@@ -512,31 +497,12 @@ public class Geolocation {
 	 * fired only on iPhone/iPad when the device detects interface and requires calibration. when this event is fired, the calibration UI is being displayed to the end user.
 	 * @param calibration event handler
 	 */
-	public native void addCalibration(CalibrationHandler calibration) /*-{
+	public native void addCalibration(com.pmt.wrap.titanium.sys.events.TitaniumGeolocationCalibrationHandler calibration) /*-{
 		this.@com.pmt.wrap.titanium.Geolocation::handler.addEventListener('calibration', function(source, type) {
-			calibration.@com.pmt.wrap.titanium.Geolocation.CalibrationHandler::calibration(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			calibration.@com.pmt.wrap.titanium.sys.events.TitaniumGeolocationCalibrationHandler::calibration(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
-
-	/**
-	 * <b>heading</b>
-	 * <p>
-	 * fired when a heading event is received
-	 */
-	public interface HeadingHandler {
-		/**
-		 * <b>heading</b>
-		 * <p>
-		 * fired when a heading event is received
-		 * @param source the source object that fired the event
-		 * @param error if success is false, returns a string of the error description
-		 * @param code if success is false, the error code if available (iOS only)
-		 * @param type the name of the event fired
-		 * @param success boolean to indicate if the heading event was successfully received or an error occurred
-		 * @param heading heading results dictionary with the following sub-properties: magneticHeading, trueHeading, accuracy, x, y, z, timestamp.
-		 */
-		void heading(JavaScriptObject source, JavaScriptObject error, JavaScriptObject code, JavaScriptObject type, JavaScriptObject success, JavaScriptObject heading);
-	}
+	
 
 	/**
 	 * <b>heading</b>
@@ -544,32 +510,12 @@ public class Geolocation {
 	 * fired when a heading event is received
 	 * @param heading event handler
 	 */
-	public native void addHeading(HeadingHandler heading) /*-{
+	public native void addHeading(com.pmt.wrap.titanium.sys.events.TitaniumGeolocationHeadingHandler heading) /*-{
 		this.@com.pmt.wrap.titanium.Geolocation::handler.addEventListener('heading', function(source, error, code, type, success, heading) {
-			heading.@com.pmt.wrap.titanium.Geolocation.HeadingHandler::heading(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, error, code, type, success, heading);
+			heading.@com.pmt.wrap.titanium.sys.events.TitaniumGeolocationHeadingHandler::heading(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, error, code, type, success, heading);
 		});
 	}-*/;
-
-	/**
-	 * <b>location</b>
-	 * <p>
-	 * fired when a location event is received
-	 */
-	public interface LocationHandler {
-		/**
-		 * <b>location</b>
-		 * <p>
-		 * fired when a location event is received
-		 * @param coords location coordinates dictionary with the following sub-properties: latitude, longitude, altitude, accuracy, altitudeAccuracy, heading, speed, timestamp.
-		 * @param source the source object that fired the event
-		 * @param error if success is false, returns a string of the error description
-		 * @param provider (Android only) location provider dictionary with the following sub-properties: name, accuracy, power, and provider.
-		 * @param code if success is false, the error code if available (iOS only)
-		 * @param type the name of the event fired
-		 * @param success boolean to indicate if the location event was successfully received or an error occurred
-		 */
-		void location(JavaScriptObject coords, JavaScriptObject source, JavaScriptObject error, JavaScriptObject provider, JavaScriptObject code, JavaScriptObject type, JavaScriptObject success);
-	}
+	
 
 	/**
 	 * <b>location</b>
@@ -577,9 +523,9 @@ public class Geolocation {
 	 * fired when a location event is received
 	 * @param location event handler
 	 */
-	public native void addLocation(LocationHandler location) /*-{
+	public native void addLocation(com.pmt.wrap.titanium.sys.events.TitaniumGeolocationLocationHandler location) /*-{
 		this.@com.pmt.wrap.titanium.Geolocation::handler.addEventListener('location', function(coords, source, error, provider, code, type, success) {
-			location.@com.pmt.wrap.titanium.Geolocation.LocationHandler::location(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(coords, source, error, provider, code, type, success);
+			location.@com.pmt.wrap.titanium.sys.events.TitaniumGeolocationLocationHandler::location(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(coords, source, error, provider, code, type, success);
 		});
 	}-*/;
 }

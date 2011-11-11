@@ -189,7 +189,7 @@ public class Intent {
 	 * Add a category to this Intent. See the category constants in Titanium.Android.
 	 * <p>
 	 * <b>Platforms:</b> android, <b>Since:</b> 1.5
-	 * @param name (string) The category name. See the category constants in <a href="Titanium.Android-module.html">Titanium.Android</a>
+	 * @param name (string) The category name. See the category constants in Titanium.Android
 	 * @return void
 	 */
 	 public native void addCategory(String name) /*-{

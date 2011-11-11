@@ -326,23 +326,7 @@ public class App {
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return Titanium.App.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>proximity</b>
-	 * <p>
-	 * fired when a proximity state changes
-	 */
-	public interface ProximityHandler {
-		/**
-		 * <b>proximity</b>
-		 * <p>
-		 * fired when a proximity state changes
-		 * @param source the source object that fired the event
-		 * @param state the proximity state value
-		 * @param type the name of the event fired
-		 */
-		void proximity(JavaScriptObject source, JavaScriptObject state, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>proximity</b>
@@ -350,9 +334,9 @@ public class App {
 	 * fired when a proximity state changes
 	 * @param proximity event handler
 	 */
-	public native void addProximity(ProximityHandler proximity) /*-{
+	public native void addProximity(com.pmt.wrap.titanium.sys.events.TitaniumAppProximityHandler proximity) /*-{
 		this.@com.pmt.wrap.titanium.App::handler.addEventListener('proximity', function(source, state, type) {
-			proximity.@com.pmt.wrap.titanium.App.ProximityHandler::proximity(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, state, type);
+			proximity.@com.pmt.wrap.titanium.sys.events.TitaniumAppProximityHandler::proximity(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, state, type);
 		});
 	}-*/;
 }

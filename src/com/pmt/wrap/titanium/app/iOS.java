@@ -73,7 +73,7 @@ public class iOS {
 	 * create and return an instance of Titanium.App.iOS.BackgroundService
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.5
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.App.iOS.BackgroundService.html">Titanium.App.iOS.BackgroundService</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.App.iOS.BackgroundService
 	 * @return object
 	 */
 	 public static native JavaScriptObject createBackgroundService(JavaScriptObject parameters) /*-{
@@ -86,7 +86,7 @@ public class iOS {
 	 * create and return an instance of Titanium.App.iOS.LocalNotification
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.5
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.App.iOS.LocalNotification.html">Titanium.App.iOS.LocalNotification</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.App.iOS.LocalNotification
 	 * @return object
 	 */
 	 public static native JavaScriptObject createLocalNotification(JavaScriptObject parameters) /*-{
@@ -113,7 +113,7 @@ public class iOS {
 	 * register a background service to run when the app is backgrounded
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.5
-	 * @param params (object) dictionary of key/values that are used to create the service. the <tt>url</tt> property should point to a local JavaScript url that will be executed when the app is backgrounded.
+	 * @param params (object) dictionary of key/values that are used to create the service. the url property should point to a local JavaScript url that will be executed when the app is backgrounded.
 	 * @return object
 	 */
 	 public static native JavaScriptObject registerBackgroundService(JavaScriptObject params) /*-{
@@ -140,28 +140,13 @@ public class iOS {
 	 * schedule a local notification
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad, <b>Since:</b> 1.5
-	 * @param params (object) dictionary of key/values that are used to create the notification. the <tt>date</tt> property is when the notification should fire, <tt>repeat</tt> is an optional property of one of: <tt>weekly</tt>, <tt>daily</tt>, <tt>yearly,</tt> <tt>monthly</tt>, <tt>alertBody</tt> is an optional property that is the body of the alert when the notification is displayed, <tt>alertAction</tt> is an optional property that represents the alert button text or the 'slide to unlock...' slider in place of unlock, <tt>alertLaunchImage</tt> is an optional property that specifies the launch image to display instead of Default.png when launching the application, <tt>badge</tt> is the optional badge value for the application, <tt>sound</tt> is the optional property to specify the sound to play when the notification is triggered and <tt>userInfo</tt> is the optional property which specifies data passed to the application upon launch when the notification is triggered.
+	 * @param params (object) dictionary of key/values that are used to create the notification. the date property is when the notification should fire, repeat is an optional property of one of: weekly, daily, yearly, monthly, alertBody is an optional property that is the body of the alert when the notification is displayed, alertAction is an optional property that represents the alert button text or the 'slide to unlock...' slider in place of unlock, alertLaunchImage is an optional property that specifies the launch image to display instead of Default.png when launching the application, badge is the optional badge value for the application, sound is the optional property to specify the sound to play when the notification is triggered and userInfo is the optional property which specifies data passed to the application upon launch when the notification is triggered.
 	 * @return object
 	 */
 	 public static native JavaScriptObject scheduleLocalNotification(JavaScriptObject params) /*-{
 		return Titanium.App.iOS.scheduleLocalNotification(params);
 	}-*/;
-
-	/**
-	 * <b>notification</b>
-	 * <p>
-	 * fired when a local notification is received by the app.  the following event properties are available: date, timezone, alertBody, alertAction, alertLaunchImage, sound, bound, userInfo.
-	 */
-	public interface NotificationHandler {
-		/**
-		 * <b>notification</b>
-		 * <p>
-		 * fired when a local notification is received by the app.  the following event properties are available: date, timezone, alertBody, alertAction, alertLaunchImage, sound, bound, userInfo.
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 */
-		void notification(JavaScriptObject source, JavaScriptObject type);
-	}
+	
 
 	/**
 	 * <b>notification</b>
@@ -169,9 +154,9 @@ public class iOS {
 	 * fired when a local notification is received by the app.  the following event properties are available: date, timezone, alertBody, alertAction, alertLaunchImage, sound, bound, userInfo.
 	 * @param notification event handler
 	 */
-	public native void addNotification(NotificationHandler notification) /*-{
+	public native void addNotification(com.pmt.wrap.titanium.sys.events.TitaniumAppiOSNotificationHandler notification) /*-{
 		this.@com.pmt.wrap.titanium.app.iOS::handler.addEventListener('notification', function(source, type) {
-			notification.@com.pmt.wrap.titanium.app.iOS.NotificationHandler::notification(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
+			notification.@com.pmt.wrap.titanium.sys.events.TitaniumAppiOSNotificationHandler::notification(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(source, type);
 		});
 	}-*/;
 }

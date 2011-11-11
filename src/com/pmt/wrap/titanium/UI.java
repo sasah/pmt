@@ -1075,7 +1075,7 @@ public class UI {
 	}-*/;
 
 	/**
-	 * <b>currentWindow</b> (`Titanium.UI.Window`) static
+	 * <b>currentWindow</b> (Titanium.UI.Window) static
 	 * <p>
 	 * The active window associated with the executing Javascript context.
 	 * <p>
@@ -1086,7 +1086,7 @@ public class UI {
 	}-*/;
 
 	/**
-	 * <b>currentWindow</b> (`Titanium.UI.Window`) static
+	 * <b>currentWindow</b> (Titanium.UI.Window) static
 	 * <p>
 	 * The active window associated with the executing Javascript context.
 	 * <p>
@@ -1138,7 +1138,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.2DMatrix
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.2DMatrix.html">Titanium.UI.2DMatrix</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.2DMatrix
 	 * @return object
 	 */
 	 public static native JavaScriptObject create2DMatrix(JavaScriptObject parameters) /*-{
@@ -1151,7 +1151,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.3DMatrix
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.3DMatrix.html">Titanium.UI.3DMatrix</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.3DMatrix
 	 * @return object
 	 */
 	 public static native JavaScriptObject create3DMatrix(JavaScriptObject parameters) /*-{
@@ -1164,7 +1164,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.ActivityIndicator
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.ActivityIndicator.html">Titanium.UI.ActivityIndicator</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.ActivityIndicator
 	 * @return object
 	 */
 	 public static native JavaScriptObject createActivityIndicator(JavaScriptObject parameters) /*-{
@@ -1177,7 +1177,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.AlertDialog
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.AlertDialog.html">Titanium.UI.AlertDialog</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.AlertDialog
 	 * @return object
 	 */
 	 public static native JavaScriptObject createAlertDialog(JavaScriptObject parameters) /*-{
@@ -1190,7 +1190,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Animation
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Animation.html">Titanium.UI.Animation</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Animation
 	 * @return object
 	 */
 	 public static native JavaScriptObject createAnimation(JavaScriptObject parameters) /*-{
@@ -1203,7 +1203,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Button
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Button.html">Titanium.UI.Button</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Button
 	 * @return object
 	 */
 	 public static native JavaScriptObject createButton(JavaScriptObject parameters) /*-{
@@ -1216,7 +1216,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.ButtonBar
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.ButtonBar.html">Titanium.UI.ButtonBar</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.ButtonBar
 	 * @return object
 	 */
 	 public static native JavaScriptObject createButtonBar(JavaScriptObject parameters) /*-{
@@ -1229,7 +1229,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.CoverFlowView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.CoverFlowView.html">Titanium.UI.CoverFlowView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.CoverFlowView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createCoverFlowView(JavaScriptObject parameters) /*-{
@@ -1242,7 +1242,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.DashboardItem
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.DashboardItem.html">Titanium.UI.DashboardItem</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.DashboardItem
 	 * @return object
 	 */
 	 public static native JavaScriptObject createDashboardItem(JavaScriptObject parameters) /*-{
@@ -1255,7 +1255,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.DashboardView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.DashboardView.html">Titanium.UI.DashboardView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.DashboardView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createDashboardView(JavaScriptObject parameters) /*-{
@@ -1268,7 +1268,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.EmailDialog
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.EmailDialog.html">Titanium.UI.EmailDialog</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.EmailDialog
 	 * @return object
 	 */
 	 public static native JavaScriptObject createEmailDialog(JavaScriptObject parameters) /*-{
@@ -1281,7 +1281,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.ImageView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.ImageView.html">Titanium.UI.ImageView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.ImageView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createImageView(JavaScriptObject parameters) /*-{
@@ -1294,7 +1294,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Label
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Label.html">Titanium.UI.Label</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Label
 	 * @return object
 	 */
 	 public static native JavaScriptObject createLabel(JavaScriptObject parameters) /*-{
@@ -1307,7 +1307,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.OptionDialog
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.OptionDialog.html">Titanium.UI.OptionDialog</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.OptionDialog
 	 * @return object
 	 */
 	 public static native JavaScriptObject createOptionDialog(JavaScriptObject parameters) /*-{
@@ -1320,7 +1320,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Picker
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Picker.html">Titanium.UI.Picker</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Picker
 	 * @return object
 	 */
 	 public static native JavaScriptObject createPicker(JavaScriptObject parameters) /*-{
@@ -1333,7 +1333,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.PickerColumn
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.PickerColumn.html">Titanium.UI.PickerColumn</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.PickerColumn
 	 * @return object
 	 */
 	 public static native JavaScriptObject createPickerColumn(JavaScriptObject parameters) /*-{
@@ -1346,7 +1346,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.PickerRow
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.PickerRow.html">Titanium.UI.PickerRow</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.PickerRow
 	 * @return object
 	 */
 	 public static native JavaScriptObject createPickerRow(JavaScriptObject parameters) /*-{
@@ -1359,7 +1359,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.ProgressBar
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.ProgressBar.html">Titanium.UI.ProgressBar</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.ProgressBar
 	 * @return object
 	 */
 	 public static native JavaScriptObject createProgressBar(JavaScriptObject parameters) /*-{
@@ -1372,7 +1372,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.ScrollView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.ScrollView.html">Titanium.UI.ScrollView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.ScrollView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createScrollView(JavaScriptObject parameters) /*-{
@@ -1385,7 +1385,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.ScrollableView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.ScrollableView.html">Titanium.UI.ScrollableView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.ScrollableView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createScrollableView(JavaScriptObject parameters) /*-{
@@ -1398,7 +1398,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.SearchBar
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.SearchBar.html">Titanium.UI.SearchBar</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.SearchBar
 	 * @return object
 	 */
 	 public static native JavaScriptObject createSearchBar(JavaScriptObject parameters) /*-{
@@ -1411,7 +1411,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Slider
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Slider.html">Titanium.UI.Slider</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Slider
 	 * @return object
 	 */
 	 public static native JavaScriptObject createSlider(JavaScriptObject parameters) /*-{
@@ -1424,7 +1424,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Switch
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Switch.html">Titanium.UI.Switch</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Switch
 	 * @return object
 	 */
 	 public static native JavaScriptObject createSwitch(JavaScriptObject parameters) /*-{
@@ -1437,7 +1437,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Tab
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Tab.html">Titanium.UI.Tab</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Tab
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTab(JavaScriptObject parameters) /*-{
@@ -1450,7 +1450,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.TabGroup
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.TabGroup.html">Titanium.UI.TabGroup</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.TabGroup
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTabGroup(JavaScriptObject parameters) /*-{
@@ -1463,7 +1463,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.TabbedBar
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.TabbedBar.html">Titanium.UI.TabbedBar</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.TabbedBar
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTabbedBar(JavaScriptObject parameters) /*-{
@@ -1476,7 +1476,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.TableView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.TableView.html">Titanium.UI.TableView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.TableView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTableView(JavaScriptObject parameters) /*-{
@@ -1489,7 +1489,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.TableViewRow
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.TableViewRow.html">Titanium.UI.TableViewRow</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.TableViewRow
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTableViewRow(JavaScriptObject parameters) /*-{
@@ -1502,7 +1502,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.TableViewSection
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.TableViewSection.html">Titanium.UI.TableViewSection</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.TableViewSection
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTableViewSection(JavaScriptObject parameters) /*-{
@@ -1515,7 +1515,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.TextArea
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.TextArea.html">Titanium.UI.TextArea</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.TextArea
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTextArea(JavaScriptObject parameters) /*-{
@@ -1528,7 +1528,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.TextField
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.TextField.html">Titanium.UI.TextField</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.TextField
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTextField(JavaScriptObject parameters) /*-{
@@ -1541,7 +1541,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Toolbar
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Toolbar.html">Titanium.UI.Toolbar</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Toolbar
 	 * @return object
 	 */
 	 public static native JavaScriptObject createToolbar(JavaScriptObject parameters) /*-{
@@ -1554,7 +1554,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.View
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.View.html">Titanium.UI.View</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.View
 	 * @return object
 	 */
 	 public static native JavaScriptObject createView(JavaScriptObject parameters) /*-{
@@ -1567,7 +1567,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.WebView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.WebView.html">Titanium.UI.WebView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.WebView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createWebView(JavaScriptObject parameters) /*-{
@@ -1580,7 +1580,7 @@ public class UI {
 	 * create and return an instance of Titanium.UI.Window
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.4
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.UI.Window.html">Titanium.UI.Window</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.UI.Window
 	 * @return object
 	 */
 	 public static native JavaScriptObject createWindow(JavaScriptObject parameters) /*-{

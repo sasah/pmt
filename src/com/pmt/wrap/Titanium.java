@@ -93,7 +93,7 @@ public class Titanium {
 	 * create and return an instance of Titanium.Blob
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Blob.html">Titanium.Blob</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Blob
 	 * @return object
 	 */
 	 public static native JavaScriptObject createBlob(JavaScriptObject parameters) /*-{
@@ -106,7 +106,7 @@ public class Titanium {
 	 * creates a new buffer based on the params
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param params (object) Key value pairs.  You can include: <tt>value</tt>, an optional initial value which will be encoded and placed in the buffer.  If value is a Number, <tt>type</tt> must also be set. This is simply a convenient way of calling <a href="Titanium.Codec.encodeString.html">Titanium.Codec.encodeString</a> or <a href="Titanium.Codec.encodeNumber.html">Titanium.Codec.encodeNumber</a> and placing the encoded value in the returned buffer.  <tt>length</tt>: the length of the buffer, with a default of 0 unless <tt>value</tt> is specified, in which case the length of the encoded <tt>value</tt>.  <tt>type</tt>, the type of data encoding to use with <tt>value</tt>, with <a href="Titanium.Codec.CHARSET_UTF8.html">Titanium.Codec.CHARSET_UTF8</a> being the default if <tt>value</tt> is a String, else this argument is required in the case of <tt>value</tt> being a number.  <tt>byteOrder</tt>, the byte order of this buffer, with the default being the OS native byte order is used by default (see <a href="Titanium.Codec.getNativeByteOrder.html">Titanium.Codec.getNativeByteOrder</a>).
+	 * @param params (object) Key value pairs.  You can include: value, an optional initial value which will be encoded and placed in the buffer.  If value is a Number, type must also be set. This is simply a convenient way of calling Titanium.Codec.encodeString or Titanium.Codec.encodeNumber and placing the encoded value in the returned buffer.  length: the length of the buffer, with a default of 0 unless value is specified, in which case the length of the encoded value.  type, the type of data encoding to use with value, with Titanium.Codec.CHARSET_UTF8 being the default if value is a String, else this argument is required in the case of value being a number.  byteOrder, the byte order of this buffer, with the default being the OS native byte order is used by default (see Titanium.Codec.getNativeByteOrder).
 	 * @return <a href="Titanium.Buffer-object.html">Titanium.Buffer</a>
 	 */
 	 public static native JavaScriptObject createBuffer(JavaScriptObject params) /*-{

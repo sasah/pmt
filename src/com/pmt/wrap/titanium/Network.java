@@ -383,7 +383,7 @@ public class Network {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param serviceType (string) service to search for, must include the protocol type suffix (._tcp)
 	 * @param domain (string) the Bonjour service domain to conduct the search in.  Default value is 'local.'
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Network.BonjourBrowser.html">Titanium.Network.BonjourBrowser</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Network.BonjourBrowser
 	 * @return object
 	 */
 	 public static native JavaScriptObject createBonjourBrowser(String serviceType, String domain, JavaScriptObject parameters) /*-{
@@ -399,7 +399,7 @@ public class Network {
 	 * @param name (string) the name of the service.  Must be a unique identifier for this service type and domain.
 	 * @param type (string) the type of service.  Must include the protocol identifier (._tcp)
 	 * @param domain (string) the domain to publish the service in.  Default value is 'local.'
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Network.BonjourService.html">Titanium.Network.BonjourService</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Network.BonjourService
 	 * @return object
 	 */
 	 public static native JavaScriptObject createBonjourService(String name, String type, String domain, JavaScriptObject parameters) /*-{
@@ -412,7 +412,7 @@ public class Network {
 	 * create and return an instance of Titanium.Network.HTTPClient
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Network.HTTPClient.html">Titanium.Network.HTTPClient</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Network.HTTPClient
 	 * @return object
 	 */
 	 public static native JavaScriptObject createHTTPClient(JavaScriptObject parameters) /*-{
@@ -427,8 +427,8 @@ public class Network {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 * @param hostName (string) the host name to connect to/listen on
 	 * @param port (int) the port for the socket
-	 * @param mode (int) the socket's mode; one of <a href="Titanium.Network.READ_MODE.html">Titanium.Network.READ_MODE</a>, <a href="Titanium.Network.WRITE_MODE.html">Titanium.Network.WRITE_MODE</a>, <a href="Titanium.Network.READ_WRITE_MODE.html">Titanium.Network.READ_WRITE_MODE</a>
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Network.TCPSocket.html">Titanium.Network.TCPSocket</a>
+	 * @param mode (int) the socket's mode; one of Titanium.Network.READ_MODE, Titanium.Network.WRITE_MODE, Titanium.Network.READ_WRITE_MODE
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Network.TCPSocket
 	 * @return object
 	 */
 	 public static native JavaScriptObject createTCPSocket(String hostName, int port, int mode, JavaScriptObject parameters) /*-{
@@ -481,7 +481,7 @@ public class Network {
 	 * register for push notifications with the Apple Push Notification Service. Only available on iPhone.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param config (object) dictionary of the following: <tt>types</tt> is an array of type constants that the application would like to receive, <tt>success</tt> is a callback function that is called when the push registration is successfully completed, <tt>error</tt> is a callback function that is called when an error is received during registration and <tt>callback</tt> is a callback function that is invoked upon receiving a new push notification. This method should be called at application startup.
+	 * @param config (object) dictionary of the following: types is an array of type constants that the application would like to receive, success is a callback function that is called when the push registration is successfully completed, error is a callback function that is called when an error is received during registration and callback is a callback function that is invoked upon receiving a new push notification. This method should be called at application startup.
 	 * @return void
 	 */
 	 public static native void registerForPushNotifications(JavaScriptObject config) /*-{
@@ -514,25 +514,7 @@ public class Network {
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
 		return Titanium.Network.removeEventListener(name, callback);
 	}-*/;
-
-	/**
-	 * <b>change</b>
-	 * <p>
-	 * fired upon a network connectivity change
-	 */
-	public interface ChangeHandler {
-		/**
-		 * <b>change</b>
-		 * <p>
-		 * fired upon a network connectivity change
-		 * @param networkType the new network type
-		 * @param source the source object that fired the event
-		 * @param type the name of the event fired
-		 * @param online boolean to indicate if the network is online
-		 * @param networkTypeName the new network type as a string
-		 */
-		void change(JavaScriptObject networkType, JavaScriptObject source, JavaScriptObject type, JavaScriptObject online, JavaScriptObject networkTypeName);
-	}
+	
 
 	/**
 	 * <b>change</b>
@@ -540,9 +522,9 @@ public class Network {
 	 * fired upon a network connectivity change
 	 * @param change event handler
 	 */
-	public native void addChange(ChangeHandler change) /*-{
+	public native void addChange(com.pmt.wrap.titanium.sys.events.TitaniumNetworkChangeHandler change) /*-{
 		this.@com.pmt.wrap.titanium.Network::handler.addEventListener('change', function(networkType, source, type, online, networkTypeName) {
-			change.@com.pmt.wrap.titanium.Network.ChangeHandler::change(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(networkType, source, type, online, networkTypeName);
+			change.@com.pmt.wrap.titanium.sys.events.TitaniumNetworkChangeHandler::change(Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;Lcom/google/gwt/core/client/JavaScriptObject;)(networkType, source, type, online, networkTypeName);
 		});
 	}-*/;
 }

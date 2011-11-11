@@ -93,7 +93,7 @@ public class Contacts {
 	 * create and return an instance of Titanium.Contacts.Group
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad android, <b>Since:</b> 0.8
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Contacts.Group.html">Titanium.Contacts.Group</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Contacts.Group
 	 * @return object
 	 */
 	 public static native JavaScriptObject createGroup(JavaScriptObject parameters) /*-{
@@ -106,7 +106,7 @@ public class Contacts {
 	 * create and return an instance of Titanium.Contacts.Person
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad android, <b>Since:</b> 0.8
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Contacts.Person.html">Titanium.Contacts.Person</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Contacts.Person
 	 * @return object
 	 */
 	 public static native JavaScriptObject createPerson(JavaScriptObject parameters) /*-{
@@ -210,7 +210,7 @@ public class Contacts {
 	 * Removes a group from the contacts database (NOTE: not supported on Android.)
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad android, <b>Since:</b> 0.8
-	 * @param group (object) The <a href="Titanium.Contacts.Group.html">Titanium.Contacts.Group</a> object to remove from the database. (NOTE: not supported on Android.)
+	 * @param group (object) The Titanium.Contacts.Group object to remove from the database. (NOTE: not supported on Android.)
 	 * @return void
 	 */
 	 public static native void removeGroup(JavaScriptObject group) /*-{
@@ -223,7 +223,7 @@ public class Contacts {
 	 * Removes a person from the contacts database. (NOTE: not supported on Android.)
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad android, <b>Since:</b> 0.8
-	 * @param person (object) The <a href="Titanium.Contacts.Person.html">Titanium.Contacts.Person</a> object to remove from the database. (NOTE: not supported on Android.)
+	 * @param person (object) The Titanium.Contacts.Person object to remove from the database. (NOTE: not supported on Android.)
 	 * @return void
 	 */
 	 public static native void removePerson(JavaScriptObject person) /*-{
@@ -261,8 +261,8 @@ public class Contacts {
 	 * <p>
 	 * <b>Platforms:</b> iphone ipad android, <b>Since:</b> 0.8
 	 * @param cancel (function) The function to call when selection is cancelled
-	 * @param selectedPerson (function) The function to call when a person is selected.  Mutually exclusive with <tt>selectedProperty</tt>
-	 * @param selectedProperty (function) The function to call when a property is selected.  Mutally exclusive with <tt>selectedPerson</tt>
+	 * @param selectedPerson (function) The function to call when a person is selected.  Mutually exclusive with selectedProperty
+	 * @param selectedProperty (function) The function to call when a property is selected.  Mutally exclusive with selectedPerson
 	 * @param animated (boolean) Whether or not to animate the show/hide of the contacts picker
 	 * @param fields (array) A list of field names to show when selecting properties, default is to show all available
 	 * @return void

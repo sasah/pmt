@@ -82,7 +82,7 @@ public class Map {
 	 * create and return an instance of Titanium.Map.Annotation
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.8
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Map.Annotation.html">Titanium.Map.Annotation</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Map.Annotation
 	 * @return object
 	 */
 	 public static native JavaScriptObject createAnnotation(JavaScriptObject parameters) /*-{
@@ -95,7 +95,7 @@ public class Map {
 	 * create and return an instance of Titanium.Map.MapView
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.8
-	 * @param parameters (object) (optional) a dictionary object properties defined in <a href="Titanium.Map.MapView.html">Titanium.Map.MapView</a>
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Map.MapView
 	 * @return object
 	 */
 	 public static native JavaScriptObject createMapView(JavaScriptObject parameters) /*-{
