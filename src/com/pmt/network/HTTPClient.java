@@ -1,13 +1,14 @@
-package com.pmt.wrap.titanium.network;
+package com.pmt.network;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * <b>Titanium.Network.HTTPClient</b>
  * <p>
- * The HttpClient instance returned from Titanium.Network.createHTTPClient. This object (mostly) implements the XMLHttpRequest specification.
+ * The HttpClient instance returned from Titanium.Network.createHTTPClient. This
+ * object (mostly) implements the XMLHttpRequest specification.
  * <p>
- * <b>Platforms:</b> android iphone ipad 
+ * <b>Platforms:</b> android iphone ipad
  * <p>
  * <b>Since:</b> 0.1
  * <p>
@@ -19,15 +20,27 @@ import com.google.gwt.core.client.JavaScriptObject;
  */
 public class HTTPClient {
 
-	private JavaScriptObject handler;
+	private final JavaScriptObject handler;
 
-	public HTTPClient(JavaScriptObject handler) {
-		this.handler = handler;
+	public HTTPClient() {
+		this.handler = createHTTPClient();
 	}
-	
-	public JavaScriptObject getHandler() {
-		return handler;
-	}
+
+	/**
+	 * <b>createHTTPClient</b>
+	 * <p>
+	 * create and return an instance of Titanium.Network.HTTPClient
+	 * <p>
+	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+	 * 
+	 * @param parameters
+	 *            (object) (optional) a dictionary object properties defined in
+	 *            Titanium.Network.HTTPClient
+	 * @return object
+	 */
+	private static native JavaScriptObject createHTTPClient() /*-{
+		return Titanium.Network.createHTTPClient();
+	}-*/;
 
 	/**
 	 * <b>DONE</b> (int) static
@@ -92,7 +105,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native boolean getConnected() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.connected;
+		return this.@com.pmt.network.HTTPClient::handler.connected;
 	}-*/;
 
 	/**
@@ -103,7 +116,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setConnected(boolean connected) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.connected = connected;
+		this.@com.pmt.network.HTTPClient::handler.connected = connected;
 	}-*/;
 
 	/**
@@ -114,7 +127,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native String getConnectionType() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.connectionType;
+		return this.@com.pmt.network.HTTPClient::handler.connectionType;
 	}-*/;
 
 	/**
@@ -125,29 +138,31 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setConnectionType(String connectionType) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.connectionType = connectionType;
+		this.@com.pmt.network.HTTPClient::handler.connectionType = connectionType;
 	}-*/;
 
 	/**
 	 * <b>file</b> (string)
 	 * <p>
-	 * file to download contents to.  Can only be set after calling open.  iOS only
+	 * file to download contents to. Can only be set after calling open. iOS
+	 * only
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native String getFile() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.file;
+		return this.@com.pmt.network.HTTPClient::handler.file;
 	}-*/;
 
 	/**
 	 * <b>file</b> (string)
 	 * <p>
-	 * file to download contents to.  Can only be set after calling open.  iOS only
+	 * file to download contents to. Can only be set after calling open. iOS
+	 * only
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setFile(String file) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.file = file;
+		this.@com.pmt.network.HTTPClient::handler.file = file;
 	}-*/;
 
 	/**
@@ -158,7 +173,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native String getLocation() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.location;
+		return this.@com.pmt.network.HTTPClient::handler.location;
 	}-*/;
 
 	/**
@@ -169,117 +184,135 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setLocation(String location) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.location = location;
+		this.@com.pmt.network.HTTPClient::handler.location = location;
 	}-*/;
 
 	/**
 	 * <b>ondatastream</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called at regular intervals as the request data is being received. the progress property of the event will contain a value from 0.0-1.0 with the progress.
+	 * set this to a function before calling open to cause the function to be
+	 * called at regular intervals as the request data is being received. the
+	 * progress property of the event will contain a value from 0.0-1.0 with the
+	 * progress.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native JavaScriptObject getOndatastream() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.ondatastream;
+		return this.@com.pmt.network.HTTPClient::handler.ondatastream;
 	}-*/;
 
 	/**
 	 * <b>ondatastream</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called at regular intervals as the request data is being received. the progress property of the event will contain a value from 0.0-1.0 with the progress.
+	 * set this to a function before calling open to cause the function to be
+	 * called at regular intervals as the request data is being received. the
+	 * progress property of the event will contain a value from 0.0-1.0 with the
+	 * progress.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setOndatastream(JavaScriptObject ondatastream) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.ondatastream = ondatastream;
+		this.@com.pmt.network.HTTPClient::handler.ondatastream = ondatastream;
 	}-*/;
 
 	/**
 	 * <b>onerror</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called upon a error response
+	 * set this to a function before calling open to cause the function to be
+	 * called upon a error response
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native JavaScriptObject getOnerror() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onerror;
+		return this.@com.pmt.network.HTTPClient::handler.onerror;
 	}-*/;
 
 	/**
 	 * <b>onerror</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called upon a error response
+	 * set this to a function before calling open to cause the function to be
+	 * called upon a error response
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setOnerror(JavaScriptObject onerror) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onerror = onerror;
+		this.@com.pmt.network.HTTPClient::handler.onerror = onerror;
 	}-*/;
 
 	/**
 	 * <b>onload</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called upon a successful response
+	 * set this to a function before calling open to cause the function to be
+	 * called upon a successful response
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native JavaScriptObject getOnload() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onload;
+		return this.@com.pmt.network.HTTPClient::handler.onload;
 	}-*/;
 
 	/**
 	 * <b>onload</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called upon a successful response
+	 * set this to a function before calling open to cause the function to be
+	 * called upon a successful response
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setOnload(JavaScriptObject onload) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onload = onload;
+		this.@com.pmt.network.HTTPClient::handler.onload = onload;
 	}-*/;
 
 	/**
 	 * <b>onreadystatechange</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called for each readyState change
+	 * set this to a function before calling open to cause the function to be
+	 * called for each readyState change
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native JavaScriptObject getOnreadystatechange() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onreadystatechange;
+		return this.@com.pmt.network.HTTPClient::handler.onreadystatechange;
 	}-*/;
 
 	/**
 	 * <b>onreadystatechange</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called for each readyState change
+	 * set this to a function before calling open to cause the function to be
+	 * called for each readyState change
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setOnreadystatechange(JavaScriptObject onreadystatechange) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onreadystatechange = onreadystatechange;
+		this.@com.pmt.network.HTTPClient::handler.onreadystatechange = onreadystatechange;
 	}-*/;
 
 	/**
 	 * <b>onsendstream</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called at regular intervals as the request data is being transmitted. the progress property of the event will contain a value from 0.0-1.0 with the progress.
+	 * set this to a function before calling open to cause the function to be
+	 * called at regular intervals as the request data is being transmitted. the
+	 * progress property of the event will contain a value from 0.0-1.0 with the
+	 * progress.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native JavaScriptObject getOnsendstream() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onsendstream;
+		return this.@com.pmt.network.HTTPClient::handler.onsendstream;
 	}-*/;
 
 	/**
 	 * <b>onsendstream</b> (function)
 	 * <p>
-	 * set this to a function before calling open to cause the function to be called at regular intervals as the request data is being transmitted. the progress property of the event will contain a value from 0.0-1.0 with the progress.
+	 * set this to a function before calling open to cause the function to be
+	 * called at regular intervals as the request data is being transmitted. the
+	 * progress property of the event will contain a value from 0.0-1.0 with the
+	 * progress.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setOnsendstream(JavaScriptObject onsendstream) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.onsendstream = onsendstream;
+		this.@com.pmt.network.HTTPClient::handler.onsendstream = onsendstream;
 	}-*/;
 
 	/**
@@ -290,7 +323,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native int getReadyState() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.readyState;
+		return this.@com.pmt.network.HTTPClient::handler.readyState;
 	}-*/;
 
 	/**
@@ -301,7 +334,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setReadyState(int readyState) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.readyState = readyState;
+		this.@com.pmt.network.HTTPClient::handler.readyState = readyState;
 	}-*/;
 
 	/**
@@ -312,7 +345,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native JavaScriptObject getResponseData() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.responseData;
+		return this.@com.pmt.network.HTTPClient::handler.responseData;
 	}-*/;
 
 	/**
@@ -323,51 +356,57 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setResponseData(JavaScriptObject responseData) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.responseData = responseData;
+		this.@com.pmt.network.HTTPClient::handler.responseData = responseData;
 	}-*/;
 
 	/**
 	 * <b>responseText</b> (string)
 	 * <p>
-	 * the response as text or null if an error was received or no data was returned
+	 * the response as text or null if an error was received or no data was
+	 * returned
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native String getResponseText() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.responseText;
+		return this.@com.pmt.network.HTTPClient::handler.responseText;
 	}-*/;
 
 	/**
 	 * <b>responseText</b> (string)
 	 * <p>
-	 * the response as text or null if an error was received or no data was returned
+	 * the response as text or null if an error was received or no data was
+	 * returned
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setResponseText(String responseText) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.responseText = responseText;
+		this.@com.pmt.network.HTTPClient::handler.responseText = responseText;
 	}-*/;
 
 	/**
 	 * <b>responseXML</b> (object)
 	 * <p>
-	 * the response object as an XML DOMDocument object. returns null if the content type returned by the server was not XML or the content could not be parsed
+	 * the response object as an XML DOMDocument object. returns null if the
+	 * content type returned by the server was not XML or the content could not
+	 * be parsed
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native JavaScriptObject getResponseXML() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.responseXML;
+		return this.@com.pmt.network.HTTPClient::handler.responseXML;
 	}-*/;
 
 	/**
 	 * <b>responseXML</b> (object)
 	 * <p>
-	 * the response object as an XML DOMDocument object. returns null if the content type returned by the server was not XML or the content could not be parsed
+	 * the response object as an XML DOMDocument object. returns null if the
+	 * content type returned by the server was not XML or the content could not
+	 * be parsed
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setResponseXML(JavaScriptObject responseXML) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.responseXML = responseXML;
+		this.@com.pmt.network.HTTPClient::handler.responseXML = responseXML;
 	}-*/;
 
 	/**
@@ -378,7 +417,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native int getStatus() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.status;
+		return this.@com.pmt.network.HTTPClient::handler.status;
 	}-*/;
 
 	/**
@@ -389,7 +428,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setStatus(int status) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.status = status;
+		this.@com.pmt.network.HTTPClient::handler.status = status;
 	}-*/;
 
 	/**
@@ -400,7 +439,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native int getTimeout() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.timeout;
+		return this.@com.pmt.network.HTTPClient::handler.timeout;
 	}-*/;
 
 	/**
@@ -411,29 +450,33 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setTimeout(int timeout) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.timeout = timeout;
+		this.@com.pmt.network.HTTPClient::handler.timeout = timeout;
 	}-*/;
 
 	/**
 	 * <b>validatesSecureCertificate</b> (boolean)
 	 * <p>
-	 * set this to control how SSL certification validation is performed on connection.  defaults to false if in simulator or device testing and true if release for distribution mode.
+	 * set this to control how SSL certification validation is performed on
+	 * connection. defaults to false if in simulator or device testing and true
+	 * if release for distribution mode.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native boolean getValidatesSecureCertificate() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.validatesSecureCertificate;
+		return this.@com.pmt.network.HTTPClient::handler.validatesSecureCertificate;
 	}-*/;
 
 	/**
 	 * <b>validatesSecureCertificate</b> (boolean)
 	 * <p>
-	 * set this to control how SSL certification validation is performed on connection.  defaults to false if in simulator or device testing and true if release for distribution mode.
+	 * set this to control how SSL certification validation is performed on
+	 * connection. defaults to false if in simulator or device testing and true
+	 * if release for distribution mode.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setValidatesSecureCertificate(boolean validatesSecureCertificate) /*-{
-		this.@com.pmt.wrap.titanium.network.HTTPClient::handler.validatesSecureCertificate = validatesSecureCertificate;
+		this.@com.pmt.network.HTTPClient::handler.validatesSecureCertificate = validatesSecureCertificate;
 	}-*/;
 
 	/**
@@ -442,10 +485,11 @@ public class HTTPClient {
 	 * abort a pending request
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+	 * 
 	 * @return void
 	 */
-	 public native void abort() /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.abort();
+	public native void abort() /*-{
+		return this.@com.pmt.network.HTTPClient::handler.abort();
 	}-*/;
 
 	/**
@@ -454,11 +498,14 @@ public class HTTPClient {
 	 * return the response header.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param name (string) the header name
+	 * 
+	 * @param name
+	 *            (string) the header name
 	 * @return string
 	 */
-	 public native String getResponseHeader(String name) /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.getResponseHeader(name);
+	public native String getResponseHeader(String name) /*-{
+		return this.@com.pmt.network.HTTPClient::handler
+				.getResponseHeader(name);
 	}-*/;
 
 	/**
@@ -467,13 +514,19 @@ public class HTTPClient {
 	 * open the request and ready the connection
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param method (string) the HTTP method
-	 * @param url (string) the URL for the request
-	 * @param async (boolean) optional property to indicate if asynchronous (default) or not
+	 * 
+	 * @param method
+	 *            (string) the HTTP method
+	 * @param url
+	 *            (string) the URL for the request
+	 * @param async
+	 *            (boolean) optional property to indicate if asynchronous
+	 *            (default) or not
 	 * @return void
 	 */
-	 public native void open(String method, String url, boolean async) /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.open(method, url, async);
+	public native void open(String method, String url, boolean async) /*-{
+		return this.@com.pmt.network.HTTPClient::handler.open(method, url,
+				async);
 	}-*/;
 
 	/**
@@ -482,11 +535,14 @@ public class HTTPClient {
 	 * send the request (Only async is currently supported)
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param data (object) the data to send in the request. can either be null, dictionary, string, File object or Blob.
+	 * 
+	 * @param data
+	 *            (object) the data to send in the request. can either be null,
+	 *            dictionary, string, File object or Blob.
 	 * @return void
 	 */
-	 public native void send(JavaScriptObject data) /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.send(data);
+	public native void send(JavaScriptObject data) /*-{
+		return this.@com.pmt.network.HTTPClient::handler.send(data);
 	}-*/;
 
 	/**
@@ -495,12 +551,17 @@ public class HTTPClient {
 	 * set the request header. Must be called after open but before send.
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param name (string) name of the header
-	 * @param value (string) value of the header. May be null to clearing out a property, such as X-Requested-With
+	 * 
+	 * @param name
+	 *            (string) name of the header
+	 * @param value
+	 *            (string) value of the header. May be null to clearing out a
+	 *            property, such as X-Requested-With
 	 * @return void
 	 */
-	 public native void setRequestHeader(String name, String value) /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.setRequestHeader(name, value);
+	public native void setRequestHeader(String name, String value) /*-{
+		return this.@com.pmt.network.HTTPClient::handler.setRequestHeader(name,
+				value);
 	}-*/;
 
 	/**
@@ -509,10 +570,13 @@ public class HTTPClient {
 	 * set the request timeout
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param timeout (double) the timeout in milliseconds
+	 * 
+	 * @param timeout
+	 *            (double) the timeout in milliseconds
 	 * @return void
 	 */
-	 public native void setTimeoutMethod(double timeout) /*-{
-		return this.@com.pmt.wrap.titanium.network.HTTPClient::handler.setTimeoutMethod(timeout);
+	public native void setTimeoutMethod(double timeout) /*-{
+		return this.@com.pmt.network.HTTPClient::handler
+				.setTimeoutMethod(timeout);
 	}-*/;
 }
