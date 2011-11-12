@@ -40,7 +40,7 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.iOS.addEventListener(name, callback);
+		Titanium.App.iOS.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -52,7 +52,7 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void cancelAllLocalNotifications() /*-{
-		return Titanium.App.iOS.cancelAllLocalNotifications();
+		Titanium.App.iOS.cancelAllLocalNotifications();
 	}-*/;
 
 	/**
@@ -64,7 +64,7 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void cancelLocalNotification() /*-{
-		return Titanium.App.iOS.cancelLocalNotification();
+		Titanium.App.iOS.cancelLocalNotification();
 	}-*/;
 
 	/**
@@ -104,7 +104,7 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.App.iOS.fireEvent(name, event);
+		Titanium.App.iOS.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -131,7 +131,7 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.iOS.removeEventListener(name, callback);
+		Titanium.App.iOS.removeEventListener(name, callback);
 	}-*/;
 
 	/**

@@ -128,7 +128,7 @@ public class DashboardItem {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -142,7 +142,7 @@ public class DashboardItem {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -156,7 +156,7 @@ public class DashboardItem {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.DashboardItem::handler.removeEventListener(name, callback);
 	}-*/;
 	
 

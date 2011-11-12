@@ -985,7 +985,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.add(view);
 	}-*/;
 
 	/**
@@ -999,7 +999,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1013,7 +1013,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1027,7 +1027,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1039,7 +1039,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.hide();
 	}-*/;
 
 	/**
@@ -1052,7 +1052,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1066,7 +1066,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1078,7 +1078,7 @@ public class Switch {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Switch::handler.show();
+		this.@com.pmt.wrap.titanium.ui.Switch::handler.show();
 	}-*/;
 
 	/**

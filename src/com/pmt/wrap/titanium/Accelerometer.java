@@ -40,7 +40,7 @@ public class Accelerometer {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Accelerometer.addEventListener(name, callback);
+		Titanium.Accelerometer.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class Accelerometer {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Accelerometer.fireEvent(name, event);
+		Titanium.Accelerometer.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -68,7 +68,7 @@ public class Accelerometer {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Accelerometer.removeEventListener(name, callback);
+		Titanium.Accelerometer.removeEventListener(name, callback);
 	}-*/;
 	
 

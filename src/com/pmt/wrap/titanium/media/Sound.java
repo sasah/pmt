@@ -216,7 +216,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.Sound::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -230,7 +230,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.media.Sound::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -242,7 +242,7 @@ public class Sound {
 	 * @return double
 	 */
 	 public native double getTimeMethod() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.getTimeMethod();
+		return this.@com.pmt.wrap.titanium.media.Sound::handler.getTime();
 	}-*/;
 
 	/**
@@ -254,7 +254,7 @@ public class Sound {
 	 * @return float
 	 */
 	 public native double getVolumeMethod() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.getVolumeMethod();
+		return this.@com.pmt.wrap.titanium.media.Sound::handler.getVolume();
 	}-*/;
 
 	/**
@@ -302,7 +302,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void pause() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.pause();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.pause();
 	}-*/;
 
 	/**
@@ -314,7 +314,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void play() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.play();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.play();
 	}-*/;
 
 	/**
@@ -326,7 +326,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void release() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.release();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.release();
 	}-*/;
 
 	/**
@@ -340,7 +340,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.Sound::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -352,7 +352,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void reset() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.reset();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.reset();
 	}-*/;
 
 	/**
@@ -364,7 +364,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void setLoopingMethod() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.setLoopingMethod();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.setLooping();
 	}-*/;
 
 	/**
@@ -376,7 +376,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void setPausedMethod() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.setPausedMethod();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.setPaused();
 	}-*/;
 
 	/**
@@ -388,7 +388,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void setTimeMethod() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.setTimeMethod();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.setTime();
 	}-*/;
 
 	/**
@@ -400,7 +400,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void setVolumeMethod() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.setVolumeMethod();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.setVolume();
 	}-*/;
 
 	/**
@@ -412,7 +412,7 @@ public class Sound {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.media.Sound::handler.stop();
+		this.@com.pmt.wrap.titanium.media.Sound::handler.stop();
 	}-*/;
 	
 

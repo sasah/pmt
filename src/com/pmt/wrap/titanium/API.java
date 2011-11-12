@@ -40,7 +40,7 @@ public class API {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.API.addEventListener(name, callback);
+		Titanium.API.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -53,7 +53,7 @@ public class API {
 	 * @return void
 	 */
 	 public static native void debug(String message) /*-{
-		return Titanium.API.debug(message);
+		Titanium.API.debug(message);
 	}-*/;
 
 	/**
@@ -66,7 +66,7 @@ public class API {
 	 * @return void
 	 */
 	 public static native void error(String message) /*-{
-		return Titanium.API.error(message);
+		Titanium.API.error(message);
 	}-*/;
 
 	/**
@@ -80,7 +80,7 @@ public class API {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.API.fireEvent(name, event);
+		Titanium.API.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -93,7 +93,7 @@ public class API {
 	 * @return void
 	 */
 	 public static native void info(String message) /*-{
-		return Titanium.API.info(message);
+		Titanium.API.info(message);
 	}-*/;
 
 	/**
@@ -107,7 +107,7 @@ public class API {
 	 * @return void
 	 */
 	 public static native void log(String level, String message) /*-{
-		return Titanium.API.log(level, message);
+		Titanium.API.log(level, message);
 	}-*/;
 
 	/**
@@ -121,7 +121,7 @@ public class API {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.API.removeEventListener(name, callback);
+		Titanium.API.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -134,6 +134,6 @@ public class API {
 	 * @return void
 	 */
 	 public static native void warn(String message) /*-{
-		return Titanium.API.warn(message);
+		Titanium.API.warn(message);
 	}-*/;
 }

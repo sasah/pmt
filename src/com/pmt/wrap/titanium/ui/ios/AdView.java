@@ -853,7 +853,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.add(view);
 	}-*/;
 
 	/**
@@ -867,7 +867,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -881,7 +881,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -893,7 +893,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void cancelAction() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.cancelAction();
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.cancelAction();
 	}-*/;
 
 	/**
@@ -907,7 +907,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -919,7 +919,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.hide();
 	}-*/;
 
 	/**
@@ -932,7 +932,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -946,7 +946,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -958,7 +958,7 @@ public class AdView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.show();
+		this.@com.pmt.wrap.titanium.ui.ios.AdView::handler.show();
 	}-*/;
 
 	/**

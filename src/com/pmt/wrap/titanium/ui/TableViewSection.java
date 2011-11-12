@@ -964,7 +964,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject row, JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.add(row, view);
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.add(row, view);
 	}-*/;
 
 	/**
@@ -978,7 +978,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -992,7 +992,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1006,7 +1006,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1018,7 +1018,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.hide();
 	}-*/;
 
 	/**
@@ -1032,7 +1032,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject row, JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.remove(row, view);
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.remove(row, view);
 	}-*/;
 
 	/**
@@ -1046,7 +1046,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1058,7 +1058,7 @@ public class TableViewSection {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.show();
+		this.@com.pmt.wrap.titanium.ui.TableViewSection::handler.show();
 	}-*/;
 
 	/**

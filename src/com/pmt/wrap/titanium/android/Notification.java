@@ -390,6 +390,6 @@ public class Notification {
 	 * @return void
 	 */
 	 public native void setLatestEventInfo() /*-{
-		return this.@com.pmt.wrap.titanium.android.Notification::handler.setLatestEventInfo();
+		this.@com.pmt.wrap.titanium.android.Notification::handler.setLatestEventInfo();
 	}-*/;
 }

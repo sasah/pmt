@@ -1029,7 +1029,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.Button::handler.add(view);
 	}-*/;
 
 	/**
@@ -1043,7 +1043,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Button::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1057,7 +1057,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.Button::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1071,7 +1071,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.Button::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1083,7 +1083,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.Button::handler.hide();
 	}-*/;
 
 	/**
@@ -1096,7 +1096,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.Button::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1110,7 +1110,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Button::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1122,7 +1122,7 @@ public class Button {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Button::handler.show();
+		this.@com.pmt.wrap.titanium.ui.Button::handler.show();
 	}-*/;
 
 	/**

@@ -1161,7 +1161,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.add(view);
 	}-*/;
 
 	/**
@@ -1175,7 +1175,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1189,7 +1189,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1203,7 +1203,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1215,7 +1215,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.hide();
 	}-*/;
 
 	/**
@@ -1227,7 +1227,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void pause() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.pause();
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.pause();
 	}-*/;
 
 	/**
@@ -1240,7 +1240,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1254,7 +1254,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1266,7 +1266,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.show();
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.show();
 	}-*/;
 
 	/**
@@ -1278,7 +1278,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void start() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.start();
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.start();
 	}-*/;
 
 	/**
@@ -1290,7 +1290,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.stop();
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.stop();
 	}-*/;
 
 	/**
@@ -1302,7 +1302,7 @@ public class ImageView {
 	 * @return void
 	 */
 	 public native void toBlob() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ImageView::handler.toBlob();
+		this.@com.pmt.wrap.titanium.ui.ImageView::handler.toBlob();
 	}-*/;
 
 	/**

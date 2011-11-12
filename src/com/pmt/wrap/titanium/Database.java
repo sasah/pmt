@@ -84,7 +84,7 @@ public class Database {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Database.addEventListener(name, callback);
+		Titanium.Database.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -98,7 +98,7 @@ public class Database {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Database.fireEvent(name, event);
+		Titanium.Database.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -139,6 +139,6 @@ public class Database {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Database.removeEventListener(name, callback);
+		Titanium.Database.removeEventListener(name, callback);
 	}-*/;
 }

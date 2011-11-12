@@ -40,7 +40,7 @@ public class _2DMatrix {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class _2DMatrix {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -66,7 +66,7 @@ public class _2DMatrix {
 	 * @return void
 	 */
 	 public native void invert() /*-{
-		return this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.invert();
+		this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.invert();
 	}-*/;
 
 	/**
@@ -93,7 +93,7 @@ public class _2DMatrix {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui._2DMatrix::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**

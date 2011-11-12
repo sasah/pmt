@@ -104,7 +104,7 @@ public class DB {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.database.DB::handler.close();
+		this.@com.pmt.wrap.titanium.database.DB::handler.close();
 	}-*/;
 
 	/**
@@ -130,6 +130,6 @@ public class DB {
 	 * @return void
 	 */
 	 public native void remove() /*-{
-		return this.@com.pmt.wrap.titanium.database.DB::handler.remove();
+		this.@com.pmt.wrap.titanium.database.DB::handler.remove();
 	}-*/;
 }

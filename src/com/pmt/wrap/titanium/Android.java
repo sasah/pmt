@@ -1792,7 +1792,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Android.addEventListener(name, callback);
+		Titanium.Android.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1895,7 +1895,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Android.fireEvent(name, event);
+		Titanium.Android.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1922,7 +1922,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Android.removeEventListener(name, callback);
+		Titanium.Android.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1935,7 +1935,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void startService(JavaScriptObject intent) /*-{
-		return Titanium.Android.startService(intent);
+		Titanium.Android.startService(intent);
 	}-*/;
 
 	/**
@@ -1948,6 +1948,6 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void stopService(JavaScriptObject intent) /*-{
-		return Titanium.Android.stopService(intent);
+		Titanium.Android.stopService(intent);
 	}-*/;
 }

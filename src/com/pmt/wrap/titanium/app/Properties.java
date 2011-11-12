@@ -40,7 +40,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.Properties.addEventListener(name, callback);
+		Titanium.App.Properties.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.App.Properties.fireEvent(name, event);
+		Titanium.App.Properties.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -163,7 +163,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.Properties.removeEventListener(name, callback);
+		Titanium.App.Properties.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -176,7 +176,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void removeProperty(String property) /*-{
-		return Titanium.App.Properties.removeProperty(property);
+		Titanium.App.Properties.removeProperty(property);
 	}-*/;
 
 	/**
@@ -190,7 +190,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void setBool(String property, boolean value) /*-{
-		return Titanium.App.Properties.setBool(property, value);
+		Titanium.App.Properties.setBool(property, value);
 	}-*/;
 
 	/**
@@ -204,7 +204,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void setDouble(String property, double value) /*-{
-		return Titanium.App.Properties.setDouble(property, value);
+		Titanium.App.Properties.setDouble(property, value);
 	}-*/;
 
 	/**
@@ -218,7 +218,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void setInt(String property, int value) /*-{
-		return Titanium.App.Properties.setInt(property, value);
+		Titanium.App.Properties.setInt(property, value);
 	}-*/;
 
 	/**
@@ -232,7 +232,7 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void setList(String property, JavaScriptObject value) /*-{
-		return Titanium.App.Properties.setList(property, value);
+		Titanium.App.Properties.setList(property, value);
 	}-*/;
 
 	/**
@@ -246,6 +246,6 @@ public class Properties {
 	 * @return void
 	 */
 	 public static native void setString(String property, String value) /*-{
-		return Titanium.App.Properties.setString(property, value);
+		Titanium.App.Properties.setString(property, value);
 	}-*/;
 }

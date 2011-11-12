@@ -106,7 +106,7 @@ public class Locale {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Locale.addEventListener(name, callback);
+		Titanium.Locale.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -120,7 +120,7 @@ public class Locale {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Locale.fireEvent(name, event);
+		Titanium.Locale.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -200,6 +200,6 @@ public class Locale {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Locale.removeEventListener(name, callback);
+		Titanium.Locale.removeEventListener(name, callback);
 	}-*/;
 }

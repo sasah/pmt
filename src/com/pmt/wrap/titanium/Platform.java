@@ -480,7 +480,7 @@ public class Platform {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Platform.addEventListener(name, callback);
+		Titanium.Platform.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -493,7 +493,7 @@ public class Platform {
 	 * @return void
 	 */
 	 public static native void canOpenURL(String url) /*-{
-		return Titanium.Platform.canOpenURL(url);
+		Titanium.Platform.canOpenURL(url);
 	}-*/;
 
 	/**
@@ -519,7 +519,7 @@ public class Platform {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Platform.fireEvent(name, event);
+		Titanium.Platform.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -532,7 +532,7 @@ public class Platform {
 	 * @return void
 	 */
 	 public static native void openURL(String url) /*-{
-		return Titanium.Platform.openURL(url);
+		Titanium.Platform.openURL(url);
 	}-*/;
 
 	/**
@@ -546,7 +546,7 @@ public class Platform {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Platform.removeEventListener(name, callback);
+		Titanium.Platform.removeEventListener(name, callback);
 	}-*/;
 	
 

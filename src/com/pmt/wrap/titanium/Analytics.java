@@ -41,7 +41,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void addEvent(String type, String name, JavaScriptObject data) /*-{
-		return Titanium.Analytics.addEvent(type, name, data);
+		Titanium.Analytics.addEvent(type, name, data);
 	}-*/;
 
 	/**
@@ -55,7 +55,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Analytics.addEventListener(name, callback);
+		Titanium.Analytics.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -69,7 +69,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void featureEvent(String name, JavaScriptObject data) /*-{
-		return Titanium.Analytics.featureEvent(name, data);
+		Titanium.Analytics.featureEvent(name, data);
 	}-*/;
 
 	/**
@@ -83,7 +83,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Analytics.fireEvent(name, event);
+		Titanium.Analytics.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -99,7 +99,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void navEvent(String from, String to, String name, JavaScriptObject data) /*-{
-		return Titanium.Analytics.navEvent(from, to, name, data);
+		Titanium.Analytics.navEvent(from, to, name, data);
 	}-*/;
 
 	/**
@@ -113,7 +113,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Analytics.removeEventListener(name, callback);
+		Titanium.Analytics.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -127,7 +127,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void settingsEvent(String name, JavaScriptObject data) /*-{
-		return Titanium.Analytics.settingsEvent(name, data);
+		Titanium.Analytics.settingsEvent(name, data);
 	}-*/;
 
 	/**
@@ -144,7 +144,7 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void timedEvent(String name, JavaScriptObject start, JavaScriptObject stop, double duration, JavaScriptObject data) /*-{
-		return Titanium.Analytics.timedEvent(name, start, stop, duration, data);
+		Titanium.Analytics.timedEvent(name, start, stop, duration, data);
 	}-*/;
 
 	/**
@@ -158,6 +158,6 @@ public class Analytics {
 	 * @return void
 	 */
 	 public static native void userEvent(String name, JavaScriptObject data) /*-{
-		return Titanium.Analytics.userEvent(name, data);
+		Titanium.Analytics.userEvent(name, data);
 	}-*/;
 }

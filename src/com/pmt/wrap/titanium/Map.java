@@ -73,7 +73,7 @@ public class Map {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Map.addEventListener(name, callback);
+		Titanium.Map.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -113,7 +113,7 @@ public class Map {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Map.fireEvent(name, event);
+		Titanium.Map.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -127,6 +127,6 @@ public class Map {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Map.removeEventListener(name, callback);
+		Titanium.Map.removeEventListener(name, callback);
 	}-*/;
 }

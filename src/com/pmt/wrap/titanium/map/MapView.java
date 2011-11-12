@@ -1007,7 +1007,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.add(view);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.add(view);
 	}-*/;
 
 	/**
@@ -1020,7 +1020,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void addAnnotation(JavaScriptObject annotation) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.addAnnotation(annotation);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.addAnnotation(annotation);
 	}-*/;
 
 	/**
@@ -1033,7 +1033,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void addAnnotations(JavaScriptObject annotations) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.addAnnotations(annotations);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.addAnnotations(annotations);
 	}-*/;
 
 	/**
@@ -1047,7 +1047,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1060,7 +1060,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void addRoute(JavaScriptObject route) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.addRoute(route);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.addRoute(route);
 	}-*/;
 
 	/**
@@ -1074,7 +1074,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1087,7 +1087,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void deselectAnnotation(JavaScriptObject annotation) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.deselectAnnotation(annotation);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.deselectAnnotation(annotation);
 	}-*/;
 
 	/**
@@ -1101,7 +1101,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1113,7 +1113,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.hide();
+		this.@com.pmt.wrap.titanium.map.MapView::handler.hide();
 	}-*/;
 
 	/**
@@ -1126,7 +1126,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1138,7 +1138,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void removeAllAnnotations() /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.removeAllAnnotations();
+		this.@com.pmt.wrap.titanium.map.MapView::handler.removeAllAnnotations();
 	}-*/;
 
 	/**
@@ -1151,7 +1151,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void removeAnnotation(JavaScriptObject annotation) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.removeAnnotation(annotation);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.removeAnnotation(annotation);
 	}-*/;
 
 	/**
@@ -1164,7 +1164,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void removeAnnotations(JavaScriptObject annotation) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.removeAnnotations(annotation);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.removeAnnotations(annotation);
 	}-*/;
 
 	/**
@@ -1178,7 +1178,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1191,7 +1191,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void removeRoute(JavaScriptObject route) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.removeRoute(route);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.removeRoute(route);
 	}-*/;
 
 	/**
@@ -1204,7 +1204,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void selectAnnotation(JavaScriptObject annotation) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.selectAnnotation(annotation);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.selectAnnotation(annotation);
 	}-*/;
 
 	/**
@@ -1217,7 +1217,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void setLocationMethod(JavaScriptObject location) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.setLocationMethod(location);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.setLocation(location);
 	}-*/;
 
 	/**
@@ -1230,7 +1230,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void setMapTypeMethod(int mapType) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.setMapTypeMethod(mapType);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.setMapType(mapType);
 	}-*/;
 
 	/**
@@ -1242,7 +1242,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.show();
+		this.@com.pmt.wrap.titanium.map.MapView::handler.show();
 	}-*/;
 
 	/**
@@ -1268,7 +1268,7 @@ public class MapView {
 	 * @return void
 	 */
 	 public native void zoom(double level) /*-{
-		return this.@com.pmt.wrap.titanium.map.MapView::handler.zoom(level);
+		this.@com.pmt.wrap.titanium.map.MapView::handler.zoom(level);
 	}-*/;
 	
 

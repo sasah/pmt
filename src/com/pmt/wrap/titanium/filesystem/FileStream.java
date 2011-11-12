@@ -38,7 +38,7 @@ public class FileStream {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.filesystem.FileStream::handler.close();
+		this.@com.pmt.wrap.titanium.filesystem.FileStream::handler.close();
 	}-*/;
 
 	/**

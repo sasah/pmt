@@ -941,7 +941,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.add(view);
 	}-*/;
 
 	/**
@@ -955,7 +955,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -969,7 +969,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -983,7 +983,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -995,7 +995,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.hide();
 	}-*/;
 
 	/**
@@ -1008,7 +1008,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1022,7 +1022,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1034,7 +1034,7 @@ public class Tab {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Tab::handler.show();
+		this.@com.pmt.wrap.titanium.ui.Tab::handler.show();
 	}-*/;
 
 	/**

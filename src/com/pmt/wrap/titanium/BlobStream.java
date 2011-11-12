@@ -38,7 +38,7 @@ public class BlobStream {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.BlobStream::handler.close();
+		this.@com.pmt.wrap.titanium.BlobStream::handler.close();
 	}-*/;
 
 	/**

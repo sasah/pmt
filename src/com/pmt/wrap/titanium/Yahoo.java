@@ -40,7 +40,7 @@ public class Yahoo {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Yahoo.addEventListener(name, callback);
+		Titanium.Yahoo.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class Yahoo {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Yahoo.fireEvent(name, event);
+		Titanium.Yahoo.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -68,7 +68,7 @@ public class Yahoo {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Yahoo.removeEventListener(name, callback);
+		Titanium.Yahoo.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -82,6 +82,6 @@ public class Yahoo {
 	 * @return void
 	 */
 	 public static native void yql(String yql, JavaScriptObject callback) /*-{
-		return Titanium.Yahoo.yql(yql, callback);
+		Titanium.Yahoo.yql(yql, callback);
 	}-*/;
 }

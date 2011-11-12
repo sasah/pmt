@@ -40,7 +40,7 @@ public class LocalNotification {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -52,7 +52,7 @@ public class LocalNotification {
 	 * @return void
 	 */
 	 public native void cancel() /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.cancel();
+		this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.cancel();
 	}-*/;
 
 	/**
@@ -66,7 +66,7 @@ public class LocalNotification {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -80,6 +80,6 @@ public class LocalNotification {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.app.ios.LocalNotification::handler.removeEventListener(name, callback);
 	}-*/;
 }

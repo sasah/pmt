@@ -227,7 +227,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.Android.addEventListener(name, callback);
+		Titanium.UI.Android.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -241,7 +241,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.UI.Android.fireEvent(name, event);
+		Titanium.UI.Android.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -253,7 +253,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void hideSoftKeyboard() /*-{
-		return Titanium.UI.Android.hideSoftKeyboard();
+		Titanium.UI.Android.hideSoftKeyboard();
 	}-*/;
 
 	/**
@@ -265,7 +265,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void openPreferences() /*-{
-		return Titanium.UI.Android.openPreferences();
+		Titanium.UI.Android.openPreferences();
 	}-*/;
 
 	/**
@@ -279,6 +279,6 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.Android.removeEventListener(name, callback);
+		Titanium.UI.Android.removeEventListener(name, callback);
 	}-*/;
 }

@@ -40,7 +40,7 @@ public class Utils {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Utils.addEventListener(name, callback);
+		Titanium.Utils.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -80,7 +80,7 @@ public class Utils {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Utils.fireEvent(name, event);
+		Titanium.Utils.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -107,6 +107,6 @@ public class Utils {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Utils.removeEventListener(name, callback);
+		Titanium.Utils.removeEventListener(name, callback);
 	}-*/;
 }

@@ -303,7 +303,7 @@ public class TCP {
 	 * @return void
 	 */
 	 public native void accept(JavaScriptObject params) /*-{
-		return this.@com.pmt.wrap.titanium.network.socket.TCP::handler.accept(params);
+		this.@com.pmt.wrap.titanium.network.socket.TCP::handler.accept(params);
 	}-*/;
 
 	/**
@@ -315,7 +315,7 @@ public class TCP {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.network.socket.TCP::handler.close();
+		this.@com.pmt.wrap.titanium.network.socket.TCP::handler.close();
 	}-*/;
 
 	/**
@@ -327,7 +327,7 @@ public class TCP {
 	 * @return void
 	 */
 	 public native void connect() /*-{
-		return this.@com.pmt.wrap.titanium.network.socket.TCP::handler.connect();
+		this.@com.pmt.wrap.titanium.network.socket.TCP::handler.connect();
 	}-*/;
 
 	/**
@@ -339,6 +339,6 @@ public class TCP {
 	 * @return void
 	 */
 	 public native void listen() /*-{
-		return this.@com.pmt.wrap.titanium.network.socket.TCP::handler.listen();
+		this.@com.pmt.wrap.titanium.network.socket.TCP::handler.listen();
 	}-*/;
 }

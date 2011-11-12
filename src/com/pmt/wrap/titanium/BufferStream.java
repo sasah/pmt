@@ -38,7 +38,7 @@ public class BufferStream {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.BufferStream::handler.close();
+		this.@com.pmt.wrap.titanium.BufferStream::handler.close();
 	}-*/;
 
 	/**

@@ -1129,7 +1129,7 @@ public class UI {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.addEventListener(name, callback);
+		Titanium.UI.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1598,7 +1598,7 @@ public class UI {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.UI.fireEvent(name, event);
+		Titanium.UI.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1612,6 +1612,6 @@ public class UI {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.removeEventListener(name, callback);
+		Titanium.UI.removeEventListener(name, callback);
 	}-*/;
 }

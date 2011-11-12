@@ -40,7 +40,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Media.Android.addEventListener(name, callback);
+		Titanium.Media.Android.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Media.Android.fireEvent(name, event);
+		Titanium.Media.Android.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -68,7 +68,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Media.Android.removeEventListener(name, callback);
+		Titanium.Media.Android.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -83,7 +83,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void scanMediaFiles(JavaScriptObject paths, JavaScriptObject mimeTypes, JavaScriptObject callback) /*-{
-		return Titanium.Media.Android.scanMediaFiles(paths, mimeTypes, callback);
+		Titanium.Media.Android.scanMediaFiles(paths, mimeTypes, callback);
 	}-*/;
 
 	/**
@@ -97,6 +97,6 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void setSystemWallpaper(JavaScriptObject image, boolean scale) /*-{
-		return Titanium.Media.Android.setSystemWallpaper(image, scale);
+		Titanium.Media.Android.setSystemWallpaper(image, scale);
 	}-*/;
 }

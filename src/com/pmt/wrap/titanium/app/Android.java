@@ -51,7 +51,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.Android.addEventListener(name, callback);
+		Titanium.App.Android.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -65,7 +65,7 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.App.Android.fireEvent(name, event);
+		Titanium.App.Android.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -79,6 +79,6 @@ public class Android {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.Android.removeEventListener(name, callback);
+		Titanium.App.Android.removeEventListener(name, callback);
 	}-*/;
 }

@@ -348,7 +348,7 @@ public class Annotation {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.map.Annotation::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.map.Annotation::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -362,7 +362,7 @@ public class Annotation {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.map.Annotation::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.map.Annotation::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -376,6 +376,6 @@ public class Annotation {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.map.Annotation::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.map.Annotation::handler.removeEventListener(name, callback);
 	}-*/;
 }

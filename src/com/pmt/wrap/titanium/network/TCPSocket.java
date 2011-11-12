@@ -148,7 +148,7 @@ public class TCPSocket {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.network.TCPSocket::handler.close();
+		this.@com.pmt.wrap.titanium.network.TCPSocket::handler.close();
 	}-*/;
 
 	/**
@@ -160,7 +160,7 @@ public class TCPSocket {
 	 * @return void
 	 */
 	 public native void connect() /*-{
-		return this.@com.pmt.wrap.titanium.network.TCPSocket::handler.connect();
+		this.@com.pmt.wrap.titanium.network.TCPSocket::handler.connect();
 	}-*/;
 
 	/**
@@ -172,7 +172,7 @@ public class TCPSocket {
 	 * @return void
 	 */
 	 public native void listen() /*-{
-		return this.@com.pmt.wrap.titanium.network.TCPSocket::handler.listen();
+		this.@com.pmt.wrap.titanium.network.TCPSocket::handler.listen();
 	}-*/;
 
 	/**
@@ -186,7 +186,7 @@ public class TCPSocket {
 	 * @return void
 	 */
 	 public native void write(JavaScriptObject data, int sendTo) /*-{
-		return this.@com.pmt.wrap.titanium.network.TCPSocket::handler.write(data, sendTo);
+		this.@com.pmt.wrap.titanium.network.TCPSocket::handler.write(data, sendTo);
 	}-*/;
 	
 

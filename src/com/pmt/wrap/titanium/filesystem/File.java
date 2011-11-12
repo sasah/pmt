@@ -40,7 +40,7 @@ public class File {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.filesystem.File::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.filesystem.File::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -151,7 +151,7 @@ public class File {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.filesystem.File::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.filesystem.File::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -274,7 +274,7 @@ public class File {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.filesystem.File::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.filesystem.File::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -299,7 +299,7 @@ public class File {
 	 * @return void
 	 */
 	 public native void setExecutable() /*-{
-		return this.@com.pmt.wrap.titanium.filesystem.File::handler.setExecutable();
+		this.@com.pmt.wrap.titanium.filesystem.File::handler.setExecutable();
 	}-*/;
 
 	/**
@@ -311,7 +311,7 @@ public class File {
 	 * @return void
 	 */
 	 public native void setHidden() /*-{
-		return this.@com.pmt.wrap.titanium.filesystem.File::handler.setHidden();
+		this.@com.pmt.wrap.titanium.filesystem.File::handler.setHidden();
 	}-*/;
 
 	/**
@@ -323,7 +323,7 @@ public class File {
 	 * @return void
 	 */
 	 public native void setReadonly() /*-{
-		return this.@com.pmt.wrap.titanium.filesystem.File::handler.setReadonly();
+		this.@com.pmt.wrap.titanium.filesystem.File::handler.setReadonly();
 	}-*/;
 
 	/**

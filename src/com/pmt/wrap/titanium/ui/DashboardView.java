@@ -853,7 +853,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.add(view);
 	}-*/;
 
 	/**
@@ -867,7 +867,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -881,7 +881,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -895,7 +895,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -907,7 +907,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.hide();
 	}-*/;
 
 	/**
@@ -920,7 +920,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -934,7 +934,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -946,7 +946,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.show();
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.show();
 	}-*/;
 
 	/**
@@ -958,7 +958,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void startEditing() /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.startEditing();
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.startEditing();
 	}-*/;
 
 	/**
@@ -970,7 +970,7 @@ public class DashboardView {
 	 * @return void
 	 */
 	 public native void stopEditing() /*-{
-		return this.@com.pmt.wrap.titanium.ui.DashboardView::handler.stopEditing();
+		this.@com.pmt.wrap.titanium.ui.DashboardView::handler.stopEditing();
 	}-*/;
 
 	/**

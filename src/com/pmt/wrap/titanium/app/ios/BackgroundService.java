@@ -40,7 +40,7 @@ public class BackgroundService {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class BackgroundService {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -68,7 +68,7 @@ public class BackgroundService {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -80,7 +80,7 @@ public class BackgroundService {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.stop();
+		this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.stop();
 	}-*/;
 
 	/**
@@ -92,6 +92,6 @@ public class BackgroundService {
 	 * @return void
 	 */
 	 public native void unregister() /*-{
-		return this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.unregister();
+		this.@com.pmt.wrap.titanium.app.ios.BackgroundService::handler.unregister();
 	}-*/;
 }

@@ -193,7 +193,7 @@ public class Intent {
 	 * @return void
 	 */
 	 public native void addCategory(String name) /*-{
-		return this.@com.pmt.wrap.titanium.android.Intent::handler.addCategory(name);
+		this.@com.pmt.wrap.titanium.android.Intent::handler.addCategory(name);
 	}-*/;
 
 	/**
@@ -206,7 +206,7 @@ public class Intent {
 	 * @return void
 	 */
 	 public native void addFlags(int flags) /*-{
-		return this.@com.pmt.wrap.titanium.android.Intent::handler.addFlags(flags);
+		this.@com.pmt.wrap.titanium.android.Intent::handler.addFlags(flags);
 	}-*/;
 
 	/**
@@ -231,7 +231,7 @@ public class Intent {
 	 * @return void
 	 */
 	 public native void getDataMethod() /*-{
-		return this.@com.pmt.wrap.titanium.android.Intent::handler.getDataMethod();
+		this.@com.pmt.wrap.titanium.android.Intent::handler.getData();
 	}-*/;
 
 	/**
@@ -310,7 +310,7 @@ public class Intent {
 	 * @return void
 	 */
 	 public native void putExtra(String name, JavaScriptObject value) /*-{
-		return this.@com.pmt.wrap.titanium.android.Intent::handler.putExtra(name, value);
+		this.@com.pmt.wrap.titanium.android.Intent::handler.putExtra(name, value);
 	}-*/;
 
 	/**
@@ -324,6 +324,6 @@ public class Intent {
 	 * @return void
 	 */
 	 public native void putExtraUri(String name, String value) /*-{
-		return this.@com.pmt.wrap.titanium.android.Intent::handler.putExtraUri(name, value);
+		this.@com.pmt.wrap.titanium.android.Intent::handler.putExtraUri(name, value);
 	}-*/;
 }

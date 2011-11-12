@@ -161,7 +161,7 @@ public class NotificationManager {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Android.NotificationManager.addEventListener(name, callback);
+		Titanium.Android.NotificationManager.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -174,7 +174,7 @@ public class NotificationManager {
 	 * @return void
 	 */
 	 public static native void cancel(int id) /*-{
-		return Titanium.Android.NotificationManager.cancel(id);
+		Titanium.Android.NotificationManager.cancel(id);
 	}-*/;
 
 	/**
@@ -186,7 +186,7 @@ public class NotificationManager {
 	 * @return void
 	 */
 	 public static native void cancelAll() /*-{
-		return Titanium.Android.NotificationManager.cancelAll();
+		Titanium.Android.NotificationManager.cancelAll();
 	}-*/;
 
 	/**
@@ -200,7 +200,7 @@ public class NotificationManager {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Android.NotificationManager.fireEvent(name, event);
+		Titanium.Android.NotificationManager.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -214,7 +214,7 @@ public class NotificationManager {
 	 * @return void
 	 */
 	 public static native void notify(int id, JavaScriptObject notification) /*-{
-		return Titanium.Android.NotificationManager.notify(id, notification);
+		Titanium.Android.NotificationManager.notify(id, notification);
 	}-*/;
 
 	/**
@@ -228,6 +228,6 @@ public class NotificationManager {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Android.NotificationManager.removeEventListener(name, callback);
+		Titanium.Android.NotificationManager.removeEventListener(name, callback);
 	}-*/;
 }

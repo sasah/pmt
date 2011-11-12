@@ -148,7 +148,7 @@ public class ActivityIndicator {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ActivityIndicator::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.ActivityIndicator::handler.hide();
 	}-*/;
 
 	/**
@@ -160,6 +160,6 @@ public class ActivityIndicator {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ActivityIndicator::handler.show();
+		this.@com.pmt.wrap.titanium.ui.ActivityIndicator::handler.show();
 	}-*/;
 }

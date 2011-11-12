@@ -150,7 +150,7 @@ public class Socket {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Network.Socket.addEventListener(name, callback);
+		Titanium.Network.Socket.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -177,7 +177,7 @@ public class Socket {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Network.Socket.fireEvent(name, event);
+		Titanium.Network.Socket.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -191,6 +191,6 @@ public class Socket {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Network.Socket.removeEventListener(name, callback);
+		Titanium.Network.Socket.removeEventListener(name, callback);
 	}-*/;
 }

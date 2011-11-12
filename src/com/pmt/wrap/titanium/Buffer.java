@@ -229,7 +229,7 @@ public class Buffer {
 	 * @return void
 	 */
 	 public native void clear() /*-{
-		return this.@com.pmt.wrap.titanium.Buffer::handler.clear();
+		this.@com.pmt.wrap.titanium.Buffer::handler.clear();
 	}-*/;
 
 	/**
@@ -274,7 +274,7 @@ public class Buffer {
 	 * @return void
 	 */
 	 public native void fill(double fillByte, double offset, double length) /*-{
-		return this.@com.pmt.wrap.titanium.Buffer::handler.fill(fillByte, offset, length);
+		this.@com.pmt.wrap.titanium.Buffer::handler.fill(fillByte, offset, length);
 	}-*/;
 
 	/**
@@ -302,7 +302,7 @@ public class Buffer {
 	 * @return void
 	 */
 	 public native void release() /*-{
-		return this.@com.pmt.wrap.titanium.Buffer::handler.release();
+		this.@com.pmt.wrap.titanium.Buffer::handler.release();
 	}-*/;
 
 	/**

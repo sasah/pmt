@@ -392,7 +392,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Geolocation.addEventListener(name, callback);
+		Titanium.Geolocation.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -406,7 +406,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Geolocation.fireEvent(name, event);
+		Titanium.Geolocation.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -420,7 +420,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void forwardGeocoder(String address, JavaScriptObject callback) /*-{
-		return Titanium.Geolocation.forwardGeocoder(address, callback);
+		Titanium.Geolocation.forwardGeocoder(address, callback);
 	}-*/;
 
 	/**
@@ -433,7 +433,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void getCurrentHeading(JavaScriptObject callback) /*-{
-		return Titanium.Geolocation.getCurrentHeading(callback);
+		Titanium.Geolocation.getCurrentHeading(callback);
 	}-*/;
 
 	/**
@@ -446,7 +446,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void getCurrentPosition(JavaScriptObject callback) /*-{
-		return Titanium.Geolocation.getCurrentPosition(callback);
+		Titanium.Geolocation.getCurrentPosition(callback);
 	}-*/;
 
 	/**
@@ -460,7 +460,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Geolocation.removeEventListener(name, callback);
+		Titanium.Geolocation.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -475,7 +475,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void reverseGeocoder(double latitude, double longitude, JavaScriptObject callback) /*-{
-		return Titanium.Geolocation.reverseGeocoder(latitude, longitude, callback);
+		Titanium.Geolocation.reverseGeocoder(latitude, longitude, callback);
 	}-*/;
 
 	/**
@@ -487,7 +487,7 @@ public class Geolocation {
 	 * @return void
 	 */
 	 public static native void setShowCalibrationMethod() /*-{
-		return Titanium.Geolocation.setShowCalibrationMethod();
+		Titanium.Geolocation.setShowCalibration();
 	}-*/;
 	
 

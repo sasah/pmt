@@ -40,7 +40,7 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.iOS.addEventListener(name, callback);
+		Titanium.UI.iOS.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -67,7 +67,7 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.UI.iOS.fireEvent(name, event);
+		Titanium.UI.iOS.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -81,6 +81,6 @@ public class iOS {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.iOS.removeEventListener(name, callback);
+		Titanium.UI.iOS.removeEventListener(name, callback);
 	}-*/;
 }

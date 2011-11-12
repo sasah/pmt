@@ -84,7 +84,7 @@ public class Titanium {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.addEventListener(name, callback);
+		Titanium.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -124,7 +124,7 @@ public class Titanium {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.fireEvent(name, event);
+		Titanium.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -137,7 +137,7 @@ public class Titanium {
 	 * @return void
 	 */
 	 public static native void include(String name) /*-{
-		return Titanium.include(name);
+		Titanium.include(name);
 	}-*/;
 
 	/**
@@ -151,6 +151,6 @@ public class Titanium {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.removeEventListener(name, callback);
+		Titanium.removeEventListener(name, callback);
 	}-*/;
 }

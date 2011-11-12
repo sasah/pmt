@@ -963,7 +963,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.add(view);
 	}-*/;
 
 	/**
@@ -977,7 +977,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -991,7 +991,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1042,7 +1042,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1054,7 +1054,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void goBack() /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.goBack();
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.goBack();
 	}-*/;
 
 	/**
@@ -1066,7 +1066,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void goForward() /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.goForward();
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.goForward();
 	}-*/;
 
 	/**
@@ -1078,7 +1078,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.hide();
 	}-*/;
 
 	/**
@@ -1090,7 +1090,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void reload() /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.reload();
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.reload();
 	}-*/;
 
 	/**
@@ -1103,7 +1103,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1117,7 +1117,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1129,7 +1129,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void repaint() /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.repaint();
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.repaint();
 	}-*/;
 
 	/**
@@ -1143,7 +1143,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void setBasicAuthentication(String username, String password) /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.setBasicAuthentication(username, password);
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.setBasicAuthentication(username, password);
 	}-*/;
 
 	/**
@@ -1155,7 +1155,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.show();
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.show();
 	}-*/;
 
 	/**
@@ -1167,7 +1167,7 @@ public class WebView {
 	 * @return void
 	 */
 	 public native void stopLoading() /*-{
-		return this.@com.pmt.wrap.titanium.ui.WebView::handler.stopLoading();
+		this.@com.pmt.wrap.titanium.ui.WebView::handler.stopLoading();
 	}-*/;
 
 	/**

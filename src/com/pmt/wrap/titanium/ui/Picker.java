@@ -281,7 +281,7 @@ public class Picker {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject data) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Picker::handler.add(data);
+		this.@com.pmt.wrap.titanium.ui.Picker::handler.add(data);
 	}-*/;
 
 	/**
@@ -295,7 +295,7 @@ public class Picker {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Picker::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Picker::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -309,7 +309,7 @@ public class Picker {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Picker::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.Picker::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -335,7 +335,7 @@ public class Picker {
 	 * @return void
 	 */
 	 public native void reloadColumn(JavaScriptObject column) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Picker::handler.reloadColumn(column);
+		this.@com.pmt.wrap.titanium.ui.Picker::handler.reloadColumn(column);
 	}-*/;
 
 	/**
@@ -349,7 +349,7 @@ public class Picker {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Picker::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Picker::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -364,7 +364,7 @@ public class Picker {
 	 * @return void
 	 */
 	 public native void setSelectedRow(int column, int row, boolean animated) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Picker::handler.setSelectedRow(column, row, animated);
+		this.@com.pmt.wrap.titanium.ui.Picker::handler.setSelectedRow(column, row, animated);
 	}-*/;
 	
 

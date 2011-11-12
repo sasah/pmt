@@ -106,7 +106,7 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Stream.addEventListener(name, callback);
+		Titanium.Stream.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -133,7 +133,7 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Stream.fireEvent(name, event);
+		Titanium.Stream.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -149,7 +149,7 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void pump(JavaScriptObject inputStream, JavaScriptObject handler, double maxChunkSize, boolean isAsync) /*-{
-		return Titanium.Stream.pump(inputStream, handler, maxChunkSize, isAsync);
+		Titanium.Stream.pump(inputStream, handler, maxChunkSize, isAsync);
 	}-*/;
 
 	/**
@@ -166,7 +166,7 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void read(JavaScriptObject sourceStream, JavaScriptObject buffer, double offset, double length, JavaScriptObject resultsCallback) /*-{
-		return Titanium.Stream.read(sourceStream, buffer, offset, length, resultsCallback);
+		Titanium.Stream.read(sourceStream, buffer, offset, length, resultsCallback);
 	}-*/;
 
 	/**
@@ -181,7 +181,7 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void readAll(JavaScriptObject sourceStream, JavaScriptObject buffer, JavaScriptObject resultsCallback) /*-{
-		return Titanium.Stream.readAll(sourceStream, buffer, resultsCallback);
+		Titanium.Stream.readAll(sourceStream, buffer, resultsCallback);
 	}-*/;
 
 	/**
@@ -195,7 +195,7 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Stream.removeEventListener(name, callback);
+		Titanium.Stream.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -212,7 +212,7 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void write(JavaScriptObject outputStream, JavaScriptObject buffer, double offset, double length, JavaScriptObject resultsCallback) /*-{
-		return Titanium.Stream.write(outputStream, buffer, offset, length, resultsCallback);
+		Titanium.Stream.write(outputStream, buffer, offset, length, resultsCallback);
 	}-*/;
 
 	/**
@@ -228,6 +228,6 @@ public class Stream {
 	 * @return void
 	 */
 	 public static native void writeStream(JavaScriptObject inputStream, JavaScriptObject outputStream, double maxChunkSize, JavaScriptObject resultsCallback) /*-{
-		return Titanium.Stream.writeStream(inputStream, outputStream, maxChunkSize, resultsCallback);
+		Titanium.Stream.writeStream(inputStream, outputStream, maxChunkSize, resultsCallback);
 	}-*/;
 }

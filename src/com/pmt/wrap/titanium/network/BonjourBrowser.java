@@ -104,7 +104,7 @@ public class BonjourBrowser {
 	 * @return void
 	 */
 	 public native void search() /*-{
-		return this.@com.pmt.wrap.titanium.network.BonjourBrowser::handler.search();
+		this.@com.pmt.wrap.titanium.network.BonjourBrowser::handler.search();
 	}-*/;
 
 	/**
@@ -116,7 +116,7 @@ public class BonjourBrowser {
 	 * @return void
 	 */
 	 public native void stopSearch() /*-{
-		return this.@com.pmt.wrap.titanium.network.BonjourBrowser::handler.stopSearch();
+		this.@com.pmt.wrap.titanium.network.BonjourBrowser::handler.stopSearch();
 	}-*/;
 	
 

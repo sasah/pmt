@@ -106,7 +106,7 @@ public class iPad {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.iPad.addEventListener(name, callback);
+		Titanium.UI.iPad.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -146,7 +146,7 @@ public class iPad {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.UI.iPad.fireEvent(name, event);
+		Titanium.UI.iPad.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -160,6 +160,6 @@ public class iPad {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.iPad.removeEventListener(name, callback);
+		Titanium.UI.iPad.removeEventListener(name, callback);
 	}-*/;
 }

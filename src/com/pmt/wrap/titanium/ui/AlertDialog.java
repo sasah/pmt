@@ -150,7 +150,7 @@ public class AlertDialog {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -164,7 +164,7 @@ public class AlertDialog {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -176,7 +176,7 @@ public class AlertDialog {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.hide();
 	}-*/;
 
 	/**
@@ -190,7 +190,7 @@ public class AlertDialog {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -202,7 +202,7 @@ public class AlertDialog {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.show();
+		this.@com.pmt.wrap.titanium.ui.AlertDialog::handler.show();
 	}-*/;
 	
 

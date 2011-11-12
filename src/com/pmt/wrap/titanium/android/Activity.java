@@ -126,7 +126,7 @@ public class Activity {
 	 * @return void
 	 */
 	 public native void finish() /*-{
-		return this.@com.pmt.wrap.titanium.android.Activity::handler.finish();
+		this.@com.pmt.wrap.titanium.android.Activity::handler.finish();
 	}-*/;
 
 	/**
@@ -138,7 +138,7 @@ public class Activity {
 	 * @return <a href="Titanium.Android.Intent.html">Titanium.Android.Intent</a>
 	 */
 	 public native JavaScriptObject getIntentMethod() /*-{
-		return this.@com.pmt.wrap.titanium.android.Activity::handler.getIntentMethod();
+		return this.@com.pmt.wrap.titanium.android.Activity::handler.getIntent();
 	}-*/;
 
 	/**
@@ -165,7 +165,7 @@ public class Activity {
 	 * @return void
 	 */
 	 public native void setRequestedOrientationMethod(int orientation) /*-{
-		return this.@com.pmt.wrap.titanium.android.Activity::handler.setRequestedOrientationMethod(orientation);
+		this.@com.pmt.wrap.titanium.android.Activity::handler.setRequestedOrientation(orientation);
 	}-*/;
 
 	/**
@@ -179,7 +179,7 @@ public class Activity {
 	 * @return void
 	 */
 	 public native void setResult(int resultCode, JavaScriptObject intent) /*-{
-		return this.@com.pmt.wrap.titanium.android.Activity::handler.setResult(resultCode, intent);
+		this.@com.pmt.wrap.titanium.android.Activity::handler.setResult(resultCode, intent);
 	}-*/;
 
 	/**
@@ -192,7 +192,7 @@ public class Activity {
 	 * @return void
 	 */
 	 public native void startActivity(JavaScriptObject intent) /*-{
-		return this.@com.pmt.wrap.titanium.android.Activity::handler.startActivity(intent);
+		this.@com.pmt.wrap.titanium.android.Activity::handler.startActivity(intent);
 	}-*/;
 
 	/**
@@ -206,7 +206,7 @@ public class Activity {
 	 * @return void
 	 */
 	 public native void startActivityForResult(JavaScriptObject intent, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.android.Activity::handler.startActivityForResult(intent, callback);
+		this.@com.pmt.wrap.titanium.android.Activity::handler.startActivityForResult(intent, callback);
 	}-*/;
 	
 

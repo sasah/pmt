@@ -282,7 +282,7 @@ public class App {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.addEventListener(name, callback);
+		Titanium.App.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -298,7 +298,7 @@ public class App {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject data, String name2, JavaScriptObject event) /*-{
-		return Titanium.App.fireEvent(name, data, name2, event);
+		Titanium.App.fireEvent(name, data, name2, event);
 	}-*/;
 
 	/**
@@ -324,7 +324,7 @@ public class App {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.App.removeEventListener(name, callback);
+		Titanium.App.removeEventListener(name, callback);
 	}-*/;
 	
 

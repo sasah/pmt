@@ -875,7 +875,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.add(view);
 	}-*/;
 
 	/**
@@ -889,7 +889,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -903,7 +903,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -917,7 +917,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -930,7 +930,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void hide(JavaScriptObject options) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.hide(options);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.hide(options);
 	}-*/;
 
 	/**
@@ -943,7 +943,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.remove(view);
 	}-*/;
 
 	/**
@@ -957,7 +957,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -970,7 +970,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void setHeightMethod(String height) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.setHeightMethod(height);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.setHeight(height);
 	}-*/;
 
 	/**
@@ -983,7 +983,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void setPassthroughViews(JavaScriptObject passthroughViews) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.setPassthroughViews(passthroughViews);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.setPassthroughViews(passthroughViews);
 	}-*/;
 
 	/**
@@ -996,7 +996,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void setWidthMethod(String width) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.setWidthMethod(width);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.setWidth(width);
 	}-*/;
 
 	/**
@@ -1009,7 +1009,7 @@ public class Popover {
 	 * @return void
 	 */
 	 public native void show(JavaScriptObject options) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.show(options);
+		this.@com.pmt.wrap.titanium.ui.ipad.Popover::handler.show(options);
 	}-*/;
 
 	/**

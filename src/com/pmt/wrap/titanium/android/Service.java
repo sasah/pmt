@@ -82,7 +82,7 @@ public class Service {
 	 * @return void
 	 */
 	 public native void start() /*-{
-		return this.@com.pmt.wrap.titanium.android.Service::handler.start();
+		this.@com.pmt.wrap.titanium.android.Service::handler.start();
 	}-*/;
 
 	/**
@@ -94,7 +94,7 @@ public class Service {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.android.Service::handler.stop();
+		this.@com.pmt.wrap.titanium.android.Service::handler.stop();
 	}-*/;
 	
 

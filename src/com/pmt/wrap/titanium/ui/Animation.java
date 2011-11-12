@@ -480,7 +480,7 @@ public class Animation {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Animation::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Animation::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -494,7 +494,7 @@ public class Animation {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Animation::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.Animation::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -508,7 +508,7 @@ public class Animation {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Animation::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Animation::handler.removeEventListener(name, callback);
 	}-*/;
 	
 

@@ -237,7 +237,7 @@ public class EmailDialog {
 	 * @return void
 	 */
 	 public native void addAttachment(JavaScriptObject attachment) /*-{
-		return this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.addAttachment(attachment);
+		this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.addAttachment(attachment);
 	}-*/;
 
 	/**
@@ -251,7 +251,7 @@ public class EmailDialog {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -265,7 +265,7 @@ public class EmailDialog {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -277,7 +277,7 @@ public class EmailDialog {
 	 * @return void
 	 */
 	 public native void isSupported() /*-{
-		return this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.isSupported();
+		this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.isSupported();
 	}-*/;
 
 	/**
@@ -290,7 +290,7 @@ public class EmailDialog {
 	 * @return void
 	 */
 	 public native void open(JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.open(properties);
+		this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.open(properties);
 	}-*/;
 
 	/**
@@ -304,7 +304,7 @@ public class EmailDialog {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.EmailDialog::handler.removeEventListener(name, callback);
 	}-*/;
 	
 

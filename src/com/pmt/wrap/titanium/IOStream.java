@@ -38,7 +38,7 @@ public class IOStream {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.IOStream::handler.close();
+		this.@com.pmt.wrap.titanium.IOStream::handler.close();
 	}-*/;
 
 	/**

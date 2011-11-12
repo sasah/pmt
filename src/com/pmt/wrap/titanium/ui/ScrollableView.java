@@ -1029,7 +1029,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.add(view);
 	}-*/;
 
 	/**
@@ -1043,7 +1043,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1056,7 +1056,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void addView(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.addView(view);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.addView(view);
 	}-*/;
 
 	/**
@@ -1070,7 +1070,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1084,7 +1084,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1096,7 +1096,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.hide();
 	}-*/;
 
 	/**
@@ -1109,7 +1109,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1123,7 +1123,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1136,7 +1136,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void removeView(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.removeView(view);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.removeView(view);
 	}-*/;
 
 	/**
@@ -1149,7 +1149,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void scrollToView(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.scrollToView(view);
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.scrollToView(view);
 	}-*/;
 
 	/**
@@ -1161,7 +1161,7 @@ public class ScrollableView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.show();
+		this.@com.pmt.wrap.titanium.ui.ScrollableView::handler.show();
 	}-*/;
 
 	/**

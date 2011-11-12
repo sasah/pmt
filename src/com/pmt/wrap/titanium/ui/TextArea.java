@@ -1051,7 +1051,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.add(view);
 	}-*/;
 
 	/**
@@ -1065,7 +1065,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1079,7 +1079,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1091,7 +1091,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void blur() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.blur();
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.blur();
 	}-*/;
 
 	/**
@@ -1105,7 +1105,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1117,7 +1117,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void focus() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.focus();
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.focus();
 	}-*/;
 
 	/**
@@ -1129,7 +1129,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void hasText() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.hasText();
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.hasText();
 	}-*/;
 
 	/**
@@ -1141,7 +1141,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.hide();
 	}-*/;
 
 	/**
@@ -1154,7 +1154,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1168,7 +1168,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1180,7 +1180,7 @@ public class TextArea {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TextArea::handler.show();
+		this.@com.pmt.wrap.titanium.ui.TextArea::handler.show();
 	}-*/;
 
 	/**

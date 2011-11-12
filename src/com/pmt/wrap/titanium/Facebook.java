@@ -194,7 +194,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Facebook.addEventListener(name, callback);
+		Titanium.Facebook.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -206,7 +206,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void authorize() /*-{
-		return Titanium.Facebook.authorize();
+		Titanium.Facebook.authorize();
 	}-*/;
 
 	/**
@@ -234,7 +234,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void dialog(String action, JavaScriptObject params, JavaScriptObject callback) /*-{
-		return Titanium.Facebook.dialog(action, params, callback);
+		Titanium.Facebook.dialog(action, params, callback);
 	}-*/;
 
 	/**
@@ -248,7 +248,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Facebook.fireEvent(name, event);
+		Titanium.Facebook.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -260,7 +260,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void logout() /*-{
-		return Titanium.Facebook.logout();
+		Titanium.Facebook.logout();
 	}-*/;
 
 	/**
@@ -274,7 +274,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Facebook.removeEventListener(name, callback);
+		Titanium.Facebook.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -289,7 +289,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void request(String method, JavaScriptObject params, JavaScriptObject callback) /*-{
-		return Titanium.Facebook.request(method, params, callback);
+		Titanium.Facebook.request(method, params, callback);
 	}-*/;
 
 	/**
@@ -305,7 +305,7 @@ public class Facebook {
 	 * @return void
 	 */
 	 public static native void requestWithGraphPath(String path, JavaScriptObject params, String httpMethod, JavaScriptObject callback) /*-{
-		return Titanium.Facebook.requestWithGraphPath(path, params, httpMethod, callback);
+		Titanium.Facebook.requestWithGraphPath(path, params, httpMethod, callback);
 	}-*/;
 	
 

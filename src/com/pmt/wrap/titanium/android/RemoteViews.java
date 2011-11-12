@@ -41,7 +41,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setBoolean(int viewId, String methodName, boolean value) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setBoolean(viewId, methodName, value);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setBoolean(viewId, methodName, value);
 	}-*/;
 
 	/**
@@ -57,7 +57,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setChronometer(int viewId, JavaScriptObject base, String format, boolean started) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setChronometer(viewId, base, format, started);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setChronometer(viewId, base, format, started);
 	}-*/;
 
 	/**
@@ -72,7 +72,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setDouble(int viewId, String methodName, double value) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setDouble(viewId, methodName, value);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setDouble(viewId, methodName, value);
 	}-*/;
 
 	/**
@@ -86,7 +86,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setImageViewResource(int viewId, int srcId) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setImageViewResource(viewId, srcId);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setImageViewResource(viewId, srcId);
 	}-*/;
 
 	/**
@@ -100,7 +100,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setImageViewUri(int viewId, String uri) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setImageViewUri(viewId, uri);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setImageViewUri(viewId, uri);
 	}-*/;
 
 	/**
@@ -115,7 +115,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setInt(int viewId, String methodName, int value) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setInt(viewId, methodName, value);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setInt(viewId, methodName, value);
 	}-*/;
 
 	/**
@@ -129,7 +129,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setOnClickPendingIntent(int viewId, JavaScriptObject pendingIntent) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setOnClickPendingIntent(viewId, pendingIntent);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setOnClickPendingIntent(viewId, pendingIntent);
 	}-*/;
 
 	/**
@@ -145,7 +145,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setProgressBar(int viewId, int max, int progress, boolean indeterminate) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setProgressBar(viewId, max, progress, indeterminate);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setProgressBar(viewId, max, progress, indeterminate);
 	}-*/;
 
 	/**
@@ -160,7 +160,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setString(int viewId, String methodName, String value) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setString(viewId, methodName, value);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setString(viewId, methodName, value);
 	}-*/;
 
 	/**
@@ -174,7 +174,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setTextColor(int viewId, int color) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setTextColor(viewId, color);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setTextColor(viewId, color);
 	}-*/;
 
 	/**
@@ -188,7 +188,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setTextViewText(int viewId, String text) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setTextViewText(viewId, text);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setTextViewText(viewId, text);
 	}-*/;
 
 	/**
@@ -203,7 +203,7 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setUri(int viewId, String methodName, String value) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setUri(viewId, methodName, value);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setUri(viewId, methodName, value);
 	}-*/;
 
 	/**
@@ -217,6 +217,6 @@ public class RemoteViews {
 	 * @return void
 	 */
 	 public native void setViewVisibility(int viewId, int visibility) /*-{
-		return this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setViewVisibility(viewId, visibility);
+		this.@com.pmt.wrap.titanium.android.RemoteViews::handler.setViewVisibility(viewId, visibility);
 	}-*/;
 }

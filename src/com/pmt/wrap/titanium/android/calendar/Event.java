@@ -385,6 +385,6 @@ public class Event {
 	 * @return void
 	 */
 	 public native void setExtendedProperty(String name, String value) /*-{
-		return this.@com.pmt.wrap.titanium.android.calendar.Event::handler.setExtendedProperty(name, value);
+		this.@com.pmt.wrap.titanium.android.calendar.Event::handler.setExtendedProperty(name, value);
 	}-*/;
 }

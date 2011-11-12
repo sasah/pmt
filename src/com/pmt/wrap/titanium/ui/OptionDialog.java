@@ -192,7 +192,7 @@ public class OptionDialog {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.OptionDialog::handler.show();
+		this.@com.pmt.wrap.titanium.ui.OptionDialog::handler.show();
 	}-*/;
 	
 

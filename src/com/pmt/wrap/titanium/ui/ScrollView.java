@@ -1139,7 +1139,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.add(view);
 	}-*/;
 
 	/**
@@ -1153,7 +1153,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1167,7 +1167,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1181,7 +1181,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1193,7 +1193,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.hide();
 	}-*/;
 
 	/**
@@ -1206,7 +1206,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1220,7 +1220,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1234,7 +1234,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void scrollTo(double x, double y) /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.scrollTo(x, y);
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.scrollTo(x, y);
 	}-*/;
 
 	/**
@@ -1246,7 +1246,7 @@ public class ScrollView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.ScrollView::handler.show();
+		this.@com.pmt.wrap.titanium.ui.ScrollView::handler.show();
 	}-*/;
 
 	/**

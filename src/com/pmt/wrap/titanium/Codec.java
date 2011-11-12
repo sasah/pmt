@@ -216,7 +216,7 @@ public class Codec {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Codec.addEventListener(name, callback);
+		Titanium.Codec.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -282,7 +282,7 @@ public class Codec {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Codec.fireEvent(name, event);
+		Titanium.Codec.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -308,6 +308,6 @@ public class Codec {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Codec.removeEventListener(name, callback);
+		Titanium.Codec.removeEventListener(name, callback);
 	}-*/;
 }

@@ -1337,7 +1337,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.add(view);
 	}-*/;
 
 	/**
@@ -1351,7 +1351,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1365,7 +1365,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1378,7 +1378,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void close(JavaScriptObject options) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.close(options);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.close(options);
 	}-*/;
 
 	/**
@@ -1392,7 +1392,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1404,7 +1404,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.Window::handler.hide();
 	}-*/;
 
 	/**
@@ -1417,7 +1417,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void open(JavaScriptObject options) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.open(options);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.open(options);
 	}-*/;
 
 	/**
@@ -1430,7 +1430,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1444,7 +1444,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.Window::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1456,7 +1456,7 @@ public class Window {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.Window::handler.show();
+		this.@com.pmt.wrap.titanium.ui.Window::handler.show();
 	}-*/;
 
 	/**

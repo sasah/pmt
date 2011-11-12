@@ -40,7 +40,7 @@ public class XML {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.XML.addEventListener(name, callback);
+		Titanium.XML.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class XML {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.XML.fireEvent(name, event);
+		Titanium.XML.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -81,7 +81,7 @@ public class XML {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.XML.removeEventListener(name, callback);
+		Titanium.XML.removeEventListener(name, callback);
 	}-*/;
 
 	/**

@@ -84,7 +84,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Contacts.addEventListener(name, callback);
+		Titanium.Contacts.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -124,7 +124,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Contacts.fireEvent(name, event);
+		Titanium.Contacts.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -136,7 +136,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void getAllGroups() /*-{
-		return Titanium.Contacts.getAllGroups();
+		Titanium.Contacts.getAllGroups();
 	}-*/;
 
 	/**
@@ -148,7 +148,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void getAllPeople() /*-{
-		return Titanium.Contacts.getAllPeople();
+		Titanium.Contacts.getAllPeople();
 	}-*/;
 
 	/**
@@ -201,7 +201,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Contacts.removeEventListener(name, callback);
+		Titanium.Contacts.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -214,7 +214,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void removeGroup(JavaScriptObject group) /*-{
-		return Titanium.Contacts.removeGroup(group);
+		Titanium.Contacts.removeGroup(group);
 	}-*/;
 
 	/**
@@ -227,7 +227,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void removePerson(JavaScriptObject person) /*-{
-		return Titanium.Contacts.removePerson(person);
+		Titanium.Contacts.removePerson(person);
 	}-*/;
 
 	/**
@@ -239,7 +239,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void revert() /*-{
-		return Titanium.Contacts.revert();
+		Titanium.Contacts.revert();
 	}-*/;
 
 	/**
@@ -251,7 +251,7 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void save() /*-{
-		return Titanium.Contacts.save();
+		Titanium.Contacts.save();
 	}-*/;
 
 	/**
@@ -268,6 +268,6 @@ public class Contacts {
 	 * @return void
 	 */
 	 public static native void showContacts(JavaScriptObject cancel, JavaScriptObject selectedPerson, JavaScriptObject selectedProperty, boolean animated, JavaScriptObject fields) /*-{
-		return Titanium.Contacts.showContacts(cancel, selectedPerson, selectedProperty, animated, fields);
+		Titanium.Contacts.showContacts(cancel, selectedPerson, selectedProperty, animated, fields);
 	}-*/;
 }

@@ -260,7 +260,7 @@ public class Calendar {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Android.Calendar.addEventListener(name, callback);
+		Titanium.Android.Calendar.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -326,7 +326,7 @@ public class Calendar {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Android.Calendar.fireEvent(name, event);
+		Titanium.Android.Calendar.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -353,6 +353,6 @@ public class Calendar {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Android.Calendar.removeEventListener(name, callback);
+		Titanium.Android.Calendar.removeEventListener(name, callback);
 	}-*/;
 }

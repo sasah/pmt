@@ -149,7 +149,7 @@ public class BonjourService {
 	 * @return void
 	 */
 	 public native void publish(JavaScriptObject socket) /*-{
-		return this.@com.pmt.wrap.titanium.network.BonjourService::handler.publish(socket);
+		this.@com.pmt.wrap.titanium.network.BonjourService::handler.publish(socket);
 	}-*/;
 
 	/**
@@ -162,7 +162,7 @@ public class BonjourService {
 	 * @return void
 	 */
 	 public native void resolve(double timeout) /*-{
-		return this.@com.pmt.wrap.titanium.network.BonjourService::handler.resolve(timeout);
+		this.@com.pmt.wrap.titanium.network.BonjourService::handler.resolve(timeout);
 	}-*/;
 
 	/**
@@ -174,6 +174,6 @@ public class BonjourService {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.network.BonjourService::handler.stop();
+		this.@com.pmt.wrap.titanium.network.BonjourService::handler.stop();
 	}-*/;
 }

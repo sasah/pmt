@@ -204,7 +204,7 @@ public class MenuItem {
 	 * @return int
 	 */
 	 public native int getGroupIdMethod() /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getGroupIdMethod();
+		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getGroupId();
 	}-*/;
 
 	/**
@@ -216,7 +216,7 @@ public class MenuItem {
 	 * @return int
 	 */
 	 public native int getItemIdMethod() /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getItemIdMethod();
+		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getItemId();
 	}-*/;
 
 	/**
@@ -228,7 +228,7 @@ public class MenuItem {
 	 * @return int
 	 */
 	 public native int getOrderMethod() /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getOrderMethod();
+		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getOrder();
 	}-*/;
 
 	/**
@@ -240,7 +240,7 @@ public class MenuItem {
 	 * @return string
 	 */
 	 public native String getTitleMethod() /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getTitleMethod();
+		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.getTitle();
 	}-*/;
 
 	/**
@@ -277,7 +277,7 @@ public class MenuItem {
 	 * @return void
 	 */
 	 public native void setCondensedTitle(String condensedTitle) /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.setCondensedTitle(condensedTitle);
+		this.@com.pmt.wrap.titanium.android.MenuItem::handler.setCondensedTitle(condensedTitle);
 	}-*/;
 
 	/**
@@ -290,7 +290,7 @@ public class MenuItem {
 	 * @return void
 	 */
 	 public native void setEnabledMethod(boolean enabled) /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.setEnabledMethod(enabled);
+		this.@com.pmt.wrap.titanium.android.MenuItem::handler.setEnabled(enabled);
 	}-*/;
 
 	/**
@@ -303,7 +303,7 @@ public class MenuItem {
 	 * @return void
 	 */
 	 public native void setIcon(JavaScriptObject icon) /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.setIcon(icon);
+		this.@com.pmt.wrap.titanium.android.MenuItem::handler.setIcon(icon);
 	}-*/;
 
 	/**
@@ -316,7 +316,7 @@ public class MenuItem {
 	 * @return void
 	 */
 	 public native void setTitleMethod(String title) /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.setTitleMethod(title);
+		this.@com.pmt.wrap.titanium.android.MenuItem::handler.setTitle(title);
 	}-*/;
 
 	/**
@@ -329,7 +329,7 @@ public class MenuItem {
 	 * @return void
 	 */
 	 public native void setVisibleMethod(boolean visible) /*-{
-		return this.@com.pmt.wrap.titanium.android.MenuItem::handler.setVisibleMethod(visible);
+		this.@com.pmt.wrap.titanium.android.MenuItem::handler.setVisible(visible);
 	}-*/;
 	
 

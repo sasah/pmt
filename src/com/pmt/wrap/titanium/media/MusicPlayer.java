@@ -170,7 +170,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void pause() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.pause();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.pause();
 	}-*/;
 
 	/**
@@ -182,7 +182,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void play() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.play();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.play();
 	}-*/;
 
 	/**
@@ -194,7 +194,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void seekBackward() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.seekBackward();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.seekBackward();
 	}-*/;
 
 	/**
@@ -206,7 +206,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void seekForward() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.seekForward();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.seekForward();
 	}-*/;
 
 	/**
@@ -219,7 +219,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void setQueue(JavaScriptObject queue) /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.setQueue(queue);
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.setQueue(queue);
 	}-*/;
 
 	/**
@@ -231,7 +231,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void skipToBeginning() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.skipToBeginning();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.skipToBeginning();
 	}-*/;
 
 	/**
@@ -243,7 +243,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void skipToNext() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.skipToNext();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.skipToNext();
 	}-*/;
 
 	/**
@@ -255,7 +255,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void skipToPrevious() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.skipToPrevious();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.skipToPrevious();
 	}-*/;
 
 	/**
@@ -267,7 +267,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.stop();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.stop();
 	}-*/;
 
 	/**
@@ -279,7 +279,7 @@ public class MusicPlayer {
 	 * @return void
 	 */
 	 public native void stopSeeking() /*-{
-		return this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.stopSeeking();
+		this.@com.pmt.wrap.titanium.media.MusicPlayer::handler.stopSeeking();
 	}-*/;
 	
 

@@ -40,7 +40,7 @@ public class Gesture {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Gesture.addEventListener(name, callback);
+		Titanium.Gesture.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -54,7 +54,7 @@ public class Gesture {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Gesture.fireEvent(name, event);
+		Titanium.Gesture.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -68,7 +68,7 @@ public class Gesture {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Gesture.removeEventListener(name, callback);
+		Titanium.Gesture.removeEventListener(name, callback);
 	}-*/;
 	
 

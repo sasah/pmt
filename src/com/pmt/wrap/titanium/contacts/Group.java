@@ -61,7 +61,7 @@ public class Group {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject person) /*-{
-		return this.@com.pmt.wrap.titanium.contacts.Group::handler.add(person);
+		this.@com.pmt.wrap.titanium.contacts.Group::handler.add(person);
 	}-*/;
 
 	/**
@@ -73,7 +73,7 @@ public class Group {
 	 * @return void
 	 */
 	 public native void members() /*-{
-		return this.@com.pmt.wrap.titanium.contacts.Group::handler.members();
+		this.@com.pmt.wrap.titanium.contacts.Group::handler.members();
 	}-*/;
 
 	/**
@@ -86,7 +86,7 @@ public class Group {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject person) /*-{
-		return this.@com.pmt.wrap.titanium.contacts.Group::handler.remove(person);
+		this.@com.pmt.wrap.titanium.contacts.Group::handler.remove(person);
 	}-*/;
 
 	/**
@@ -99,6 +99,6 @@ public class Group {
 	 * @return void
 	 */
 	 public native void sortedMembers(int sortBy) /*-{
-		return this.@com.pmt.wrap.titanium.contacts.Group::handler.sortedMembers(sortBy);
+		this.@com.pmt.wrap.titanium.contacts.Group::handler.sortedMembers(sortBy);
 	}-*/;
 }

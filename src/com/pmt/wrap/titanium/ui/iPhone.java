@@ -216,7 +216,7 @@ public class iPhone {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.iPhone.addEventListener(name, callback);
+		Titanium.UI.iPhone.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -243,7 +243,7 @@ public class iPhone {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.UI.iPhone.fireEvent(name, event);
+		Titanium.UI.iPhone.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -257,7 +257,7 @@ public class iPhone {
 	 * @return void
 	 */
 	 public static native void hideStatusBar(boolean animated, int animationStyle) /*-{
-		return Titanium.UI.iPhone.hideStatusBar(animated, animationStyle);
+		Titanium.UI.iPhone.hideStatusBar(animated, animationStyle);
 	}-*/;
 
 	/**
@@ -271,7 +271,7 @@ public class iPhone {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.iPhone.removeEventListener(name, callback);
+		Titanium.UI.iPhone.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -285,6 +285,6 @@ public class iPhone {
 	 * @return void
 	 */
 	 public static native void showStatusBar(boolean animated, int animationStyle) /*-{
-		return Titanium.UI.iPhone.showStatusBar(animated, animationStyle);
+		Titanium.UI.iPhone.showStatusBar(animated, animationStyle);
 	}-*/;
 }

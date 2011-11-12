@@ -73,7 +73,7 @@ public class Menu {
 	 * @return void
 	 */
 	 public native void clear() /*-{
-		return this.@com.pmt.wrap.titanium.android.Menu::handler.clear();
+		this.@com.pmt.wrap.titanium.android.Menu::handler.clear();
 	}-*/;
 
 	/**
@@ -85,7 +85,7 @@ public class Menu {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.android.Menu::handler.close();
+		this.@com.pmt.wrap.titanium.android.Menu::handler.close();
 	}-*/;
 
 	/**
@@ -136,7 +136,7 @@ public class Menu {
 	 * @return void
 	 */
 	 public native void removeGroup(int groupId) /*-{
-		return this.@com.pmt.wrap.titanium.android.Menu::handler.removeGroup(groupId);
+		this.@com.pmt.wrap.titanium.android.Menu::handler.removeGroup(groupId);
 	}-*/;
 
 	/**
@@ -149,7 +149,7 @@ public class Menu {
 	 * @return void
 	 */
 	 public native void removeItem(int itemId) /*-{
-		return this.@com.pmt.wrap.titanium.android.Menu::handler.removeItem(itemId);
+		this.@com.pmt.wrap.titanium.android.Menu::handler.removeItem(itemId);
 	}-*/;
 
 	/**
@@ -163,7 +163,7 @@ public class Menu {
 	 * @return void
 	 */
 	 public native void setGroupEnabled(int groupId, boolean enabled) /*-{
-		return this.@com.pmt.wrap.titanium.android.Menu::handler.setGroupEnabled(groupId, enabled);
+		this.@com.pmt.wrap.titanium.android.Menu::handler.setGroupEnabled(groupId, enabled);
 	}-*/;
 
 	/**
@@ -177,7 +177,7 @@ public class Menu {
 	 * @return void
 	 */
 	 public native void setGroupVisible(int groupId, boolean visible) /*-{
-		return this.@com.pmt.wrap.titanium.android.Menu::handler.setGroupVisible(groupId, visible);
+		this.@com.pmt.wrap.titanium.android.Menu::handler.setGroupVisible(groupId, visible);
 	}-*/;
 
 	/**

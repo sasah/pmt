@@ -205,7 +205,7 @@ public class Filesystem {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Filesystem.addEventListener(name, callback);
+		Titanium.Filesystem.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -256,7 +256,7 @@ public class Filesystem {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Filesystem.fireEvent(name, event);
+		Titanium.Filesystem.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -295,6 +295,6 @@ public class Filesystem {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Filesystem.removeEventListener(name, callback);
+		Titanium.Filesystem.removeEventListener(name, callback);
 	}-*/;
 }

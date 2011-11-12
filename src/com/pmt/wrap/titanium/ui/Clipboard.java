@@ -40,7 +40,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.Clipboard.addEventListener(name, callback);
+		Titanium.UI.Clipboard.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -53,7 +53,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void clearData(String type) /*-{
-		return Titanium.UI.Clipboard.clearData(type);
+		Titanium.UI.Clipboard.clearData(type);
 	}-*/;
 
 	/**
@@ -65,7 +65,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void clearText() /*-{
-		return Titanium.UI.Clipboard.clearText();
+		Titanium.UI.Clipboard.clearText();
 	}-*/;
 
 	/**
@@ -79,7 +79,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.UI.Clipboard.fireEvent(name, event);
+		Titanium.UI.Clipboard.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -92,7 +92,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void getData(String type) /*-{
-		return Titanium.UI.Clipboard.getData(type);
+		Titanium.UI.Clipboard.getData(type);
 	}-*/;
 
 	/**
@@ -104,7 +104,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void getText() /*-{
-		return Titanium.UI.Clipboard.getText();
+		Titanium.UI.Clipboard.getText();
 	}-*/;
 
 	/**
@@ -117,7 +117,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void hasData(String type) /*-{
-		return Titanium.UI.Clipboard.hasData(type);
+		Titanium.UI.Clipboard.hasData(type);
 	}-*/;
 
 	/**
@@ -129,7 +129,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void hasText() /*-{
-		return Titanium.UI.Clipboard.hasText();
+		Titanium.UI.Clipboard.hasText();
 	}-*/;
 
 	/**
@@ -143,7 +143,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.UI.Clipboard.removeEventListener(name, callback);
+		Titanium.UI.Clipboard.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -157,7 +157,7 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void setData(String type, JavaScriptObject data) /*-{
-		return Titanium.UI.Clipboard.setData(type, data);
+		Titanium.UI.Clipboard.setData(type, data);
 	}-*/;
 
 	/**
@@ -170,6 +170,6 @@ public class Clipboard {
 	 * @return void
 	 */
 	 public static native void setText(String text) /*-{
-		return Titanium.UI.Clipboard.setText(text);
+		Titanium.UI.Clipboard.setText(text);
 	}-*/;
 }

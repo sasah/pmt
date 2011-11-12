@@ -82,7 +82,7 @@ public class ResultSet {
 	 * @return void
 	 */
 	 public native void close() /*-{
-		return this.@com.pmt.wrap.titanium.database.ResultSet::handler.close();
+		this.@com.pmt.wrap.titanium.database.ResultSet::handler.close();
 	}-*/;
 
 	/**

@@ -359,7 +359,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -373,7 +373,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -385,7 +385,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void pause() /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.pause();
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.pause();
 	}-*/;
 
 	/**
@@ -399,7 +399,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -412,7 +412,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void setPausedMethod(boolean paused) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.setPausedMethod(paused);
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.setPaused(paused);
 	}-*/;
 
 	/**
@@ -425,7 +425,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void setUrlMethod(String url) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.setUrlMethod(url);
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.setUrl(url);
 	}-*/;
 
 	/**
@@ -437,7 +437,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void start() /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.start();
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.start();
 	}-*/;
 
 	/**
@@ -461,7 +461,7 @@ public class AudioPlayer {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.stop();
+		this.@com.pmt.wrap.titanium.media.AudioPlayer::handler.stop();
 	}-*/;
 	
 

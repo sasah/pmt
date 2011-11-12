@@ -150,7 +150,7 @@ public class AudioRecorder {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -164,7 +164,7 @@ public class AudioRecorder {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -176,7 +176,7 @@ public class AudioRecorder {
 	 * @return void
 	 */
 	 public native void pause() /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.pause();
+		this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.pause();
 	}-*/;
 
 	/**
@@ -190,7 +190,7 @@ public class AudioRecorder {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -202,7 +202,7 @@ public class AudioRecorder {
 	 * @return void
 	 */
 	 public native void resume() /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.resume();
+		this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.resume();
 	}-*/;
 
 	/**
@@ -214,7 +214,7 @@ public class AudioRecorder {
 	 * @return void
 	 */
 	 public native void start() /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.start();
+		this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.start();
 	}-*/;
 
 	/**
@@ -226,6 +226,6 @@ public class AudioRecorder {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.stop();
+		this.@com.pmt.wrap.titanium.media.AudioRecorder::handler.stop();
 	}-*/;
 }

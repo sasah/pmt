@@ -358,7 +358,7 @@ public class Network {
 	 * @return void
 	 */
 	 public static native void addConnectivityListener(JavaScriptObject callback) /*-{
-		return Titanium.Network.addConnectivityListener(callback);
+		Titanium.Network.addConnectivityListener(callback);
 	}-*/;
 
 	/**
@@ -372,7 +372,7 @@ public class Network {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Network.addEventListener(name, callback);
+		Titanium.Network.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -404,6 +404,19 @@ public class Network {
 	 */
 	 public static native JavaScriptObject createBonjourService(String name, String type, String domain, JavaScriptObject parameters) /*-{
 		return Titanium.Network.createBonjourService(name, type, domain, parameters);
+	}-*/;
+
+	/**
+	 * <b>createHTTPClient</b>
+	 * <p>
+	 * create and return an instance of Titanium.Network.HTTPClient
+	 * <p>
+	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Network.HTTPClient
+	 * @return object
+	 */
+	 public static native JavaScriptObject createHTTPClient(JavaScriptObject parameters) /*-{
+		return Titanium.Network.createHTTPClient(parameters);
 	}-*/;
 
 	/**
@@ -459,7 +472,7 @@ public class Network {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Network.fireEvent(name, event);
+		Titanium.Network.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -472,7 +485,7 @@ public class Network {
 	 * @return void
 	 */
 	 public static native void registerForPushNotifications(JavaScriptObject config) /*-{
-		return Titanium.Network.registerForPushNotifications(config);
+		Titanium.Network.registerForPushNotifications(config);
 	}-*/;
 
 	/**
@@ -485,7 +498,7 @@ public class Network {
 	 * @return void
 	 */
 	 public static native void removeConnectivityListener(JavaScriptObject callback) /*-{
-		return Titanium.Network.removeConnectivityListener(callback);
+		Titanium.Network.removeConnectivityListener(callback);
 	}-*/;
 
 	/**
@@ -499,7 +512,7 @@ public class Network {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Network.removeEventListener(name, callback);
+		Titanium.Network.removeEventListener(name, callback);
 	}-*/;
 	
 

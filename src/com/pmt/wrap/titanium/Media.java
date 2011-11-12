@@ -1338,7 +1338,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Media.addEventListener(name, callback);
+		Titanium.Media.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1350,7 +1350,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void beep() /*-{
-		return Titanium.Media.beep();
+		Titanium.Media.beep();
 	}-*/;
 
 	/**
@@ -1442,7 +1442,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void fireEvent(String name, JavaScriptObject event) /*-{
-		return Titanium.Media.fireEvent(name, event);
+		Titanium.Media.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1454,7 +1454,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void hideCamera() /*-{
-		return Titanium.Media.hideCamera();
+		Titanium.Media.hideCamera();
 	}-*/;
 
 	/**
@@ -1466,7 +1466,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void hideMusicLibrary() /*-{
-		return Titanium.Media.hideMusicLibrary();
+		Titanium.Media.hideMusicLibrary();
 	}-*/;
 
 	/**
@@ -1493,7 +1493,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void openPhotoGallery(JavaScriptObject options) /*-{
-		return Titanium.Media.openPhotoGallery(options);
+		Titanium.Media.openPhotoGallery(options);
 	}-*/;
 
 	/**
@@ -1507,7 +1507,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return Titanium.Media.removeEventListener(name, callback);
+		Titanium.Media.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1521,7 +1521,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void saveToPhotoGallery(JavaScriptObject media, JavaScriptObject callbacks) /*-{
-		return Titanium.Media.saveToPhotoGallery(media, callbacks);
+		Titanium.Media.saveToPhotoGallery(media, callbacks);
 	}-*/;
 
 	/**
@@ -1534,7 +1534,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void showCamera(JavaScriptObject options) /*-{
-		return Titanium.Media.showCamera(options);
+		Titanium.Media.showCamera(options);
 	}-*/;
 
 	/**
@@ -1547,7 +1547,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void showMusicLibrary(JavaScriptObject options) /*-{
-		return Titanium.Media.showMusicLibrary(options);
+		Titanium.Media.showMusicLibrary(options);
 	}-*/;
 
 	/**
@@ -1559,7 +1559,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void startMicrophoneMonitor() /*-{
-		return Titanium.Media.startMicrophoneMonitor();
+		Titanium.Media.startMicrophoneMonitor();
 	}-*/;
 
 	/**
@@ -1571,7 +1571,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void stopMicrophoneMonitor() /*-{
-		return Titanium.Media.stopMicrophoneMonitor();
+		Titanium.Media.stopMicrophoneMonitor();
 	}-*/;
 
 	/**
@@ -1583,7 +1583,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void takePicture() /*-{
-		return Titanium.Media.takePicture();
+		Titanium.Media.takePicture();
 	}-*/;
 
 	/**
@@ -1596,7 +1596,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void takeScreenshot(JavaScriptObject callback) /*-{
-		return Titanium.Media.takeScreenshot(callback);
+		Titanium.Media.takeScreenshot(callback);
 	}-*/;
 
 	/**
@@ -1608,7 +1608,7 @@ public class Media {
 	 * @return void
 	 */
 	 public static native void vibrate() /*-{
-		return Titanium.Media.vibrate();
+		Titanium.Media.vibrate();
 	}-*/;
 	
 

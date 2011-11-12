@@ -1359,7 +1359,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.add(view);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.add(view);
 	}-*/;
 
 	/**
@@ -1373,7 +1373,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1387,7 +1387,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1401,7 +1401,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void appendRow(JavaScriptObject row, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.appendRow(row, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.appendRow(row, properties);
 	}-*/;
 
 	/**
@@ -1415,7 +1415,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void deleteRow(int row, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.deleteRow(row, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.deleteRow(row, properties);
 	}-*/;
 
 	/**
@@ -1428,7 +1428,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void deselectRow(int row) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.deselectRow(row);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.deselectRow(row);
 	}-*/;
 
 	/**
@@ -1442,7 +1442,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1454,7 +1454,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.hide();
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.hide();
 	}-*/;
 
 	/**
@@ -1469,7 +1469,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void insertRowAfter(int index, JavaScriptObject row, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.insertRowAfter(index, row, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.insertRowAfter(index, row, properties);
 	}-*/;
 
 	/**
@@ -1484,7 +1484,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void insertRowBefore(int index, JavaScriptObject row, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.insertRowBefore(index, row, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.insertRowBefore(index, row, properties);
 	}-*/;
 
 	/**
@@ -1497,7 +1497,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.remove(view);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1511,7 +1511,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1525,7 +1525,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void scrollToIndex(int index, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.scrollToIndex(index, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.scrollToIndex(index, properties);
 	}-*/;
 
 	/**
@@ -1539,7 +1539,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void scrollToTop(double top, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.scrollToTop(top, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.scrollToTop(top, properties);
 	}-*/;
 
 	/**
@@ -1552,7 +1552,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void selectRow(int row) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.selectRow(row);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.selectRow(row);
 	}-*/;
 
 	/**
@@ -1566,7 +1566,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void setDataMethod(JavaScriptObject data, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.setDataMethod(data, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.setData(data, properties);
 	}-*/;
 
 	/**
@@ -1578,7 +1578,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.show();
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.show();
 	}-*/;
 
 	/**
@@ -1605,7 +1605,7 @@ public class TableView {
 	 * @return void
 	 */
 	 public native void updateRow(JavaScriptObject row, JavaScriptObject properties) /*-{
-		return this.@com.pmt.wrap.titanium.ui.TableView::handler.updateRow(row, properties);
+		this.@com.pmt.wrap.titanium.ui.TableView::handler.updateRow(row, properties);
 	}-*/;
 	
 

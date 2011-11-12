@@ -1315,7 +1315,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void add(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.add(view);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.add(view);
 	}-*/;
 
 	/**
@@ -1329,7 +1329,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void addEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.addEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1343,7 +1343,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void animate(JavaScriptObject obj, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.animate(obj, callback);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.animate(obj, callback);
 	}-*/;
 
 	/**
@@ -1355,7 +1355,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void cancelAllThumbnailImageRequests() /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.cancelAllThumbnailImageRequests();
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.cancelAllThumbnailImageRequests();
 	}-*/;
 
 	/**
@@ -1369,7 +1369,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.fireEvent(name, event);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.fireEvent(name, event);
 	}-*/;
 
 	/**
@@ -1381,7 +1381,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void hide() /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.hide();
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.hide();
 	}-*/;
 
 	/**
@@ -1393,7 +1393,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void pause() /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.pause();
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.pause();
 	}-*/;
 
 	/**
@@ -1405,7 +1405,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void play() /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.play();
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.play();
 	}-*/;
 
 	/**
@@ -1417,7 +1417,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void release() /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.release();
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.release();
 	}-*/;
 
 	/**
@@ -1430,7 +1430,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void remove(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.remove(view);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.remove(view);
 	}-*/;
 
 	/**
@@ -1444,7 +1444,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void removeEventListener(String name, JavaScriptObject callback) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.removeEventListener(name, callback);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.removeEventListener(name, callback);
 	}-*/;
 
 	/**
@@ -1458,7 +1458,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void requestThumbnailImagesAtTimes(JavaScriptObject times, int option) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.requestThumbnailImagesAtTimes(times, option);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.requestThumbnailImagesAtTimes(times, option);
 	}-*/;
 
 	/**
@@ -1471,7 +1471,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void setBackgroundView(JavaScriptObject view) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.setBackgroundView(view);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.setBackgroundView(view);
 	}-*/;
 
 	/**
@@ -1484,7 +1484,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void setMediaMethod(JavaScriptObject media) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.setMediaMethod(media);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.setMedia(media);
 	}-*/;
 
 	/**
@@ -1497,7 +1497,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void setUrlMethod(String url) /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.setUrlMethod(url);
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.setUrl(url);
 	}-*/;
 
 	/**
@@ -1509,7 +1509,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void show() /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.show();
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.show();
 	}-*/;
 
 	/**
@@ -1521,7 +1521,7 @@ public class VideoPlayer {
 	 * @return void
 	 */
 	 public native void stop() /*-{
-		return this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.stop();
+		this.@com.pmt.wrap.titanium.media.VideoPlayer::handler.stop();
 	}-*/;
 
 	/**
