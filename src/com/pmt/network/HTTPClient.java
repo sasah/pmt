@@ -5,6 +5,7 @@ import com.pmt.network.events.DataStreamHandler;
 import com.pmt.network.events.ErrorHandler;
 import com.pmt.network.events.LoadHandler;
 import com.pmt.network.events.ReadyStateChangeHandler;
+import com.pmt.network.events.SendStreamHandler;
 
 /**
  * <b>Titanium.Network.HTTPClient</b>
@@ -27,7 +28,54 @@ public class HTTPClient {
 	private final JavaScriptObject handler;
 
 	public enum ReadyState {
-		DONE, HEADERS_RECEIVED, LOADING, OPENED, UNSENT, UNKNOW
+		/**
+		 * <b>DONE</b> (int) static
+		 * <p>
+		 * the DONE readyState constant
+		 * <p>
+		 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+		 */
+		DONE,
+
+		/**
+		 * <b>HEADERS_RECEIVED</b> (int) static
+		 * <p>
+		 * the HEADERS_RECEIVED readyState constant
+		 * <p>
+		 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+		 */
+		HEADERS_RECEIVED,
+
+		/**
+		 * <b>LOADING</b> (int) static
+		 * <p>
+		 * the LOADING readyState constant
+		 * <p>
+		 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+		 */
+		LOADING,
+
+		/**
+		 * <b>OPENED</b> (int) static
+		 * <p>
+		 * the OPENED readyState constant
+		 * <p>
+		 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+		 */
+		OPENED,
+
+		/**
+		 * <b>UNSENT</b> (int) static
+		 * <p>
+		 * the UNSET readyState constant
+		 * <p>
+		 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+		 */
+		UNSENT, UNKNOW
+	}
+
+	public enum Method {
+		GET, POST, PUT, DELETE
 	}
 
 	public HTTPClient() {
@@ -59,8 +107,8 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	private static native int DONE() /*-{
-		return Titanium.Network.HTTPClient.DONE;
+	private native int DONE() /*-{
+		return this.@com.pmt.network.HTTPClient::handler.DONE;
 	}-*/;
 
 	/**
@@ -70,8 +118,8 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	private static native int HEADERS_RECEIVED() /*-{
-		return Titanium.Network.HTTPClient.HEADERS_RECEIVED;
+	private native int HEADERS_RECEIVED() /*-{
+		return this.@com.pmt.network.HTTPClient::handler.HEADERS_RECEIVED;
 	}-*/;
 
 	/**
@@ -81,8 +129,8 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	private static native int LOADING() /*-{
-		return Titanium.Network.HTTPClient.LOADING;
+	private native int LOADING() /*-{
+		return this.@com.pmt.network.HTTPClient::handler.LOADING;
 	}-*/;
 
 	/**
@@ -92,8 +140,8 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	private static native int OPENED() /*-{
-		return Titanium.Network.HTTPClient.OPENED;
+	private native int OPENED() /*-{
+		return this.@com.pmt.network.HTTPClient::handler.OPENED;
 	}-*/;
 
 	/**
@@ -103,8 +151,8 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	private static native int UNSENT() /*-{
-		return Titanium.Network.HTTPClient.UNSENT;
+	private native int UNSENT() /*-{
+		return this.@com.pmt.network.HTTPClient::handler.UNSENT;
 	}-*/;
 
 	/**
@@ -209,8 +257,10 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native void setOnsendstream(JavaScriptObject onsendstream) /*-{
-		this.@com.pmt.network.HTTPClient::handler.onsendstream = onsendstream;
+	public native void setOnSendStream(SendStreamHandler onSendStream) /*-{
+		this.@com.pmt.network.HTTPClient::handler.onsendstream = function(e) {
+			onSendStream.@com.pmt.network.events.SendStreamHandler::sendStream(Lcom/pmt/network/HTTPClient;D)(e.source.pointer, e.progress);
+		};
 	}-*/;
 
 	/**
@@ -243,7 +293,7 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native int getReadyStateInternal() /*-{
+	private native int getReadyStateInternal() /*-{
 		return this.@com.pmt.network.HTTPClient::handler.readyState;
 	}-*/;
 
@@ -259,17 +309,6 @@ public class HTTPClient {
 	}-*/;
 
 	/**
-	 * <b>responseData</b> (object)
-	 * <p>
-	 * the response data as a Blob object.
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setResponseData(JavaScriptObject responseData) /*-{
-		this.@com.pmt.network.HTTPClient::handler.responseData = responseData;
-	}-*/;
-
-	/**
 	 * <b>responseText</b> (string)
 	 * <p>
 	 * the response as text or null if an error was received or no data was
@@ -279,18 +318,6 @@ public class HTTPClient {
 	 */
 	public native String getResponseText() /*-{
 		return this.@com.pmt.network.HTTPClient::handler.responseText;
-	}-*/;
-
-	/**
-	 * <b>responseText</b> (string)
-	 * <p>
-	 * the response as text or null if an error was received or no data was
-	 * returned
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setResponseText(String responseText) /*-{
-		this.@com.pmt.network.HTTPClient::handler.responseText = responseText;
 	}-*/;
 
 	/**
@@ -307,19 +334,6 @@ public class HTTPClient {
 	}-*/;
 
 	/**
-	 * <b>responseXML</b> (object)
-	 * <p>
-	 * the response object as an XML DOMDocument object. returns null if the
-	 * content type returned by the server was not XML or the content could not
-	 * be parsed
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setResponseXML(JavaScriptObject responseXML) /*-{
-		this.@com.pmt.network.HTTPClient::handler.responseXML = responseXML;
-	}-*/;
-
-	/**
 	 * <b>status</b> (int)
 	 * <p>
 	 * the response HTTP status code
@@ -331,28 +345,6 @@ public class HTTPClient {
 	}-*/;
 
 	/**
-	 * <b>status</b> (int)
-	 * <p>
-	 * the response HTTP status code
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setStatus(int status) /*-{
-		this.@com.pmt.network.HTTPClient::handler.status = status;
-	}-*/;
-
-	/**
-	 * <b>timeout</b> (int)
-	 * <p>
-	 * timeout is milliseconds when the connection should be aborted
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native int getTimeout() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.timeout;
-	}-*/;
-
-	/**
 	 * <b>timeout</b> (int)
 	 * <p>
 	 * timeout is milliseconds when the connection should be aborted
@@ -360,7 +352,7 @@ public class HTTPClient {
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
 	public native void setTimeout(int timeout) /*-{
-		this.@com.pmt.network.HTTPClient::handler.timeout = timeout;
+		this.@com.pmt.network.HTTPClient::handler.setTimeout(timeout);
 	}-*/;
 
 	/**
@@ -399,7 +391,7 @@ public class HTTPClient {
 	 * @return void
 	 */
 	public native void abort() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.abort();
+		this.@com.pmt.network.HTTPClient::handler.abort();
 	}-*/;
 
 	/**
@@ -421,6 +413,21 @@ public class HTTPClient {
 	/**
 	 * <b>open</b>
 	 * <p>
+	 * open GET the request and ready the connection
+	 * <p>
+	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+	 * 
+	 * @param url
+	 *            (string) the URL for the request
+	 * @return void
+	 */
+	public void open(String url) {
+		open(Method.GET, url);
+	}
+
+	/**
+	 * <b>open</b>
+	 * <p>
 	 * open the request and ready the connection
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
@@ -429,14 +436,24 @@ public class HTTPClient {
 	 *            (string) the HTTP method
 	 * @param url
 	 *            (string) the URL for the request
-	 * @param async
-	 *            (boolean) optional property to indicate if asynchronous
-	 *            (default) or not
 	 * @return void
 	 */
-	public native void open(String method, String url, boolean async) /*-{
-		return this.@com.pmt.network.HTTPClient::handler.open(method, url,
-				async);
+	public native void open(Method method, String url) /*-{
+		this.@com.pmt.network.HTTPClient::handler.open(
+				method.@com.pmt.network.HTTPClient.Method::toString()(), url);
+	}-*/;
+
+	/**
+	 * <b>send</b>
+	 * <p>
+	 * send the request (Only async is currently supported)
+	 * <p>
+	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+	 * 
+	 * @return void
+	 */
+	public native void send() /*-{
+		this.@com.pmt.network.HTTPClient::handler.send();
 	}-*/;
 
 	/**
@@ -452,7 +469,7 @@ public class HTTPClient {
 	 * @return void
 	 */
 	public native void send(JavaScriptObject data) /*-{
-		return this.@com.pmt.network.HTTPClient::handler.send(data);
+		this.@com.pmt.network.HTTPClient::handler.send(data);
 	}-*/;
 
 	/**
@@ -470,23 +487,6 @@ public class HTTPClient {
 	 * @return void
 	 */
 	public native void setRequestHeader(String name, String value) /*-{
-		return this.@com.pmt.network.HTTPClient::handler.setRequestHeader(name,
-				value);
-	}-*/;
-
-	/**
-	 * <b>setTimeout</b>
-	 * <p>
-	 * set the request timeout
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * 
-	 * @param timeout
-	 *            (double) the timeout in milliseconds
-	 * @return void
-	 */
-	public native void setTimeoutMethod(double timeout) /*-{
-		return this.@com.pmt.network.HTTPClient::handler
-				.setTimeoutMethod(timeout);
+		this.@com.pmt.network.HTTPClient::handler.setRequestHeader(name, value);
 	}-*/;
 }
