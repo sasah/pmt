@@ -200,7 +200,7 @@ public class HTTPClient {
 	 */
 	public native void setOnDataStream(DataStreamHandler onDataStream) /*-{
 		this.@com.pmt.network.HTTPClient::handler.ondatastream = function(e) {
-			onDataStream.@com.pmt.network.events.DataStreamHandler::dataStream(IIILcom/google/gwt/core/client/JavaScriptObject;D)(e.totalCount, e.totalSize, e.size, e.blob, e.progress);
+			onDataStream.@com.pmt.network.events.DataStreamHandler::onDataStream(IIILcom/google/gwt/core/client/JavaScriptObject;D)(e.totalCount, e.totalSize, e.size, e.blob, e.progress);
 		};
 	}-*/;
 
@@ -214,7 +214,7 @@ public class HTTPClient {
 	 */
 	public native void setOnError(ErrorHandler onError) /*-{
 		this.@com.pmt.network.HTTPClient::handler.onerror = function(e) {
-			onError.@com.pmt.network.events.ErrorHandler::error(Lcom/pmt/network/HTTPClient;Ljava/lang/String;)(e.source.pointer, e.error);
+			onError.@com.pmt.network.events.ErrorHandler::onError(Lcom/pmt/network/HTTPClient;Ljava/lang/String;)(e.source.pointer, e.error);
 		};
 	}-*/;
 
@@ -228,7 +228,7 @@ public class HTTPClient {
 	 */
 	public native void setOnLoad(LoadHandler onLoad) /*-{
 		this.@com.pmt.network.HTTPClient::handler.onload = function(e) {
-			onLoad.@com.pmt.network.events.LoadHandler::load(Lcom/pmt/network/HTTPClient;)(e.source.pointer);
+			onLoad.@com.pmt.network.events.LoadHandler::onLoad(Lcom/pmt/network/HTTPClient;)(e.source.pointer);
 		};
 	}-*/;
 
@@ -243,7 +243,7 @@ public class HTTPClient {
 	public native void setOnReadyStateChange(ReadyStateChangeHandler onReadyStateChange) /*-{
 		this.@com.pmt.network.HTTPClient::handler.onreadystatechange = function(
 				e) {
-			onReadyStateChange.@com.pmt.network.events.ReadyStateChangeHandler::readyStateChange(Lcom/pmt/network/HTTPClient;)(e.source.pointer);
+			onReadyStateChange.@com.pmt.network.events.ReadyStateChangeHandler::onReadyStateChange(Lcom/pmt/network/HTTPClient;)(e.source.pointer);
 		};
 	}-*/;
 
@@ -259,7 +259,7 @@ public class HTTPClient {
 	 */
 	public native void setOnSendStream(SendStreamHandler onSendStream) /*-{
 		this.@com.pmt.network.HTTPClient::handler.onsendstream = function(e) {
-			onSendStream.@com.pmt.network.events.SendStreamHandler::sendStream(Lcom/pmt/network/HTTPClient;D)(e.source.pointer, e.progress);
+			onSendStream.@com.pmt.network.events.SendStreamHandler::onSendStream(Lcom/pmt/network/HTTPClient;D)(e.source.pointer, e.progress);
 		};
 	}-*/;
 
