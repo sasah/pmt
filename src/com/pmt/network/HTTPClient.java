@@ -1,6 +1,10 @@
 package com.pmt.network;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.pmt.network.events.DataStreamHandler;
+import com.pmt.network.events.ErrorHandler;
+import com.pmt.network.events.LoadHandler;
+import com.pmt.network.events.ReadyStateChangeHandler;
 
 /**
  * <b>Titanium.Network.HTTPClient</b>
@@ -22,6 +26,10 @@ public class HTTPClient {
 
 	private final JavaScriptObject handler;
 
+	public enum ReadyState {
+		DONE, HEADERS_RECEIVED, LOADING, OPENED, UNSENT, UNKNOW
+	}
+
 	public HTTPClient() {
 		this.handler = createHTTPClient();
 	}
@@ -38,8 +46,10 @@ public class HTTPClient {
 	 *            Titanium.Network.HTTPClient
 	 * @return object
 	 */
-	private static native JavaScriptObject createHTTPClient() /*-{
-		return Titanium.Network.createHTTPClient();
+	private native JavaScriptObject createHTTPClient() /*-{
+		return Titanium.Network.createHTTPClient({
+			pointer : this
+		});
 	}-*/;
 
 	/**
@@ -49,7 +59,7 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public static native int DONE() /*-{
+	private static native int DONE() /*-{
 		return Titanium.Network.HTTPClient.DONE;
 	}-*/;
 
@@ -60,7 +70,7 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public static native int HEADERS_RECEIVED() /*-{
+	private static native int HEADERS_RECEIVED() /*-{
 		return Titanium.Network.HTTPClient.HEADERS_RECEIVED;
 	}-*/;
 
@@ -71,7 +81,7 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public static native int LOADING() /*-{
+	private static native int LOADING() /*-{
 		return Titanium.Network.HTTPClient.LOADING;
 	}-*/;
 
@@ -82,7 +92,7 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public static native int OPENED() /*-{
+	private static native int OPENED() /*-{
 		return Titanium.Network.HTTPClient.OPENED;
 	}-*/;
 
@@ -93,7 +103,7 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public static native int UNSENT() /*-{
+	private static native int UNSENT() /*-{
 		return Titanium.Network.HTTPClient.UNSENT;
 	}-*/;
 
@@ -109,17 +119,6 @@ public class HTTPClient {
 	}-*/;
 
 	/**
-	 * <b>connected</b> (boolean)
-	 * <p>
-	 * boolean to indicate that the response was successful
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setConnected(boolean connected) /*-{
-		this.@com.pmt.network.HTTPClient::handler.connected = connected;
-	}-*/;
-
-	/**
 	 * <b>connectionType</b> (string)
 	 * <p>
 	 * the connection type, normally either GET or POST.
@@ -128,41 +127,6 @@ public class HTTPClient {
 	 */
 	public native String getConnectionType() /*-{
 		return this.@com.pmt.network.HTTPClient::handler.connectionType;
-	}-*/;
-
-	/**
-	 * <b>connectionType</b> (string)
-	 * <p>
-	 * the connection type, normally either GET or POST.
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setConnectionType(String connectionType) /*-{
-		this.@com.pmt.network.HTTPClient::handler.connectionType = connectionType;
-	}-*/;
-
-	/**
-	 * <b>file</b> (string)
-	 * <p>
-	 * file to download contents to. Can only be set after calling open. iOS
-	 * only
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native String getFile() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.file;
-	}-*/;
-
-	/**
-	 * <b>file</b> (string)
-	 * <p>
-	 * file to download contents to. Can only be set after calling open. iOS
-	 * only
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setFile(String file) /*-{
-		this.@com.pmt.network.HTTPClient::handler.file = file;
 	}-*/;
 
 	/**
@@ -177,17 +141,6 @@ public class HTTPClient {
 	}-*/;
 
 	/**
-	 * <b>location</b> (string)
-	 * <p>
-	 * the absolute URL of the request
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setLocation(String location) /*-{
-		this.@com.pmt.network.HTTPClient::handler.location = location;
-	}-*/;
-
-	/**
 	 * <b>ondatastream</b> (function)
 	 * <p>
 	 * set this to a function before calling open to cause the function to be
@@ -197,22 +150,10 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native JavaScriptObject getOndatastream() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.ondatastream;
-	}-*/;
-
-	/**
-	 * <b>ondatastream</b> (function)
-	 * <p>
-	 * set this to a function before calling open to cause the function to be
-	 * called at regular intervals as the request data is being received. the
-	 * progress property of the event will contain a value from 0.0-1.0 with the
-	 * progress.
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setOndatastream(JavaScriptObject ondatastream) /*-{
-		this.@com.pmt.network.HTTPClient::handler.ondatastream = ondatastream;
+	public native void setOnDataStream(DataStreamHandler onDataStream) /*-{
+		this.@com.pmt.network.HTTPClient::handler.ondatastream = function(e) {
+			onDataStream.@com.pmt.network.events.DataStreamHandler::dataStream(IIILcom/google/gwt/core/client/JavaScriptObject;D)(e.totalCount, e.totalSize, e.size, e.blob, e.progress);
+		};
 	}-*/;
 
 	/**
@@ -223,20 +164,10 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native JavaScriptObject getOnerror() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.onerror;
-	}-*/;
-
-	/**
-	 * <b>onerror</b> (function)
-	 * <p>
-	 * set this to a function before calling open to cause the function to be
-	 * called upon a error response
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setOnerror(JavaScriptObject onerror) /*-{
-		this.@com.pmt.network.HTTPClient::handler.onerror = onerror;
+	public native void setOnError(ErrorHandler onError) /*-{
+		this.@com.pmt.network.HTTPClient::handler.onerror = function(e) {
+			onError.@com.pmt.network.events.ErrorHandler::error(Lcom/pmt/network/HTTPClient;Ljava/lang/String;)(e.source.pointer, e.error);
+		};
 	}-*/;
 
 	/**
@@ -247,20 +178,10 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native JavaScriptObject getOnload() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.onload;
-	}-*/;
-
-	/**
-	 * <b>onload</b> (function)
-	 * <p>
-	 * set this to a function before calling open to cause the function to be
-	 * called upon a successful response
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setOnload(JavaScriptObject onload) /*-{
-		this.@com.pmt.network.HTTPClient::handler.onload = onload;
+	public native void setOnLoad(LoadHandler onLoad) /*-{
+		this.@com.pmt.network.HTTPClient::handler.onload = function(e) {
+			onLoad.@com.pmt.network.events.LoadHandler::load(Lcom/pmt/network/HTTPClient;)(e.source.pointer);
+		};
 	}-*/;
 
 	/**
@@ -271,34 +192,11 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native JavaScriptObject getOnreadystatechange() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.onreadystatechange;
-	}-*/;
-
-	/**
-	 * <b>onreadystatechange</b> (function)
-	 * <p>
-	 * set this to a function before calling open to cause the function to be
-	 * called for each readyState change
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setOnreadystatechange(JavaScriptObject onreadystatechange) /*-{
-		this.@com.pmt.network.HTTPClient::handler.onreadystatechange = onreadystatechange;
-	}-*/;
-
-	/**
-	 * <b>onsendstream</b> (function)
-	 * <p>
-	 * set this to a function before calling open to cause the function to be
-	 * called at regular intervals as the request data is being transmitted. the
-	 * progress property of the event will contain a value from 0.0-1.0 with the
-	 * progress.
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native JavaScriptObject getOnsendstream() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.onsendstream;
+	public native void setOnReadyStateChange(ReadyStateChangeHandler onReadyStateChange) /*-{
+		this.@com.pmt.network.HTTPClient::handler.onreadystatechange = function(
+				e) {
+			onReadyStateChange.@com.pmt.network.events.ReadyStateChangeHandler::readyStateChange(Lcom/pmt/network/HTTPClient;)(e.source.pointer);
+		};
 	}-*/;
 
 	/**
@@ -322,9 +220,21 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native int getReadyState() /*-{
-		return this.@com.pmt.network.HTTPClient::handler.readyState;
-	}-*/;
+	public ReadyState getReadyState() {
+		int i = getReadyStateInternal();
+		if (i == DONE()) {
+			return ReadyState.DONE;
+		} else if (i == HEADERS_RECEIVED()) {
+			return ReadyState.HEADERS_RECEIVED;
+		} else if (i == LOADING()) {
+			return ReadyState.LOADING;
+		} else if (i == OPENED()) {
+			return ReadyState.OPENED;
+		} else if (i == UNSENT()) {
+			return ReadyState.UNSENT;
+		}
+		return ReadyState.UNKNOW;
+	}
 
 	/**
 	 * <b>readyState</b> (int)
@@ -333,8 +243,8 @@ public class HTTPClient {
 	 * <p>
 	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
 	 */
-	public native void setReadyState(int readyState) /*-{
-		this.@com.pmt.network.HTTPClient::handler.readyState = readyState;
+	public native int getReadyStateInternal() /*-{
+		return this.@com.pmt.network.HTTPClient::handler.readyState;
 	}-*/;
 
 	/**
