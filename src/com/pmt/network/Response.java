@@ -40,17 +40,7 @@ public abstract class Response {
 	public static final int SC_TEMPORARY_REDIRECT = 307;
 	public static final int SC_UNAUTHORIZED = 401;
 	public static final int SC_UNSUPPORTED_MEDIA_TYPE = 415;
-	public static final int SC_USE_PROXY = 305;
-	
-	
-	/**
-	 * <b>connected</b> (boolean)
-	 * <p>
-	 * boolean to indicate that the response was successful
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public abstract boolean getConnected();
+	public static final int SC_USE_PROXY = 305;	
 	
 	/**
 	 * <b>status</b> (int)

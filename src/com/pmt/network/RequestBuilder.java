@@ -165,16 +165,16 @@ public class RequestBuilder {
 
 			@Override
 			public ReadyState getReadyState() {
-				int i = requestBuilder.getReadyStateInternal();
-				if (i == requestBuilder.DONE()) {
+				int i = getReadyStateInternal();
+				if (i == DONE()) {
 					return ReadyState.DONE;
-				} else if (i == requestBuilder.HEADERS_RECEIVED()) {
+				} else if (i == HEADERS_RECEIVED()) {
 					return ReadyState.HEADERS_RECEIVED;
-				} else if (i == requestBuilder.LOADING()) {
+				} else if (i == LOADING()) {
 					return ReadyState.LOADING;
-				} else if (i == requestBuilder.OPENED()) {
+				} else if (i == OPENED()) {
 					return ReadyState.OPENED;
-				} else if (i == requestBuilder.UNSENT()) {
+				} else if (i == UNSENT()) {
 					return ReadyState.UNSENT;
 				}
 				return ReadyState.UNKNOW;
@@ -195,15 +195,14 @@ public class RequestBuilder {
 				return getLocationInternal();
 			}
 
+			@Override
+			public native boolean getConnected() /*-{
+			return this.@com.pmt.network.RequestBuilder::handler.connected;
+		}-*/;
+
 		};
-		request.requestBuilder = this;
 
 		response = new Response() {
-
-			@Override
-			public boolean getConnected() {
-				return getConnectedInternal();
-			}
 
 			@Override
 			public int getStatus() {
@@ -261,11 +260,11 @@ public class RequestBuilder {
 	}-*/;
 
 	private native String getLocationInternal() /*-{
-		return requestBuilder.@com.pmt.network.RequestBuilder::handler.location;
+		return this.@com.pmt.network.RequestBuilder::handler.location;
 	}-*/;
 
 	private native void cancelInternal() /*-{
-		requestBuilder.@com.pmt.network.RequestBuilder::handler.abort();
+		this.@com.pmt.network.RequestBuilder::handler.abort();
 	}-*/;
 
 	private native String getConnectionTypeInternal() /*-{
@@ -291,11 +290,7 @@ public class RequestBuilder {
 
 	private native JavaScriptObject getDataInternal() /*-{
 		return this.@com.pmt.network.RequestBuilder::handler.responseData;
-	}-*/;
-
-	private native boolean getConnectedInternal() /*-{
-		return this.@com.pmt.network.RequestBuilder::handler.connected;
-	}-*/;
+	}-*/;	
 
 	private native void setCallback(RequestCallback callback) /*-{
 		this.@com.pmt.network.RequestBuilder::handler.ondatastream = function(e) {
@@ -305,14 +300,14 @@ public class RequestBuilder {
 			callback.@com.pmt.network.RequestCallback::onError(Lcom/pmt/network/Request;Ljava/lang/String;)(e.source.pointer.@com.pmt.network.RequestBuilder::request, e.error);
 		};
 		this.@com.pmt.network.RequestBuilder::handler.onload = function(e) {
-			callback.@com.pmt.network.RequestCallback::onLoad(Lcom/pmt/network/Request;Lcom/pmt/network/Response;)(e.source.pointer.request, e.source.pointer.response);
+			callback.@com.pmt.network.RequestCallback::onLoad(Lcom/pmt/network/Request;Lcom/pmt/network/Response;)(e.source.pointer.@com.pmt.network.RequestBuilder::request, e.source.pointer.@com.pmt.network.RequestBuilder::response);
 		};
 		this.@com.pmt.network.RequestBuilder::handler.onreadystatechange = function(
 				e) {
 			callback.@com.pmt.network.RequestCallback::onReadyStateChange(Lcom/pmt/network/Request;)(e.source.pointer.@com.pmt.network.RequestBuilder::request);
 		};
 		this.@com.pmt.network.RequestBuilder::handler.onsendstream = function(e) {
-			callback.@com.pmt.network.RequestCallback::onSendStream(Lcom/pmt/network/Request;D)(e.source.pointer.request, e.progress);
+			callback.@com.pmt.network.RequestCallback::onSendStream(Lcom/pmt/network/Request;D)(e.source.pointer.@com.pmt.network.RequestBuilder::request, e.progress);
 		};
 	}-*/;
 

@@ -5,7 +5,14 @@ import com.pmt.network.RequestBuilder.ReadyState;
 
 public abstract class Request {
 	
-	public RequestBuilder requestBuilder;
+	/**
+	 * <b>connected</b> (boolean)
+	 * <p>
+	 * boolean to indicate that the response was successful
+	 * <p>
+	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
+	 */
+	public abstract boolean getConnected();
 
 	/**
 	 * <b>abort</b>
