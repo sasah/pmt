@@ -407,19 +407,6 @@ public class Network {
 	}-*/;
 
 	/**
-	 * <b>createHTTPClient</b>
-	 * <p>
-	 * create and return an instance of Titanium.Network.HTTPClient
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param parameters (object) (optional) a dictionary object properties defined in Titanium.Network.HTTPClient
-	 * @return object
-	 */
-	 public static native JavaScriptObject createHTTPClient(JavaScriptObject parameters) /*-{
-		return Titanium.Network.createHTTPClient(parameters);
-	}-*/;
-
-	/**
 	 * <b>createTCPSocket</b>
 	 * <p>
 	 * create and return an instance of Titanium.Network.TCPSocket

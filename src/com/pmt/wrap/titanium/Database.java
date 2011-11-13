@@ -102,33 +102,6 @@ public class Database {
 	}-*/;
 
 	/**
-	 * <b>install</b>
-	 * <p>
-	 * install a database from the application Resources folder (at build time) and return a reference to the opened database. it is safe to call this method multiple times since this method will only install once if it doesn't already exist on the device.
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param path (string) the path (relative to the main application Resources folder at build time) to the db to install. this file must be in the SQLite 3 file format.
-	 * @param name (string) the name of the database
-	 * @return object
-	 */
-	 public static native JavaScriptObject install(String path, String name) /*-{
-		return Titanium.Database.install(path, name);
-	}-*/;
-
-	/**
-	 * <b>open</b>
-	 * <p>
-	 * open a database. if it doesn't yet exist, create it.
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 * @param name (string) the name of the database
-	 * @return object
-	 */
-	 public static native JavaScriptObject open(String name) /*-{
-		return Titanium.Database.open(name);
-	}-*/;
-
-	/**
 	 * <b>removeEventListener</b>
 	 * <p>
 	 * remove a previously added event listener
