@@ -179,7 +179,7 @@ public class RequestBuilder {
 				}
 				return ReadyState.UNKNOW;
 			}
-			
+
 			@Override
 			public void cancel() {
 				cancelInternal();
@@ -196,9 +196,9 @@ public class RequestBuilder {
 			}
 
 			@Override
-			public native boolean getConnected() /*-{
-			return this.@com.pmt.network.RequestBuilder::handler.connected;
-		}-*/;
+			public boolean getConnected() {
+				return getConnectedInternal();
+			}
 
 		};
 
@@ -263,6 +263,10 @@ public class RequestBuilder {
 		return this.@com.pmt.network.RequestBuilder::handler.location;
 	}-*/;
 
+	private native boolean getConnectedInternal() /*-{
+		return this.@com.pmt.network.RequestBuilder::handler.connected;
+	}-*/;
+
 	private native void cancelInternal() /*-{
 		this.@com.pmt.network.RequestBuilder::handler.abort();
 	}-*/;
@@ -290,7 +294,7 @@ public class RequestBuilder {
 
 	private native JavaScriptObject getDataInternal() /*-{
 		return this.@com.pmt.network.RequestBuilder::handler.responseData;
-	}-*/;	
+	}-*/;
 
 	private native void setCallback(RequestCallback callback) /*-{
 		this.@com.pmt.network.RequestBuilder::handler.ondatastream = function(e) {
