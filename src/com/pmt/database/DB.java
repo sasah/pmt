@@ -22,14 +22,6 @@ public class DB {
 
 	private JavaScriptObject handler;
 
-	public DB(String path, String name) {
-		this.handler = install(path, name);
-	}
-
-	public DB(String name) {
-		this.handler = open(name);
-	}
-
 	/**
 	 * <b>install</b>
 	 * <p>
@@ -48,9 +40,9 @@ public class DB {
 	 *            (string) the name of the database
 	 * @return object
 	 */
-	private static native JavaScriptObject install(String path, String name) /*-{
-		return Titanium.Database.install(path, name);
-	}-*/;
+	public DB(String path, String name) {
+		this.handler = install(path, name);
+	}
 
 	/**
 	 * <b>open</b>
@@ -63,6 +55,14 @@ public class DB {
 	 *            (string) the name of the database
 	 * @return object
 	 */
+	public DB(String name) {
+		this.handler = open(name);
+	}
+
+	private static native JavaScriptObject install(String path, String name) /*-{
+		return Titanium.Database.install(path, name);
+	}-*/;
+
 	private static native JavaScriptObject open(String name) /*-{
 		return Titanium.Database.open(name);
 	}-*/;
@@ -79,17 +79,6 @@ public class DB {
 	}-*/;
 
 	/**
-	 * <b>lastInsertRowId</b> (int)
-	 * <p>
-	 * the last row identifier by the last INSERT query
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setLastInsertRowId(int lastInsertRowId) /*-{
-		this.@com.pmt.database.DB::handler.lastInsertRowId = lastInsertRowId;
-	}-*/;
-
-	/**
 	 * <b>name</b> (string)
 	 * <p>
 	 * the name of the database
@@ -101,17 +90,6 @@ public class DB {
 	}-*/;
 
 	/**
-	 * <b>name</b> (string)
-	 * <p>
-	 * the name of the database
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setName(String name) /*-{
-		this.@com.pmt.database.DB::handler.name = name;
-	}-*/;
-
-	/**
 	 * <b>rowsAffected</b> (int)
 	 * <p>
 	 * the number of rows affected by the last query
@@ -120,17 +98,6 @@ public class DB {
 	 */
 	public native int getRowsAffected() /*-{
 		return this.@com.pmt.database.DB::handler.rowsAffected;
-	}-*/;
-
-	/**
-	 * <b>rowsAffected</b> (int)
-	 * <p>
-	 * the number of rows affected by the last query
-	 * <p>
-	 * <b>Platforms:</b> android iphone ipad, <b>Since:</b> 0.1
-	 */
-	public native void setRowsAffected(int rowsAffected) /*-{
-		this.@com.pmt.database.DB::handler.rowsAffected = rowsAffected;
 	}-*/;
 
 	/**
