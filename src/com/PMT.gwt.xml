@@ -4,9 +4,14 @@
 	<inherits name="com.google.gwt.emul.Emulation" />
 	<inherits name="com.google.gwt.core.CompilerParameters" />
 	<inherits name="com.google.gwt.core.EmulateJsStack" />
-
+	
 	<define-linker name="pmt" class="com.gwt.pmt.PMTScriptLinker" />
 	<add-linker name="pmt" />
-
+	
+	<generate-with class="com.gwt.pmt.IntrospectorGenerator">
+		<when-type-assignable class="com.pmt.bean.Introspector" />
+	</generate-with>
+	
 	<source path='pmt' />
+	
 </module>
