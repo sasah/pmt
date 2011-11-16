@@ -1,4 +1,4 @@
-package com.gwt.pmt;
+package com.pmt.gwt;
 
 import java.util.Collection;
 import java.util.Set;

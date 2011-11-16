@@ -1,4 +1,4 @@
-package com.gwt.pmt;
+package com.pmt.gwt.reflection;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -19,10 +19,10 @@ import com.google.gwt.core.ext.typeinfo.JTypeParameter;
 import com.google.gwt.core.ext.typeinfo.TypeOracle;
 import com.google.gwt.user.rebind.ClassSourceFileComposerFactory;
 import com.google.gwt.user.rebind.SourceWriter;
-import com.pmt.bean.BeanDescriptor;
-import com.pmt.bean.Introspectable;
-import com.pmt.bean.Introspector;
-import com.pmt.bean.Method;
+import com.pmt.sys.reflection.BeanDescriptor;
+import com.pmt.sys.reflection.Introspectable;
+import com.pmt.sys.reflection.Introspector;
+import com.pmt.sys.reflection.Method;
 
 public class IntrospectorGenerator extends Generator {
 	private String implementationName = Introspector.class.getSimpleName() + "_Impl";
@@ -129,7 +129,7 @@ public class IntrospectorGenerator extends Generator {
 		cfcf.addImplementedInterface(typeName);
 		cfcf.addImport("java.util.HashMap");
 		cfcf.addImport(Method.class.getCanonicalName());
-		cfcf.addImport(com.pmt.bean.Property.class.getCanonicalName());
+		cfcf.addImport(com.pmt.sys.reflection.Property.class.getCanonicalName());
 		cfcf.addImport(BeanDescriptor.class.getCanonicalName());
 
 		PrintWriter printWriter = context.tryCreate(logger, packageName, implementationName);

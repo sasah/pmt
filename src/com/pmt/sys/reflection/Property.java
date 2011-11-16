@@ -1,4 +1,4 @@
-package com.pmt.bean;
+package com.pmt.sys.reflection;
 
 /**
  * A container for information about a Property on a type.

@@ -1,4 +1,4 @@
-package com.pmt.bean;
+package com.pmt.sys.reflection;
 
 import com.google.gwt.core.client.GWT;
 

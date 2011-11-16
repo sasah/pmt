@@ -1,4 +1,4 @@
-package com.gwt.pmt;
+package com.pmt.gwt.reflection;
 
 import com.google.gwt.core.ext.typeinfo.JMethod;
 import com.google.gwt.core.ext.typeinfo.JType;

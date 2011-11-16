@@ -5,14 +5,16 @@
 	<inherits name="com.google.gwt.core.CompilerParameters" />
 	<inherits name="com.google.gwt.core.EmulateJsStack" />
 	<inherits name="com.google.gwt.json.JSON" />
-	
-	<define-linker name="pmt" class="com.gwt.pmt.PMTScriptLinker" />
+
+	<define-linker name="pmt" class="com.pmt.gwt.PMTScriptLinker" />
 	<add-linker name="pmt" />
-	
-	<generate-with class="com.gwt.pmt.IntrospectorGenerator">
-		<when-type-assignable class="com.pmt.bean.Introspector" />
+
+	<generate-with class="com.pmt.gwt.reflection.IntrospectorGenerator">
+		<when-type-assignable class="com.pmt.sys.reflection.Introspector" />
 	</generate-with>
-	
-	<source path='pmt' />
-	
+
+	<source path='database' />
+	<source path='network' />
+	<source path='sys' />
+	<source path='wrap' />
 </module>

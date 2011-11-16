@@ -1,4 +1,4 @@
-package com.pmt.bean;
+package com.pmt.sys.reflection;
 
 public interface BeanDescriptor {
 

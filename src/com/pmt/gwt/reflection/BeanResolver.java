@@ -1,4 +1,4 @@
-package com.gwt.pmt;
+package com.pmt.gwt.reflection;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -8,7 +8,7 @@ import java.util.Map;
 import com.google.gwt.core.ext.TreeLogger;
 import com.google.gwt.core.ext.typeinfo.JClassType;
 import com.google.gwt.core.ext.typeinfo.JMethod;
-import com.pmt.bean.Omit;
+import com.pmt.sys.reflection.Omit;
 
 public class BeanResolver {
 	/* <String name, Property> */
