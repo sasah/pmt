@@ -7,32 +7,35 @@ import java.util.Map;
 
 import com.google.gwt.core.ext.TreeLogger;
 import com.google.gwt.core.ext.typeinfo.JClassType;
+import com.google.gwt.core.ext.typeinfo.JField;
 import com.google.gwt.core.ext.typeinfo.JMethod;
-import com.pmt.sys.reflection.Omit;
+import com.pmt.sys.reflection.Index;
+import com.pmt.sys.reflection.NotNull;
+import com.pmt.sys.reflection.PrimaryKey;
+import com.pmt.sys.reflection.Transient;
 
+/**
+ * @author <a href="mailto:cooper@screaming-penguin.com">Robert "kebernet" Cooper</a>
+ */
 public class BeanResolver {
-	/* <String name, Property> */
 	private HashMap<String, Property> properties = new HashMap<String, Property>();
 
-	/* <MethodWrapper> */
 	private HashSet<MethodWrapper> methodSet = new HashSet<MethodWrapper>();
+	private HashMap<String, JField> fieldsSet = new HashMap<String, JField>();
+
 	private JClassType type;
 	private TreeLogger logger;
-	private String[] filterProperties;
 
-	public BeanResolver(TreeLogger logger, JClassType type, String[] filterProperties) {
-		this(logger, type);
-		this.filterProperties = filterProperties;
-	}
-
-	/** Creates a new instance of BeanResolver */
 	public BeanResolver(TreeLogger logger, JClassType type) {
 		this.type = type;
 		this.logger = logger;
 		this.logger = logger.branch(TreeLogger.DEBUG, "Inspecting type: " + type.getQualifiedSourceName(), null);
+
 		buildMethods(type);
+		buildFields(type);
 		examineGetters();
 		examineSetters();
+
 		logger.log(TreeLogger.DEBUG, "" + methodSet.size(), null);
 
 		for (Iterator<String> it = properties.keySet().iterator(); it.hasNext();) {
@@ -40,7 +43,7 @@ public class BeanResolver {
 		}
 
 		for (Iterator<MethodWrapper> it = methodSet.iterator(); it.hasNext();) {
-			MethodWrapper w = (MethodWrapper) it.next();
+			MethodWrapper w = it.next();
 			logger.log(TreeLogger.DEBUG, w.getDeclaringType().getQualifiedSourceName() + " " + w.toString(), null);
 		}
 	}
@@ -56,7 +59,7 @@ public class BeanResolver {
 			}
 
 			MethodWrapper w = new MethodWrapper(type, methods[i]);
-			if (methods[i].getAnnotation(Omit.class) != null) {
+			if (methods[i].getAnnotation(Transient.class) != null) {
 				methodSet.remove(w);
 			} else {
 				logger.log(TreeLogger.DEBUG, w.getBaseMethod().getReadableDeclaration(), null);
@@ -77,20 +80,52 @@ public class BeanResolver {
 		}
 	}
 
+	private void buildFields(JClassType type) {
+		JField[] fields = type.getFields();
+		for (int i = 0; i < fields.length; i++) {
+			if (fields[i].getAnnotation(Transient.class) != null) {
+				fieldsSet.remove(fields[i]);
+			} else {
+				fieldsSet.put(fields[i].getName(), fields[i]);
+			}
+		}
+		JClassType[] interfaces = type.getImplementedInterfaces();
+		for (int i = 0; i < interfaces.length; i++) {
+			buildFields(interfaces[i]);
+		}
+		if (type.getSuperclass() != null) {
+			buildFields(type.getSuperclass());
+		}
+	}
+
 	private void examineGetters() {
 		for (Iterator<MethodWrapper> it = methodSet.iterator(); it.hasNext();) {
-			MethodWrapper w = (MethodWrapper) it.next();
+			MethodWrapper w = it.next();
 			String methodName = w.getBaseMethod().getName();
 			Property p = null;
 
-			if (methodName.startsWith("get") && (methodName.length() >= 4) && (methodName.charAt(3) == methodName.toUpperCase().charAt(3))) {
+			if (methodName.startsWith("get") && (methodName.length() >= 4) && (methodName.charAt(3) == methodName.toUpperCase().charAt(3)) && (methodName != "getClass")) {
 				p = new Property();
 				p.setReadMethod(w);
 				p.setName(methodName.substring(3, 4).toLowerCase() + ((methodName.length() > 4) ? methodName.substring(4, methodName.length()) : ""));
+				JField field = fieldsSet.get(p.getName());
+				if (field != null) {
+					p.setPrimaryKey(field.getAnnotation(PrimaryKey.class) != null);
+					p.setNotNull(field.getAnnotation(NotNull.class) != null);
+					
+					p.setIndex(field.getAnnotation(Index.class) != null);
+					p.setUnique((field.getAnnotation(Index.class) != null) && field.getAnnotation(Index.class).unique());
+					p.setDesc((field.getAnnotation(Index.class) != null) && field.getAnnotation(Index.class).desc());
+				}
 			} else if (methodName.startsWith("is") && (methodName.length() >= 3) && (methodName.charAt(2) == methodName.toUpperCase().charAt(2))) {
 				p = new Property();
 				p.setReadMethod(w);
 				p.setName(methodName.substring(2, 3).toLowerCase() + ((methodName.length() > 3) ? methodName.substring(3, methodName.length()) : ""));
+				JField field = fieldsSet.get(p.getName());
+				if (field != null) {
+					p.setPrimaryKey(field.getAnnotation(PrimaryKey.class) != null);
+					p.setNotNull(field.getAnnotation(NotNull.class) != null);
+				}
 			}
 
 			if (p == null) {
@@ -105,13 +140,13 @@ public class BeanResolver {
 
 	private void examineSetters() {
 		for (Iterator<MethodWrapper> it = methodSet.iterator(); it.hasNext();) {
-			MethodWrapper w = (MethodWrapper) it.next();
+			MethodWrapper w = it.next();
 			String methodName = w.getBaseMethod().getName();
 
 			if (methodName.startsWith("set") && (methodName.length() >= 4) && (methodName.charAt(3) == methodName.toUpperCase().charAt(3))) {
 				String name = methodName.substring(3, 4).toLowerCase() + ((methodName.length() > 4) ? methodName.substring(4, methodName.length()) : "");
 
-				Property p = (properties.containsKey(name) ? (Property) properties.get(name) : new Property());
+				Property p = (properties.containsKey(name) ? properties.get(name) : new Property());
 				p.setName(name);
 				p.setWriteMethod(w);
 
@@ -131,16 +166,6 @@ public class BeanResolver {
 	}
 
 	Map<String, Property> getProperties() {
-		if (this.filterProperties != null) {
-			Map<String, Property> results = new HashMap<String, Property>();
-			for (String property : this.filterProperties) {
-				property = property.trim();
-				if (this.properties.containsKey(property)) {
-					results.put(property, this.properties.get(property));
-				}
-			}
-			return results;
-		}
 		return this.properties;
 	}
 

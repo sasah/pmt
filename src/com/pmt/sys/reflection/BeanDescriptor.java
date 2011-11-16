@@ -1,5 +1,8 @@
 package com.pmt.sys.reflection;
 
+/**
+ * @author <a href="mailto:cooper@screaming-penguin.com">Robert "kebernet" Cooper</a>
+ */
 public interface BeanDescriptor {
 
 	/**
@@ -18,4 +21,5 @@ public interface BeanDescriptor {
 	 */
 	Property getProperty(String name);
 
+	String getTableName();
 }

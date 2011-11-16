@@ -2,6 +2,7 @@ package com.pmt.sys.reflection;
 
 /**
  * A Gwittir ananlogue to java.lang.reflect.Method.
+ * @author <a href="mailto:cooper@screaming-penguin.com">Robert "kebernet" Cooper</a>
  */
 public interface Method {
 

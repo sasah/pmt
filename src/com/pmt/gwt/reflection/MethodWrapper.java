@@ -3,6 +3,9 @@ package com.pmt.gwt.reflection;
 import com.google.gwt.core.ext.typeinfo.JMethod;
 import com.google.gwt.core.ext.typeinfo.JType;
 
+/**
+ * @author <a href="mailto:cooper@screaming-penguin.com">Robert "kebernet" Cooper</a>
+ */
 public class MethodWrapper implements Comparable<MethodWrapper> {
 
 	private JType declaringType;

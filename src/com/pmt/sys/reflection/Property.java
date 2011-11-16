@@ -2,6 +2,8 @@ package com.pmt.sys.reflection;
 
 /**
  * A container for information about a Property on a type.
+ * 
+ * @author <a href="mailto:cooper@screaming-penguin.com">Robert "kebernet" Cooper</a>
  */
 public class Property {
 	@SuppressWarnings("rawtypes")
@@ -9,6 +11,11 @@ public class Property {
 	private Method accessorMethod;
 	private Method mutatorMethod;
 	private String name;
+	private boolean primaryKey;
+	private boolean notNull;
+	private boolean index;
+	private boolean unique;
+	private boolean desc;
 
 	/**
 	 * Creates a new instance of Property
@@ -22,11 +29,16 @@ public class Property {
 	 * @param mutatorMethod
 	 *            The mutator method for the property.
 	 */
-	public Property(String name, @SuppressWarnings("rawtypes") Class type, Method accessorMethod, Method mutatorMethod) {
+	public Property(String name, @SuppressWarnings("rawtypes") Class type, Method accessorMethod, Method mutatorMethod, boolean primaryKey, boolean notNull, boolean index, boolean unique, boolean desc) {
 		this.name = name;
 		this.accessorMethod = accessorMethod;
 		this.mutatorMethod = mutatorMethod;
 		this.type = type;
+		this.primaryKey = primaryKey;
+		this.notNull = notNull;
+		this.index = index;
+		this.unique = unique;
+		this.desc = desc;
 	}
 
 	/**
@@ -56,6 +68,14 @@ public class Property {
 		return name;
 	}
 
+	public boolean isPrimaryKey() {
+		return primaryKey;
+	}
+
+	public boolean isNotNull() {
+		return notNull;
+	}
+
 	/**
 	 * Returns the Class literal type of the property.
 	 * 
@@ -73,5 +93,29 @@ public class Property {
 	 */
 	public String toString() {
 		return "Property[ name=" + name + " ]";
+	}
+
+	public void setIndex(boolean index) {
+		this.index = index;
+	}
+
+	public boolean isIndex() {
+		return index;
+	}
+
+	public void setUnique(boolean unique) {
+		this.unique = unique;
+	}
+
+	public boolean isUnique() {
+		return unique;
+	}
+
+	public void setDesc(boolean desc) {
+		this.desc = desc;
+	}
+
+	public boolean isDesc() {
+		return desc;
 	}
 }
