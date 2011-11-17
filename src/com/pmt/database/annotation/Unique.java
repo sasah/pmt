@@ -1,10 +1,8 @@
-package com.pmt.sys.reflection;
+package com.pmt.database.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Index {
-	boolean unique();
-	boolean desc();
+public @interface Unique {
 }

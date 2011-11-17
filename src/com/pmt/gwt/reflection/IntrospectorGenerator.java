@@ -19,11 +19,11 @@ import com.google.gwt.core.ext.typeinfo.JTypeParameter;
 import com.google.gwt.core.ext.typeinfo.TypeOracle;
 import com.google.gwt.user.rebind.ClassSourceFileComposerFactory;
 import com.google.gwt.user.rebind.SourceWriter;
+import com.pmt.database.annotation.Table;
 import com.pmt.sys.reflection.BeanDescriptor;
 import com.pmt.sys.reflection.Entity;
 import com.pmt.sys.reflection.Introspector;
 import com.pmt.sys.reflection.Method;
-import com.pmt.sys.reflection.Table;
 
 /**
  * @author <a href="mailto:cooper@screaming-penguin.com">Robert "kebernet" Cooper</a>

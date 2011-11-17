@@ -9,9 +9,11 @@ import com.google.gwt.core.ext.TreeLogger;
 import com.google.gwt.core.ext.typeinfo.JClassType;
 import com.google.gwt.core.ext.typeinfo.JField;
 import com.google.gwt.core.ext.typeinfo.JMethod;
-import com.pmt.sys.reflection.Index;
-import com.pmt.sys.reflection.NotNull;
-import com.pmt.sys.reflection.PrimaryKey;
+import com.pmt.database.annotation.Desc;
+import com.pmt.database.annotation.Index;
+import com.pmt.database.annotation.NotNull;
+import com.pmt.database.annotation.PrimaryKey;
+import com.pmt.database.annotation.Unique;
 import com.pmt.sys.reflection.Transient;
 
 /**
@@ -112,10 +114,10 @@ public class BeanResolver {
 				if (field != null) {
 					p.setPrimaryKey(field.getAnnotation(PrimaryKey.class) != null);
 					p.setNotNull(field.getAnnotation(NotNull.class) != null);
-					
+
 					p.setIndex(field.getAnnotation(Index.class) != null);
-					p.setUnique((field.getAnnotation(Index.class) != null) && field.getAnnotation(Index.class).unique());
-					p.setDesc((field.getAnnotation(Index.class) != null) && field.getAnnotation(Index.class).desc());
+					p.setUnique(field.getAnnotation(Unique.class) != null);
+					p.setDesc(field.getAnnotation(Desc.class) != null);
 				}
 			} else if (methodName.startsWith("is") && (methodName.length() >= 3) && (methodName.charAt(2) == methodName.toUpperCase().charAt(2))) {
 				p = new Property();
@@ -125,6 +127,10 @@ public class BeanResolver {
 				if (field != null) {
 					p.setPrimaryKey(field.getAnnotation(PrimaryKey.class) != null);
 					p.setNotNull(field.getAnnotation(NotNull.class) != null);
+
+					p.setIndex(field.getAnnotation(Index.class) != null);
+					p.setUnique(field.getAnnotation(Unique.class) != null);
+					p.setDesc(field.getAnnotation(Desc.class) != null);
 				}
 			}
 

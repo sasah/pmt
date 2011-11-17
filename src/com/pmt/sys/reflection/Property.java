@@ -95,24 +95,12 @@ public class Property {
 		return "Property[ name=" + name + " ]";
 	}
 
-	public void setIndex(boolean index) {
-		this.index = index;
-	}
-
 	public boolean isIndex() {
 		return index;
 	}
 
-	public void setUnique(boolean unique) {
-		this.unique = unique;
-	}
-
 	public boolean isUnique() {
 		return unique;
-	}
-
-	public void setDesc(boolean desc) {
-		this.desc = desc;
 	}
 
 	public boolean isDesc() {
