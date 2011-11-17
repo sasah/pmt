@@ -16,6 +16,7 @@ public class Property {
 	private boolean index;
 	private boolean unique;
 	private boolean desc;
+	private boolean autoIncrement;
 
 	/**
 	 * Creates a new instance of Property
@@ -29,7 +30,8 @@ public class Property {
 	 * @param mutatorMethod
 	 *            The mutator method for the property.
 	 */
-	public Property(String name, @SuppressWarnings("rawtypes") Class type, Method accessorMethod, Method mutatorMethod, boolean primaryKey, boolean notNull, boolean index, boolean unique, boolean desc) {
+	public Property(String name, @SuppressWarnings("rawtypes") Class type, Method accessorMethod, Method mutatorMethod, boolean primaryKey,
+			boolean notNull, boolean index, boolean unique, boolean desc, boolean autoIncrement) {
 		this.name = name;
 		this.accessorMethod = accessorMethod;
 		this.mutatorMethod = mutatorMethod;
@@ -39,6 +41,7 @@ public class Property {
 		this.index = index;
 		this.unique = unique;
 		this.desc = desc;
+		this.autoIncrement = autoIncrement;
 	}
 
 	/**
@@ -105,5 +108,9 @@ public class Property {
 
 	public boolean isDesc() {
 		return desc;
+	}
+
+	public boolean isAutoIncrement() {
+		return autoIncrement;
 	}
 }

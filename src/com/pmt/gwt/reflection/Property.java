@@ -15,6 +15,7 @@ class Property {
 	private boolean index;
 	private boolean unique;
 	private boolean desc;
+	private boolean autoIncrement;
 
 	public Property() {
 	}
@@ -89,5 +90,13 @@ class Property {
 
 	public boolean isDesc() {
 		return desc;
+	}
+
+	public void setAutoIncrement(boolean autoIncrement) {
+		this.autoIncrement = autoIncrement;
+	}
+
+	public boolean isAutoIncrement() {
+		return autoIncrement;
 	}
 }

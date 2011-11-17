@@ -9,6 +9,7 @@ import com.google.gwt.core.ext.TreeLogger;
 import com.google.gwt.core.ext.typeinfo.JClassType;
 import com.google.gwt.core.ext.typeinfo.JField;
 import com.google.gwt.core.ext.typeinfo.JMethod;
+import com.pmt.database.annotation.AutoIncrement;
 import com.pmt.database.annotation.Desc;
 import com.pmt.database.annotation.Index;
 import com.pmt.database.annotation.NotNull;
@@ -118,6 +119,7 @@ public class BeanResolver {
 					p.setIndex(field.getAnnotation(Index.class) != null);
 					p.setUnique(field.getAnnotation(Unique.class) != null);
 					p.setDesc(field.getAnnotation(Desc.class) != null);
+					p.setAutoIncrement(field.getAnnotation(AutoIncrement.class) != null);
 				}
 			} else if (methodName.startsWith("is") && (methodName.length() >= 3) && (methodName.charAt(2) == methodName.toUpperCase().charAt(2))) {
 				p = new Property();
@@ -131,6 +133,7 @@ public class BeanResolver {
 					p.setIndex(field.getAnnotation(Index.class) != null);
 					p.setUnique(field.getAnnotation(Unique.class) != null);
 					p.setDesc(field.getAnnotation(Desc.class) != null);
+					p.setAutoIncrement(field.getAnnotation(AutoIncrement.class) != null);
 				}
 			}
 

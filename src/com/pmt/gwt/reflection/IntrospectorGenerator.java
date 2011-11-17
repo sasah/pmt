@@ -272,16 +272,12 @@ public class IntrospectorGenerator extends Generator {
 			writer.indentln("return this.properties;");
 			writer.println("this.properties = new Property[" + (info.getProperties().size()) + "];");
 
-			Collection<Property> pds = info.getProperties().values();
-			String[] propertyNames = new String[pds.size()];
+			Object[] pds = info.getProperties().values().toArray();
 			logger.log(TreeLogger.SPAM, "" + (pds == null), null);
 
 			if (pds != null) {
-				int i = 0;
-
-				for (Iterator<Property> it = pds.iterator(); it.hasNext(); i++) {
-					Property p = it.next();
-					propertyNames[i] = p.getName();
+				for (int i = 0; i < pds.length; i++) {
+					Property p = (Property) pds[pds.length - i - 1];
 					writer.println("{");
 					writer.indent();
 
@@ -290,7 +286,8 @@ public class IntrospectorGenerator extends Generator {
 					if (p.getReadMethod() == null) {
 						writer.println("null;");
 					} else {
-						writer.println(this.packageName + "." + this.methodsImplementationName + ".METHOD_" + +this.find(methods, p.getReadMethod()) + ";");
+						writer.println(this.packageName + "." + this.methodsImplementationName + ".METHOD_" + +this.find(methods, p.getReadMethod())
+								+ ";");
 					}
 
 					writer.print("Method writeMethod = ");
@@ -298,15 +295,18 @@ public class IntrospectorGenerator extends Generator {
 					if (p.getWriteMethod() == null) {
 						writer.println("null;");
 					} else {
-						writer.println(this.packageName + "." + this.methodsImplementationName + ".METHOD_" + +this.find(methods, p.getWriteMethod()) + ";");
+						writer.println(this.packageName + "." + this.methodsImplementationName + ".METHOD_" + +this.find(methods, p.getWriteMethod())
+								+ ";");
 					}
 
 					logger.log(TreeLogger.DEBUG, p.getName() + " " + p.getType().getQualifiedSourceName(), null);
 					JType ptype = this.resolveType(p.getType());
 
 					logger.log(TreeLogger.DEBUG, p.getName() + " (Erased) " + ptype.getQualifiedSourceName(), null);
-					writer.println("this.properties[" + (i) + "] = new Property( \"" + p.getName() + "\", " + ((p.getType() != null) ? ptype.getQualifiedSourceName() : "Object")
-							+ ".class,  readMethod, writeMethod, " + p.isPrimaryKey() + ", " + p.isNotNull() + ", " + p.isIndex() + ", " + p.isUnique() + ", " + p.isDesc() + ")");
+					writer.println("this.properties[" + (i) + "] = new Property( \"" + p.getName() + "\", "
+							+ ((p.getType() != null) ? ptype.getQualifiedSourceName() : "Object") + ".class,  readMethod, writeMethod, "
+							+ p.isPrimaryKey() + ", " + p.isNotNull() + ", " + p.isIndex() + ", " + p.isUnique() + ", " + p.isDesc() + ", "
+							+ p.isAutoIncrement() + ");");
 					writer.outdent();
 					writer.println("}");
 				}
@@ -333,7 +333,8 @@ public class IntrospectorGenerator extends Generator {
 		writer.println("p = (Property) this.lookup.get(name);");
 		writer.outdent();
 		writer.println("}");
-		writer.println("if( p == null ) throw new RuntimeException(\"Couldn't find property \"+name+\" for " + info.getType().getQualifiedSourceName() + "\");");
+		writer.println("if( p == null ) throw new RuntimeException(\"Couldn't find property \"+name+\" for "
+				+ info.getType().getQualifiedSourceName() + "\");");
 		writer.println("else return p;");
 		writer.outdent();
 		writer.println("}");
@@ -386,7 +387,8 @@ public class IntrospectorGenerator extends Generator {
 		writer.indent();
 		writer.println(ptype.getQualifiedSourceName() + " casted =");
 		writer.println("(" + ptype.getQualifiedSourceName() + ") target;");
-		logger.log(TreeLogger.SPAM, "Method: " + method.getBaseMethod().getName() + " " + method.getBaseMethod().getReturnType().getQualifiedSourceName(), null);
+		logger.log(TreeLogger.SPAM, "Method: " + method.getBaseMethod().getName() + " "
+				+ method.getBaseMethod().getReturnType().getQualifiedSourceName(), null);
 
 		if (!(method.getBaseMethod().getReturnType().isPrimitive() == JPrimitiveType.VOID)) {
 			writer.print("return ");
@@ -440,7 +442,8 @@ public class IntrospectorGenerator extends Generator {
 
 		for (Iterator<BeanResolver> it = introspectables.iterator(); it.hasNext();) {
 			BeanResolver type = it.next();
-			writer.println("if( object instanceof " + type.getType().getQualifiedSourceName() + " ) return " + type.getType().getQualifiedSourceName() + ".class;");
+			writer.println("if( object instanceof " + type.getType().getQualifiedSourceName() + " ) return "
+					+ type.getType().getQualifiedSourceName() + ".class;");
 		}
 
 		writer.println("throw new RuntimeException( \"Object \"+object+\"could not be resolved.\" );");
